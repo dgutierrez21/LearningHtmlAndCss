@@ -1,0 +1,115 @@
+<!-- Los atributos HTML proporcionan información adicional sobre los elementos HTML.
+
+Atributos HTML
+Todos los elementos HTML pueden tener atributos
+Los atributos proporcionan información adicional sobre los elementos .
+Los atributos siempre se especifican en la etiqueta de inicio
+Los atributos generalmente vienen en pares de nombre/valor como: nombre="valor" -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- El atributo href
+        La <a>etiqueta define un hipervínculo. El hrefatributo especifica la URL de la página a la que va el enlace: -->
+
+    <a href="https://www.google.com/?hl=es">Link a google</a>
+
+    <!-- El atributo src
+    La <img>etiqueta se utiliza para incrustar una imagen en una página HTML. El srcatributo especifica la ruta a la imagen que se va a mostrar: -->
+
+    <img
+      src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"
+      alt="facebook logo"
+    />
+
+    <!-- Hay dos formas de especificar la URL en el src atributo:
+
+    1. URL absoluta : enlaces a una imagen externa alojada en otro sitio web. Ejemplo: src="https://www.w3schools.com/images/img_girl.jpg" .
+    
+    Notas: las imágenes externas pueden estar protegidas por derechos de autor. Si no obtiene permiso para usarlo, es posible que esté violando las leyes de derechos de autor. Además, no puede controlar imágenes externas; se puede quitar o cambiar repentinamente.
+    
+    2. URL relativa : enlaces a una imagen alojada en el sitio web. Aquí, la URL no incluye el nombre de dominio. Si la URL comienza sin una barra inclinada, será relativa a la página actual. Ejemplo: src="img_girl.jpg". Si la URL comienza con una barra inclinada, será relativa al dominio. Ejemplo: src="/images/img_girl.jpg".
+    
+    Sugerencia: casi siempre es mejor usar URL relativas. No se romperán si cambias de dominio. -->
+
+    <!-- Los atributos de ancho y alto La <img />etiqueta también debe contener los
+    atributos widthy height, que especifican el ancho y el alto de la imagen (en
+    píxeles): -->
+
+    <img
+      src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"
+      alt="facebook logo"
+      width="100px"
+      height="100px"
+    />
+
+    <!-- El atributo alt -->
+    <!-- El altatributo requerido para la <img> etiqueta especifica un texto alternativo para una imagen, si la imagen por algún motivo no se puede mostrar. Esto puede deberse a una conexión lenta, a un error en el srcatributo, o si el usuario usa un lector de pantalla. -->
+
+    <img
+      src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"
+      alt=""
+      width="200px"
+      height="200px"
+      alt="logo de facebook"
+    />
+
+    <!-- El atributo lang -->
+    <!-- Siempre debe incluir el langatributo dentro de la <html>etiqueta, para declarar el idioma de la página web. Esto está destinado a ayudar a los motores de búsqueda y navegadores. -->
+
+    <!-- Los códigos de países también se pueden agregar al código de idioma en el lang atributo. Entonces, los dos primeros caracteres definen el idioma de la página HTML y los dos últimos caracteres definen el país.-->
+
+    <!-- El atributo del título
+El titleatributo define alguna información adicional sobre un elemento.
+
+El valor del atributo de título se mostrará como información sobre herramientas cuando pase el mouse sobre el elemento: -->
+
+    <p title="Este es el titulo de parrafo">este es un parrafo</p>
+
+    <!-- Sugerimos: Utilice siempre atributos en minúsculas
+El estándar HTML no requiere nombres de atributos en minúsculas.
+
+El atributo de título (y todos los demás atributos) se pueden escribir en mayúsculas o minúsculas como título o TÍTULO .
+
+Sin embargo, W3C recomienda atributos en minúsculas en HTML y exige atributos en minúsculas para tipos de documentos más estrictos como XHTML. -->
+
+<!-- Sugerimos: Citar siempre los valores de los atributos
+El estándar HTML no requiere comillas alrededor de los valores de los atributos.
+
+Sin embargo, W3C recomienda citas en HTML y exige citas para tipos de documentos más estrictos como XHTML. -->
+
+<!-- Bueno: -->
+<a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+
+<!-- Malo:
+<a href=https://www.w3schools.com/html/>Visit our HTML tutorial</a> -->
+
+<!-- ¿Comillas simples o dobles?
+Las comillas dobles alrededor de los valores de atributo son las más comunes en HTML, pero también se pueden usar comillas simples.
+
+En algunas situaciones, cuando el propio valor del atributo contiene comillas dobles, es necesario utilizar comillas simples: -->
+
+    <a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+
+    <a href='https://www.w3schools.com/html/'>Visit our HTML tutorial</a>
+
+    <!-- Resumen del capítulo
+Todos los elementos HTML pueden tener atributos
+El hrefatributo de <a>especifica la URL de la página a la que va el enlace
+El srcatributo de <img>especifica la ruta a la imagen que se mostrará
+Los atributos widthy de proporcionan información sobre el tamaño de las imágenes.height<img>
+El altatributo de <img>proporciona un texto alternativo para una imagen.
+El styleatributo se usa para agregar estilos a un elemento, como color, fuente, tamaño y más
+El langatributo de la <html>etiqueta declara el idioma de la página web.
+El titleatributo define alguna información adicional sobre un elemento. -->
+
+<!-- Una lista completa de todos los atributos para cada elemento HTML se incluye en nuestra: https://www.w3schools.com/tags/ref_attributes.asp . -->
+
+  </body>
+</html>
