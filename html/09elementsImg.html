@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- El elemento HTML <picture>le permite mostrar diferentes imágenes para diferentes dispositivos o tamaños de pantalla.5 -->
+    <!-- El elemento HTML <imagen>
+El elemento HTML <picture>brinda a los desarrolladores web más flexibilidad para especificar recursos de imágenes.
+
+El <picture>elemento contiene uno o más <source>elementos, cada uno de los cuales hace referencia a diferentes imágenes a través del srcset atributo. De esta manera, el navegador puede elegir la imagen que mejor se adapte a la vista y/o dispositivo actual.
+
+Cada <source>elemento tiene un mediaatributo que define cuándo la imagen es la más adecuada. -->
+
+    <!-- Mostrar diferentes imágenes para diferentes tamaños de pantalla: -->
+
+    <picture>
+      <source
+        media="(min-width: 1200px)"
+        srcset="
+          https://siaguanta.com/wp-content/uploads/2020/05/que-es-wallpaper1-1024x576.jpg
+        "
+        width="600px"
+      />
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          https://cdn.vox-cdn.com/thumbor/1sWd-p9Ofv4Ut_5iDckegdkb-S0=/0x0:2160x3840/1120x0/filters:focal(0x0:2160x3840):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22963724/The_Verge_Wallpaper_Pixel_6.0.jpg
+        "
+        width="300px"
+      />
+      <source
+        media="(min-width: 480px)"
+        srcset="
+          https://images.pexels.com/photos/1212487/pexels-photo-1212487.jpeg?cs=srgb&dl=pexels-rahul-pandit-1212487.jpg&fm=jpg
+        "
+        width="300px"
+      />
+      <img
+        src="https://images.pexels.com/photos/1226302/pexels-photo-1226302.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt=""
+        width="300px"
+      />
+    </picture>
+  </body>
+</html>
