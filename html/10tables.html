@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <h1>Tablas en html</h1>
+
+    <!-- Las tablas HTML permiten a los desarrolladores web organizar los datos en filas y columnas. -->
+
+    <table>
+      <tr>
+        <th>Compañia</th>
+        <th>Contacto</th>
+        <th>Pais</th>
+      </tr>
+      <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Alemania</td>
+      </tr>
+      <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chan</td>
+        <td>Mexico</td>
+      </tr>
+    </table>
+
+    <!-- Celdas de tabla Cada celda de la tabla está definida por una
+    <td>y una</td>
+    etiqueta. td significa datos de tabla. Todo lo que está entre
+    <td>y</td>
+    es el contenido de la celda de la tabla. -->
+
+    <table>
+      <tr>
+        <td>Email</td>
+        <td>Tobias</td>
+        <td>Linus</td>
+      </tr>
+    </table>
+
+    <!-- Nota: los elementos de datos de la tabla son los contenedores de datos de la
+    tabla. Pueden contener todo tipo de elementos HTML; texto, imágenes, listas,
+    otras tablas, etc. -->
+
+    <!-- Filas de tabla Cada fila de la tabla comienza con una
+    <tr>
+      y termina con una
+    </tr>
+    etiqueta. tr significa fila de mesa. -->
+
+    <!-- Puede tener tantas filas como desee en una tabla, solo asegúrese de que la cantidad de celdas sea la misma en cada fila.
+
+Nota: hay ocasiones en las que una fila puede tener menos o más celdas que otra. Aprenderá sobre eso en un capítulo posterior.
+
+Encabezados de tabla
+A veces desea que sus celdas sean encabezados, en esos casos use la <th>etiqueta en lugar de la <td>etiqueta: -->
+
+    <!-- De forma predeterminada, el texto de los <th>elementos está en negrita y centrado, pero puedes cambiar eso con CSS. -->
+
+    <!-- Para hacer que una celda abarque varias columnas, use el colspanatributo: -->
+
+    <!-- Para hacer que una celda abarque varias filas, use el rowspanatributo: -->
+
+    <table>
+      <tr>
+        <th colspan="2" rowspan="2">Compañia</th>
+        <th>Contacto</th>
+        <th>Pais</th>
+      </tr>
+      <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Alemania</td>
+      </tr>
+      <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chan</td>
+        <td>Mexico</td>
+      </tr>
+    </table>
+
+    <!-- Nota: El valor del rowspanatributo representa el número de filas que abarca. -->
+
+    <!-- El <colgroup>elemento se utiliza para diseñar columnas específicas de una tabla. -->
+
+    <!-- Si desea aplicar estilo a las dos primeras columnas de una tabla, utilice los elementos <colgroup> y <col> . -->
+
+    <!-- El <colgroup>elemento debe utilizarse como contenedor para las especificaciones de la columna.
+
+Cada grupo se especifica con un <col>elemento.
+
+El spanatributo especifica cuántas columnas recibe el estilo.
+
+El styleatributo especifica el estilo para dar a las columnas. -->
+
+    <!-- Nota: Hay una selección muy limitada de propiedades CSS legales para colgroups . -->
+
+    <!-- Si desea diseñar más columnas con diferentes estilos, use más <col>elementos dentro de <colgroup>: -->
+
+    <!-- Si desea diseñar columnas en el medio de una tabla, inserte un <col>elemento "vacío" (sin estilos) para las columnas anteriores: -->
+
+    <!-- Ocultar columnas
+Puede ocultar columnas con la visibility: collapsepropiedad: -->
+
+    <table style="width: 100%">
+      <colgroup>
+        <col span="2" style="background-color: #d6eeee" />
+      </colgroup>
+      <tr>
+        <th>MON</th>
+        <th>TUE</th>
+        <th>WED</th>
+        <th>THU</th>
+        <th>FRI</th>
+        <th>SAT</th>
+        <th>SUN</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+        <td>13</td>
+        <td>14</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td>16</td>
+        <td>17</td>
+        <td>18</td>
+        <td>19</td>
+        <td>20</td>
+        <td>21</td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td>23</td>
+        <td>24</td>
+        <td>25</td>
+        <td>26</td>
+        <td>27</td>
+        <td>28</td>
+      </tr>
+    </table>
+
+    <!-- Nota: La <colgroup>etiqueta debe ser secundaria de un <table>elemento y debe colocarse antes de cualquier otro elemento de la tabla, como <thead>, <tr>, <td> etc., pero después del <caption>elemento, si está presente. -->
+
+    <!-- Propiedades CSS legales
+Solo hay una selección muy limitada de propiedades CSS que se pueden usar en el grupo col:
+
+widthpropiedad
+visibilitypropiedad
+backgroundpropiedades
+borderpropiedades
+
+Todas las demás propiedades de CSS no tendrán efecto en sus tablas. -->
+  </body>
+</html>
