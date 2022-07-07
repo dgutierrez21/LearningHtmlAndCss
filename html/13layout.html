@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .header02 {
+        background-color: #666;
+        color: #fff;
+        text-align: center;
+        font-size: 35px;
+        padding: 30px;
+      }
+
+      .nav02 {
+        float: left;
+        width: 30%;
+        height: 300px;
+        background: #ccc;
+        padding: 20px;
+      }
+
+      .nav02 ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .article02 {
+        float: left;
+        padding: 20px;
+        width: 70%;
+        background-color: #f1f1f1;
+        height: 300px;
+      }
+
+      .section02::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .footer02 {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+      @media (max-width: 600px) {
+        .nav02,
+        .article02 {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      /* Flexbox */
+
+      .header03 {
+        background-color: #666;
+        color: #fff;
+        text-align: center;
+        font-size: 35px;
+        padding: 30px;
+      }
+
+      .nav03 {
+        flex: 1;
+        background: #ccc;
+        padding: 20px;
+      }
+
+      .nav03 ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .article03 {
+        flex: 3;
+        background-color: #f1f1f1;
+        padding: 10px;
+      }
+
+      .section03 {
+        display: flex;
+      }
+
+      .footer03 {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+      @media (max-width: 600px) {
+        .section03 {
+          flex-direction: column;
+        }
+      }
+
+      /* CSS Grid */
+
+      .header04 {
+        background-color: #666;
+        color: #fff;
+        text-align: center;
+        font-size: 35px;
+        padding: 30px;
+      }
+
+      .nav04 {
+        background: #ccc;
+        padding: 20px;
+      }
+
+      .nav04 ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .article04 {
+        grid-column: 2 / 4;
+        background-color: #f1f1f1;
+        padding: 10px;
+      }
+
+      .section04 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .footer04 {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+      @media (max-width: 600px) {
+        .section04 {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Elementos de diseño HTML
+HTML tiene varios elementos semánticos que definen las diferentes partes de una página web: -->
+
+    <!-- <header>- Define un encabezado para un documento o una sección
+<nav>- Define un conjunto de enlaces de navegación
+<section>- Define una sección en un documento
+<article>- Define un contenido independiente y autónomo
+<aside>- Define el contenido aparte del contenido (como una barra lateral)
+<footer>- Define un pie de página para un documento o una sección
+<details>- Define detalles adicionales que el usuario puede abrir y cerrar a pedido
+<summary>- Define un encabezado para el <details>elemento -->
+
+    <!-- Puede leer más sobre los elementos semánticos en nuestro capítulo Semántica HTML  https://www.w3schools.com/html/html5_semantic_elements.asp . -->
+
+    <!-- Técnicas de diseño HTML
+Hay cuatro técnicas diferentes para crear diseños de varias columnas. Cada técnica tiene sus pros y sus contras: -->
+
+    <!-- CSS framework
+CSS float property
+CSS flexbox
+CSS grid -->
+
+    <!-- Diseño flotante CSS -->
+    <!-- Es común hacer diseños web completos usando la floatpropiedad CSS. Float es fácil de aprender: solo necesita recordar cómo funcionan las propiedades floaty clear. Desventajas: los elementos flotantes están vinculados al flujo de documentos, lo que puede dañar la flexibilidad. Obtenga más información sobre float en nuestro capítulo CSS Float and Clear https://www.w3schools.com/css/css_float.asp -->
+
+    <h2>Css layout float</h2>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum velit
+      aperiam nihil corrupti ratione mollitia eos perspiciatis inventore
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet alias
+      cumque, numquam laboriosam nemo earum totam quo perspiciatis dolor harum
+      vitae voluptas nihil placeat velit.
+    </p>
+
+    <header class="header02">
+      <h2>Cites</h2>
+    </header>
+
+    <section class="section02">
+      <nav class="nav02">
+        <ul class="ul02">
+          <li><a href="">Home</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">About</a></li>
+        </ul>
+      </nav>
+      <article class="article02">
+        <h1>London</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius atque
+          ea suscipit id minus a. Voluptas id natus necessitatibus sed quaerat
+          sequi esse deleniti doloribus dolorum facilis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla harum
+          sunt est, modi, reprehenderit velit optio, qui culpa impedit alias
+          consectetur repellendus? Assumenda voluptatibus modi ex deserunt
+          aliquam, sunt optio.
+        </p>
+      </article>
+    </section>
+
+    <footer class="footer02">
+      <p>Footer</p>
+    </footer>
+
+    <!-- Diseño de caja flexible CSS
+El uso de flexbox garantiza que los elementos se comporten de manera predecible cuando el diseño de la página deba adaptarse a diferentes tamaños de pantalla y diferentes dispositivos de visualización.
+
+Obtenga más información sobre flexbox en nuestro capítulo CSS Flexbox . -->
+
+    <h2>Css layout Flexbox</h2>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum velit
+      aperiam nihil corrupti ratione mollitia eos perspiciatis inventore
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet alias
+      cumque, numquam laboriosam nemo earum totam quo perspiciatis dolor harum
+      vitae voluptas nihil placeat velit.
+    </p>
+
+    <header class="header03">
+      <h2>Cites</h2>
+    </header>
+
+    <section class="section03">
+      <nav class="nav03">
+        <ul class="ul03">
+          <li><a href="">Home</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">About</a></li>
+        </ul>
+      </nav>
+      <article class="article03">
+        <h1>London</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius atque
+          ea suscipit id minus a. Voluptas id natus necessitatibus sed quaerat
+          sequi esse deleniti doloribus dolorum facilis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla harum
+          sunt est, modi, reprehenderit velit optio, qui culpa impedit alias
+          consectetur repellendus? Assumenda voluptatibus modi ex deserunt
+          aliquam, sunt optio.
+        </p>
+      </article>
+    </section>
+
+    <footer class="footer03">
+      <p>Footer</p>
+    </footer>
+
+    <!-- Diseño de caja flexible CSS
+El uso de flexbox garantiza que los elementos se comporten de manera predecible cuando el diseño de la página deba adaptarse a diferentes tamaños de pantalla y diferentes dispositivos de visualización.
+
+Obtenga más información sobre flexbox en nuestro capítulo CSS Flexbox . -->
+
+    <h2>Css layout Grid</h2>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum velit
+      aperiam nihil corrupti ratione mollitia eos perspiciatis inventore
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet alias
+      cumque, numquam laboriosam nemo earum totam quo perspiciatis dolor harum
+      vitae voluptas nihil placeat velit.
+    </p>
+
+    <header class="header04">
+      <h2>Cites</h2>
+    </header>
+
+    <section class="section04">
+      <nav class="nav04">
+        <ul class="ul04">
+          <li><a href="">Home</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">About</a></li>
+        </ul>
+      </nav>
+      <article class="article04">
+        <h1>London</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius atque
+          ea suscipit id minus a. Voluptas id natus necessitatibus sed quaerat
+          sequi esse deleniti doloribus dolorum facilis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla harum
+          sunt est, modi, reprehenderit velit optio, qui culpa impedit alias
+          consectetur repellendus? Assumenda voluptatibus modi ex deserunt
+          aliquam, sunt optio.
+        </p>
+      </article>
+    </section>
+
+    <footer class="footer04">
+      <p>Footer</p>
+    </footer>
+  </body>
+</html>
