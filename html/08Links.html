@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Los enlaces se encuentran en casi todas las páginas web. Los enlaces permiten a los usuarios hacer clic para pasar de una página a otra.
+
+Vínculos HTML - Hipervínculos
+Los enlaces HTML son hipervínculos.
+
+Puede hacer clic en un enlace y saltar a otro documento.
+
+Cuando mueva el mouse sobre un enlace, la flecha del mouse se convertirá en una pequeña mano. -->
+
+    <!-- Nota: Un enlace no tiene que ser texto. ¡Un enlace puede ser una imagen o cualquier otro elemento HTML! -->
+
+    <!-- Enlaces HTML - Sintaxis
+La <a>etiqueta HTML define un hipervínculo. Tiene la siguiente sintaxis: -->
+
+    <a href="url">este es una enlace</a>
+
+    <!-- El atributo más importante del <a> elemento es el hrefatributo, que indica el destino del enlace.
+
+El texto del enlace es la parte que será visible para el lector.
+
+Al hacer clic en el texto del enlace, se enviará al lector a la dirección URL especificada. -->
+
+    <a href="https://www.w3schools.com/">Visit W3Schools.com!</a>
+
+    <!-- De forma predeterminada, los enlaces aparecerán de la siguiente manera en todos los navegadores:
+
+Un enlace no visitado está subrayado y azul
+Un enlace visitado está subrayado y morado
+Un enlace activo está subrayado y rojo. -->
+
+    <!-- Consejo: Por supuesto, los enlaces se pueden diseñar con CSS, ¡para obtener otro aspecto! -->
+
+    <!-- Enlaces HTML: el atributo de destino
+De forma predeterminada, la página vinculada se mostrará en la ventana actual del navegador. Para cambiar esto, debe especificar otro destino para el vínculo.
+
+El targetatributo especifica dónde abrir el documento vinculado.
+
+El targetatributo puede tener uno de los siguientes valores:
+
+_self- Defecto. Abre el documento en la misma ventana/pestaña en la que se hizo clic
+_blank- Abre el documento en una nueva ventana o pestaña
+_parent- Abre el documento en el marco principal
+_top- Abre el documento en el cuerpo completo de la ventana. -->
+
+    <a href="https://www.w3schools.com/" target="_blank"
+      >Visit W3Schools.com!</a
+    >
+
+    <!-- Vínculos HTML: utilice una imagen como vínculo
+Para usar una imagen como enlace, simplemente coloque la <img> etiqueta dentro de la <a>etiqueta: -->
+
+    <a
+      href="https://desarrolloweb.com/articulos/que-es-html.html"
+      target="_blank"
+      ><img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+        alt="log Html"
+        width="300px"
+        height="300px"
+    /></a>
+
+    <!-- Enlace a una dirección de correo electrónico
+Use mailto:dentro del hrefatributo para crear un enlace que abra el programa de correo electrónico del usuario (para permitirle enviar un nuevo correo electrónico): -->
+
+    <a href="mailto:email@gmail.com">Enviar un correo</a>
+
+    <!-- Títulos de enlaces
+El titleatributo especifica información extra sobre un elemento. La información generalmente se muestra como un texto de información sobre herramientas cuando el mouse se mueve sobre el elemento. -->
+
+    <a
+      href="https://www.w3schools.com/html/"
+      title="Go to W3Schools HTML section"
+      >Visit our HTML Tutorial</a
+    >
+  </body>
+</html>
