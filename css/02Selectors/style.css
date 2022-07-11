@@ -1,0 +1,75 @@
+/* Un selector de CSS selecciona los elementos HTML que desea diseñar.
+
+Selectores de CSS
+Los selectores de CSS se utilizan para "encontrar" (o seleccionar) los elementos HTML que desea diseñar.
+
+Podemos dividir los selectores de CSS en cinco categorías:
+
+Selectores simples (seleccionar elementos basados ​​en nombre, id, clase)
+Selectores combinadores (seleccionar elementos en función de una relación específica entre ellos)
+Selectores de pseudoclase (seleccionar elementos en función de un determinado estado)
+Selectores de pseudoelementos (seleccionar y diseñar una parte de un elemento)
+Selectores de atributos (seleccionar elementos en función de un atributo o valor de atributo) */
+
+/* El selector de elementos CSS
+El selector de elementos selecciona elementos HTML en función del nombre del elemento. */
+
+p {
+  text-align: center;
+  color: red;
+  font-size: 50px;
+}
+
+/* El selector de ID de CSS
+El selector de id usa el atributo id de un elemento HTML para seleccionar un elemento específico.
+
+La identificación de un elemento es única dentro de una página, por lo que el selector de identificación se usa para seleccionar un elemento único.
+
+Para seleccionar un elemento con una identificación específica, escriba un carácter hash (#), seguido de la identificación del elemento. */
+
+#parrafo2 {
+  color: blue;
+  text-align: center;
+  font-size: 90px;
+}
+
+/* Nota: ¡Un nombre de identificación no puede comenzar con un número! */
+
+/* El selector de clases CSS
+El selector de clase selecciona elementos HTML con un atributo de clase específico.
+
+Para seleccionar elementos con una clase específica, escriba un carácter de punto (.), seguido del nombre de la clase. */
+
+.parrafos {
+  color: fuchsia;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+p.parrafosBlack {
+    color: black;
+}
+
+.alFinal {
+    text-align: end;
+}
+
+/* Nota: ¡Un nombre de clase no puede comenzar con un número! */
+
+/* El selector universal de CSS
+El selector universal (*) selecciona todos los elementos HTML de la página. */
+
+/* La siguiente regla CSS afectará a todos los elementos HTML de la página:  */
+
+* {
+  text-align: center;
+   color: blue;
+}
+
+/* El selector de agrupación CSS
+El selector de agrupación selecciona todos los elementos HTML con las mismas definiciones de estilo. */
+
+h3, h4, h5 {
+  color: darkorchid;
+}
