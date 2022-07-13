@@ -1,0 +1,140 @@
+/* Las propiedades de borde de CSS le permiten especificar el estilo, el ancho y el color del borde de un elemento.*/
+
+/* Estilo de borde CSS
+La border-stylepropiedad especifica qué tipo de borde mostrar.
+
+Se permiten los siguientes valores:
+
+dotted- Define un borde punteado
+dashed- Define un borde discontinuo
+solid- Define un borde sólido
+double- Define un borde doble
+groove- Define un borde ranurado 3D. El efecto depende del valor del color del borde.
+ridge- Define un borde estriado 3D. El efecto depende del valor del color del borde.
+inset- Define un borde de inserción 3D. El efecto depende del valor del color del borde.
+outset- Define un borde inicial 3D. El efecto depende del valor del color del borde.
+none - Defines no border
+hidden- Define un borde oculto
+La border-stylepropiedad puede tener de uno a cuatro valores (para el borde superior, el borde derecho, el borde inferior y el borde izquierdo). */
+
+/* 
+Ancho del borde CSS
+La border-widthpropiedad especifica el ancho de los cuatro bordes.
+
+El ancho se puede establecer como un tamaño específico (en px, pt, cm, em, etc.) o usando uno de los tres valores predefinidos: fino, medio o grueso: */
+
+/* Anchos laterales específicos
+La border-width propiedad puede tener de uno a cuatro valores (para el borde superior, el borde derecho, el borde inferior y el borde izquierdo): */
+
+/* Color del borde CSS
+La border-colorpropiedad se utiliza para establecer el color de los cuatro bordes.
+
+El color se puede configurar mediante:
+
+nombre - especifique un nombre de color, como "rojo"
+HEX: especifique un valor HEX, como "#ff0000"
+RGB: especifica un valor RGB, como "rgb(255,0,0)"
+HSL: especifique un valor HSL, como "hsl(0, 100%, 50%)"
+transparente
+Nota: si border-colorno se establece, hereda el color del elemento. */
+
+/* Borde CSS - Lados individuales
+De los ejemplos de las páginas anteriores, ha visto que es posible especificar un borde diferente para cada lado.
+
+En CSS, también hay propiedades para especificar cada uno de los bordes (superior, derecho, inferior e izquierdo): */
+
+/* Pues así es como funciona:
+
+Si la border-stylepropiedad tiene cuatro valores:
+
+estilo de borde: punteado sólido doble punteado;
+el borde superior está punteado
+el borde derecho es sólido
+borde inferior es doble
+el borde izquierdo está discontinuo
+Si la border-stylepropiedad tiene tres valores:
+
+estilo de borde: doble sólido punteado;
+el borde superior está punteado
+los bordes derecho e izquierdo son sólidos
+borde inferior es doble
+Si la border-stylepropiedad tiene dos valores:
+
+estilo de borde: sólido punteado;
+los bordes superior e inferior están punteados
+los bordes derecho e izquierdo son sólidos
+Si la border-stylepropiedad tiene un valor:
+
+estilo de borde: punteado;
+los cuatro bordes están punteados */
+
+/* Borde CSS - Propiedad abreviada
+Como vio en la página anterior, hay muchas propiedades a considerar cuando se trata de bordes.
+
+Para acortar el código, también es posible especificar todas las propiedades de borde individuales en una propiedad.
+
+La borderpropiedad es una propiedad abreviada para las siguientes propiedades de borde individuales:
+
+border-width
+border-style(requerido)
+border-color */
+
+/* Bordes redondeados CSS
+La border-radiuspropiedad se usa para agregar bordes redondeados a un elemento: */
+
+.p1 {
+  border-style: dotted;
+  border-width: 5px;
+}
+.p2 {
+  border-style: dashed;
+  border-width: medium;
+  border-color: blue;
+}
+.p3 {
+  border-style: solid;
+  border-width: thick;
+  border-color: green;
+}
+.p4 {
+  border-style: double;
+  border-width: 10px 40px;
+  border-color: red;
+}
+.p5 {
+  border-style: groove double;
+  border-width: 10px 20px;
+}
+.p6 {
+  border-style: ridge double dashed;
+  border-width: 10px 20px;
+}
+.p7 {
+  border-style: ridge double dashed dotted;
+  border-width: 10px 10px;
+}
+.p8 {
+  border-style: outset;
+}
+.p9 {
+  border: 20px dotted blue;
+}
+.p10 {
+  border-style: hidden;
+}
+.p11 {
+  border: 10px solid;
+  border-radius: 50px;
+}
+
+.p12 {
+  border: 10px solid;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.p13 {
+  border: 10px solid;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
