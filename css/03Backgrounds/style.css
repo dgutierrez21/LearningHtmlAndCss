@@ -1,0 +1,68 @@
+/* color de fondo CSS
+La background-color propiedad especifica el color de fondo de un elemento. */
+
+body {
+  background-color: black;
+  color: #fff;
+}
+
+/* Puede establecer el color de fondo para cualquier elemento HTML: */
+
+h1 {
+  background-color: green;
+}
+
+/* Opacidad / Transparencia
+La opacitypropiedad especifica la opacidad/transparencia de un elemento. Puede tomar un valor de 0.0 - 1.0. Cuanto menor sea el valor, más transparente: */
+
+.div01 {
+  background-color: red;
+  opacity: 0.5;
+}
+
+/* Nota: Al usar la opacity propiedad para agregar transparencia al fondo de un elemento, todos sus elementos secundarios heredan la misma transparencia. Esto puede hacer que el texto dentro de un elemento completamente transparente sea difícil de leer. */
+
+/* Imagen de fondo CSS
+La background-image propiedad especifica una imagen para usar como fondo de un elemento.
+
+De forma predeterminada, la imagen se repite para que cubra todo el elemento. */
+
+.div02 {
+  background-image: url("https://images.pexels.com/photos/60597/dahlia-red-blossom-bloom-60597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-color: red;
+  background-attachment: fixed;
+}
+
+/* Nota: cuando utilice una imagen de fondo, utilice una imagen que no interfiera con el texto.
+
+La imagen de fondo también se puede configurar para elementos específicos, como el elemento <p>: */
+
+/* Repetición de fondo CSS
+Por defecto, la background-image propiedad repite una imagen tanto horizontal como verticalmente.
+
+Algunas imágenes deben repetirse solo horizontal o verticalmente, o se verán extrañas, como esta: */
+
+/* Posición de fondo CSS
+La background-positionpropiedad se utiliza para especificar la posición de la imagen de fondo. */
+
+/* Adjunto de fondo CSS
+La background-attachmentpropiedad especifica si la imagen de fondo debe desplazarse o ser fija (no se desplazará con el resto de la página): */
+
+/* Fondo CSS - Propiedad abreviada
+Para acortar el código, también es posible especificar todas las propiedades de fondo en una sola propiedad. Esto se llama una propiedad abreviada. */
+
+/* Puedes usar la propiedad abreviada background: */
+
+/* Cuando se usa la propiedad abreviada, el orden de los valores de propiedad es:
+
+background-color
+background-image
+background-repeat
+background-attachment
+background-position */
+
+/* No importa si falta uno de los valores de propiedad, 
+siempre que los demás estén en este orden. Tenga en cuenta que no usamos la propiedad background-attachment en los ejemplos anteriores, ya que no tiene un valor. */
+
