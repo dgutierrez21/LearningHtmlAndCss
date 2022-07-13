@@ -1,0 +1,122 @@
+/* Márgenes CSS
+Las propiedades CSS marginse utilizan para crear espacio alrededor de los elementos, fuera de los bordes definidos.
+
+Con CSS, tienes control total sobre los márgenes. Hay propiedades para establecer el margen de cada lado de un elemento (superior, derecho, inferior e izquierdo).
+
+Margen - Lados individuales
+CSS tiene propiedades para especificar el margen de cada lado de un elemento:
+
+margin-top
+margin-right
+margin-bottom
+margin-left
+Todas las propiedades de margen pueden tener los siguientes valores:
+
+auto - el navegador calcula el margen
+longitud : especifica un margen en px, pt, cm, etc.
+% - especifica un margen en % del ancho del elemento contenedor
+heredar: especifica que el margen debe heredarse del elemento principal
+Sugerencia: se permiten valores negativos. */
+
+div {
+  background-color: black;
+  color: #fff;
+}
+
+.div1 {
+  margin-top: 200px;
+  margin-right: 60px;
+  margin-bottom: 400px;
+  margin-left: 300px;
+}
+
+.div2 {
+  margin: 50px 200px 100px;
+}
+.div3 {
+  margin: 50px 200px;
+}
+.div4 {
+  margin: 200px;
+}
+
+.div5 {
+  width: 300px;
+  margin: 50px auto;
+}
+
+.div6 {
+  width: 500px;
+  margin-left: 80px;
+}
+
+.div6 p {
+  margin: inherit;
+}
+
+h3, h4 {
+    font-size: 25px;
+}
+
+h3 {
+    margin: 0 0 50px 0;
+}
+
+h4 {
+    margin: 20px 0 0 0;
+}
+
+/* Margen - Propiedad abreviada
+Para acortar el código, es posible especificar todas las propiedades de margen en una propiedad.
+
+La marginpropiedad es una propiedad abreviada para las siguientes propiedades de margen individuales:
+
+margin-top
+margin-right
+margin-bottom
+margin-left
+Pues así es como funciona:
+
+Si la marginpropiedad tiene cuatro valores:
+
+margen: 25px 50px 75px 100px;
+margen superior es 25px
+margen derecho es 50px
+margen inferior es 75px
+margen izquierdo es 100px */
+
+/* Si la marginpropiedad tiene tres valores:
+
+margen: 25px 50px 75px;
+margen superior es 25px
+los márgenes derecho e izquierdo son 50px
+margen inferior es 75px */
+
+/* Si la marginpropiedad tiene dos valores:
+
+margen: 25px 50px;
+los márgenes superior e inferior son 25px
+los márgenes derecho e izquierdo son 50px
+Ejemplo */
+
+/* Si la marginpropiedad tiene un valor:
+
+margen: 25px;
+los cuatro márgenes son 25px */
+
+/* El valor automático
+Puede establecer la propiedad de margen autopara centrar horizontalmente el elemento dentro de su contenedor.
+
+Entonces, el elemento ocupará el ancho especificado y el espacio restante se dividirá en partes iguales entre los márgenes izquierdo y derecho. */
+
+/* A veces dos márgenes colapsan en un solo margen.
+
+Colapso de margen
+Los márgenes superior e inferior de los elementos a veces se contraen en un solo margen que es igual al mayor de los dos márgenes.
+
+¡Esto no sucede en los márgenes izquierdo y derecho! ¡Solo márgenes superior e inferior!
+ */
+
+ /* En el ejemplo anterior, el elemento <h3> tiene un margen inferior de 50 px y el elemento <h4> tiene un margen superior establecido en 20 px.
+
+El sentido común parecería sugerir que el margen vertical entre <h3> y <h4> sería un total de 70px (50px + 20px). Pero debido al colapso del margen, el margen real termina siendo 50 px. */
