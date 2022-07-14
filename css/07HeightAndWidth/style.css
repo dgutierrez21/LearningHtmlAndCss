@@ -1,0 +1,79 @@
+/* CSS Configuración de alto y ancho
+Las propiedades heighty widthse utilizan para establecer la altura y el ancho de un elemento.
+
+Las propiedades de alto y ancho no incluyen relleno, bordes ni márgenes. Establece el alto/ancho del área dentro del relleno, el borde y el margen del elemento. */
+
+/* Valores de alto y ancho de CSS
+Las propiedades heighty widthpueden tener los siguientes valores:
+
+auto- Esto es predeterminado. El navegador calcula la altura y la anchura.
+length- Define el alto/ancho en px, cm, etc.
+%- Define el alto/ancho en porcentaje del bloque contenedor
+initial- Establece el alto/ancho a su valor predeterminado
+inherit- El alto/ancho se heredará de su valor principal */
+
+div {
+  background-color: cornflowerblue;
+  font-size: 20px;
+  text-align: center;
+}
+
+.div1 {
+  height: 200px;
+  width: 50%;
+}
+
+.div2 {
+  height: 100px;
+  width: 500px;
+}
+
+.div3 {
+  max-width: 500px;
+  height: 100px;
+}
+
+.div4 {
+  max-width: 500px;
+  width: 800px;
+  height: 100px;
+}
+
+.div5 {
+  max-width: 500px;
+  min-width: 250px;
+  height: 100px;
+}
+
+/* nota: ¡Recuerde que las propiedades heighty widthno incluyen relleno,
+bordes ni márgenes! ¡Establecen el alto/ancho del área dentro del relleno,
+el borde y el margen del elemento!; */
+
+/* Configuración de ancho máximo
+La max-widthpropiedad se utiliza para establecer el ancho máximo de un elemento.
+
+Se max-widthpuede especificar en valores de longitud , como px, cm, etc., o en porcentaje (%) del bloque contenedor, o establecerse en ninguno (esto es predeterminado. Significa que no hay un ancho máximo).
+
+El problema con lo <div>anterior ocurre cuando la ventana del navegador es más pequeña que el ancho del elemento (500px). Luego, el navegador agrega una barra de desplazamiento horizontal a la página.
+
+Usar max-widthen su lugar, en esta situación, mejorará el manejo de las ventanas pequeñas por parte del navegador.
+
+Sugerencia: arrastre la ventana del navegador a un ancho inferior a 500 px para ver la diferencia entre los dos divs. */
+
+/* Nota: si por alguna razón usa tanto la widthpropiedad como la max-widthpropiedad en el mismo elemento, y el valor de la widthpropiedad es mayor que la max-widthpropiedad; max-widthse usará la propiedad (y se ignorará la propiedad width). */
+
+/* 
+La min-widthpropiedad define el ancho mínimo de un elemento.
+
+Si el contenido es más pequeño que el ancho mínimo, se aplicará el ancho mínimo.
+
+Si el contenido es mayor que el ancho mínimo, la min-widthpropiedad no tiene efecto.
+
+Nota: Esto evita que el valor de la propiedad ancho sea menor que min-width.Definición y uso
+La min-widthpropiedad define el ancho mínimo de un elemento.
+
+Si el contenido es más pequeño que el ancho mínimo, se aplicará el ancho mínimo.
+
+Si el contenido es mayor que el ancho mínimo, la min-widthpropiedad no tiene efecto.
+
+Nota: Esto evita que el valor de la propiedad ancho sea menor que min-width. */
