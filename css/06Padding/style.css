@@ -1,0 +1,97 @@
+/* El relleno se utiliza para crear espacio alrededor del contenido de un elemento, dentro de los bordes definidos. */
+/* Relleno CSS
+Las propiedades CSS paddingse utilizan para generar espacio alrededor del contenido de un elemento, dentro de los bordes definidos.
+
+Con CSS, tienes control total sobre el relleno. Hay propiedades para establecer el relleno para cada lado de un elemento (superior, derecho, inferior e izquierdo). */
+
+/* Acolchado - Lados individuales
+CSS tiene propiedades para especificar el relleno para cada lado de un elemento:
+
+padding-top
+padding-right
+padding-bottom
+padding-left
+Todas las propiedades de relleno pueden tener los siguientes valores:
+
+longitud : especifica un relleno en px, pt, cm, etc.
+% - especifica un relleno en % del ancho del elemento contenedor
+heredar: especifica que el relleno se debe heredar del elemento principal
+Nota: No se permiten valores negativos. */
+
+div {
+    border: 2px solid red;
+}
+
+.div1 {
+    padding-top: 50px;
+    padding-right: 100px;
+    padding-bottom: 150px;
+    padding-left: 200px;
+}
+
+.div2 {
+    padding: 50px 100px 150px 200px;
+}
+.div3 {
+    padding: 50px 100px 150px;
+}
+.div4 {
+    padding: 50px 100px;
+}
+
+.div5 {
+    padding: 50px;
+}
+
+.div6 {
+    width: 300px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+/* Relleno - Propiedad abreviada
+Para acortar el código, es posible especificar todas las propiedades de relleno en una propiedad.
+
+La paddingpropiedad es una propiedad abreviada para las siguientes propiedades de relleno individuales:
+
+padding-top
+padding-right
+padding-bottom
+padding-left
+Pues así es como funciona:
+
+Si la paddingpropiedad tiene cuatro valores:
+
+relleno: 25px 50px 75px 100px;
+el relleno superior es 25px
+el relleno derecho es 50px
+el relleno inferior es 75px
+el relleno izquierdo es 100px */
+
+/* Si la paddingpropiedad tiene tres valores: */
+/* 
+relleno: 25px 50px 75px;
+el relleno superior es 25px
+los rellenos derecho e izquierdo son 50px
+el relleno inferior es 75px */
+
+/* Si la paddingpropiedad tiene dos valores:
+
+relleno: 25px 50px;
+los rellenos superior e inferior son 25px
+los rellenos derecho e izquierdo son 50px */
+
+/* Si la paddingpropiedad tiene un valor:
+
+relleno: 25px;
+los cuatro rellenos son 25px */
+
+/* Relleno y ancho del elemento
+La propiedad CSS widthespecifica el ancho del área de contenido del elemento. El área de contenido es la porción dentro del relleno, el borde y el margen de un elemento ( el modelo de caja ).
+
+Entonces, si un elemento tiene un ancho específico, el relleno agregado a ese elemento se agregará al ancho total del elemento. Esto es a menudo un resultado indeseable. */
+
+/* Aquí, el elemento <div> tiene un ancho de 300px. Sin embargo, el ancho real del elemento <div> será de 350 px (300 px + 25 px de relleno izquierdo + 25 px de relleno derecho): */
+
+/* Para mantener el ancho en 300 px, sin importar la cantidad de relleno, puede usar la box-sizingpropiedad. Esto hace que el elemento mantenga su ancho real; si aumenta el relleno, el espacio de contenido disponible disminuirá.
+ */
