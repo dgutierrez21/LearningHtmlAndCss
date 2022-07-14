@@ -1,0 +1,106 @@
+/* CSS tiene muchas propiedades para dar formato al texto. */
+
+/* Color de texto */
+/* La colorpropiedad se utiliza para establecer el color del texto. El color se especifica por:
+
+un nombre de color - como "rojo"
+un valor HEX - como "#ff0000"
+un valor RGB - como "rgb(255,0,0)"
+Mire Valores de color CSS para obtener una lista completa de posibles valores de color.
+
+El color de texto predeterminado para una página se define en el selector de cuerpo. */
+
+/* Color de texto y color de fondo
+En este ejemplo, definimos tanto la background-colorpropiedad como la colorpropiedad: */
+
+h1 {
+  color: blueviolet;
+  background-color: black;
+}
+
+/* Importante: El alto contraste es muy importante para las personas con problemas de visión. Por lo tanto, asegúrese siempre de que el contraste entre el color del texto y el color de fondo (o la imagen de fondo) sea bueno. */
+
+/* Alineación y dirección de texto CSS
+En este capítulo aprenderá acerca de las siguientes propiedades:
+
+text-align
+text-align-last
+direction
+unicode-bidi
+vertical-align
+Alineación del texto
+La text-alignpropiedad se utiliza para establecer la alineación horizontal de un texto.
+
+Un texto puede estar alineado a la izquierda o a la derecha, centrado o justificado.
+
+El siguiente ejemplo muestra texto alineado al centro y alineado a la izquierda y a la derecha (la alineación a la izquierda es la predeterminada si la dirección del texto es de izquierda a derecha, y la alineación a la derecha es la predeterminada si la dirección del texto es de derecha a izquierda): */
+
+p {
+  font-size: 25px;
+}
+
+.p1 {
+  text-align: center;
+}
+
+.p2 {
+  text-align: right;
+}
+
+.p3 {
+  border: 1px solid black;
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  text-align: justify;
+}
+
+/* Alinear texto al final
+La text-align-lastpropiedad especifica cómo alinear la última línea de un texto. */
+
+.p4 {
+  text-align-last: right;
+}
+.p5 {
+  text-align-last: center;
+}
+.p6 {
+  text-align-last: justify;
+}
+
+/* Dirección del texto
+Las propiedades directiony unicode-bidise pueden usar para cambiar la dirección del texto de un elemento: */
+
+.p7 {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+/* Alineamiento vertical
+La vertical-alignpropiedad establece la alineación vertical de un elemento. */
+
+.div2 {
+  padding: 30px 0;
+  background-color: black;
+  color: #fff;
+}
+
+.div2 p {
+  background-color: brown;
+}
+
+.p8 img {
+  vertical-align: text-bottom;
+}
+.p9 img {
+  vertical-align: text-top;
+}
+.p10 img {
+  vertical-align: baseline;
+}
+.p11 img {
+  vertical-align: sub;
+}
+.p12 img {
+  vertical-align: super;
+}
