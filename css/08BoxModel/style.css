@@ -1,0 +1,21 @@
+/* El modelo de caja CSS
+En CSS, el término "modelo de caja" se usa cuando se habla de diseño y la maquetación.
+
+El modelo de caja CSS es esencialmente una caja que envuelve cada elemento HTML. Consiste en: márgenes, bordes, relleno y el contenido real. La siguiente imagen ilustra el modelo de caja: */
+
+/* Explicación de las diferentes partes:
+
+Contenido : el contenido del cuadro, donde aparecen el texto y las imágenes.
+Relleno : borra un área alrededor del contenido. El relleno es transparente.
+Borde : un borde que rodea el relleno y el contenido.
+Margen : borra un área fuera del borde. El margen es transparente.
+El modelo de caja nos permite agregar un borde alrededor de los elementos y definir el espacio entre los elementos.  */
+
+.div1 {
+  background-color: lightgrey;
+  max-width: 500px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+  /* box-sizing: border-box; */
+}
