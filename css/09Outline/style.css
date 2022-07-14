@@ -1,0 +1,87 @@
+/* Esquema CSS
+Un contorno es una línea que se dibuja alrededor de los elementos, FUERA de los bordes, para que el elemento "resalte". */
+
+/* CSS tiene las siguientes propiedades de esquema:
+
+outline-style
+outline-color
+outline-width
+outline-offset
+outline
+Nota: ¡ El contorno difiere de los bordes ! A diferencia del borde, el contorno se dibuja fuera del borde del elemento y puede superponerse a otro contenido. Además, el contorno NO forma parte de las dimensiones del elemento; el ancho y la altura totales del elemento no se ven afectados por el ancho del contorno. */
+
+/* Estilo de esquema CSS
+La outline-stylepropiedad especifica el estilo del contorno y puede tener uno de los siguientes valores:
+
+dotted- Define un contorno punteado
+dashed- Define un contorno discontinuo
+solid- Define un contorno sólido
+double- Define un doble contorno
+groove- Define un contorno ranurado en 3D
+ridge- Define un contorno estriado en 3D
+inset- Define un contorno de inserción 3D
+outset- Define un contorno inicial en 3D
+none- No define contorno
+hidden- Define un contorno oculto
+El siguiente ejemplo muestra los diferentes outline-stylevalores: */
+
+/* Nota: ¡Ninguna de las otras propiedades de contorno (sobre las que aprenderá más en los próximos capítulos) tendrá NINGÚN efecto a menos que se establezca la outline-stylepropiedad! */
+
+/* Desplazamiento de contorno CSS
+La outline-offsetpropiedad agrega espacio entre un contorno y el borde/borde de un elemento. El espacio entre un elemento y su contorno es transparente.
+
+El siguiente ejemplo especifica un contorno de 15 px fuera del borde del borde: */
+
+p {
+  margin: 100px;
+  border: 10px solid green;
+}
+
+.p1 {
+  outline: 10px solid red;
+  outline-offset: 20px;
+}
+
+.p2 {
+  outline: 10px dashed red;
+  outline-offset: 10px;
+}
+
+.p3 {
+  outline-offset: 40px;
+  outline: 10px dotted red;
+}
+
+.p4 {
+  outline: 10px ridge red;
+}
+
+.p5 {
+  outline: 10px groove red;
+  outline-offset: 10px;
+
+}
+
+.p6 {
+  outline: 10px outset red;
+  outline-offset: 10px;
+
+}
+
+.p7 {
+  outline: 10px inset red;
+}
+
+.p8 {
+  outline: none;
+}
+
+.p9 {
+  outline: hidden;
+}
+
+.p10 {
+  outline: 10px double red;
+  outline-offset: 40px;
+
+}
