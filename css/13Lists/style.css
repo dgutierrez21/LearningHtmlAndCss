@@ -1,0 +1,62 @@
+/* Listas HTML y propiedades de listas CSS
+En HTML, hay dos tipos principales de listas:
+
+listas desordenadas (<ul>) - los elementos de la lista están marcados con viñetas
+listas ordenadas (<ol>) - los elementos de la lista están marcados con números o letras
+Las propiedades de la lista CSS le permiten:
+
+Establecer diferentes marcadores de elementos de lista para listas ordenadas
+Establezca diferentes marcadores de elementos de lista para listas desordenadas
+Establecer una imagen como marcador de elemento de lista
+Agregar colores de fondo a listas y elementos de lista
+Marcadores de elementos de lista diferentes
+La list-style-typepropiedad especifica el tipo de marcador de elemento de lista.
+
+El siguiente ejemplo muestra algunos de los marcadores de elementos de lista disponibles: */
+
+/* Nota: Algunos de los valores son para listas desordenadas y otros para listas ordenadas. */
+
+.a {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+.b {
+  list-style-type: square;
+  list-style-position: outside;
+}
+
+.c {
+  list-style-type: upper-roman;
+}
+
+.d {
+  list-style-type: lower-alpha;
+}
+
+.e {
+  list-style-image: url("https://www.w3schools.com/css/sqpurple.gif");
+}
+
+/* Coloque los marcadores de elementos de la lista
+La list-style-positionpropiedad especifica la posición de los marcadores de elementos de lista (viñetas). */
+
+/* Eliminar configuración predeterminada
+La list-style-type:nonepropiedad también se puede utilizar para eliminar los marcadores/viñetas. Tenga en cuenta que la lista también tiene margen y relleno predeterminados. Para eliminar esto, agregue margin:0y padding:0a <ul> o <ol>: */
+
+.f {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cuando se usa la propiedad abreviada, el orden de los valores de propiedad es:
+
+list-style-type(si se especifica una imagen de estilo de lista, el valor de esta propiedad se mostrará si la imagen por algún motivo no se puede mostrar)
+list-style-position(especifica si los marcadores de elementos de lista deben aparecer dentro o fuera del flujo de contenido)
+list-style-image(especifica una imagen como marcador de elemento de lista)
+Si falta uno de los valores de propiedad anteriores, se insertará el valor predeterminado para la propiedad faltante, si corresponde. */
+
+.j {
+  list-style: square inside url("https://www.w3schools.com/css/sqpurple.gif");
+}
