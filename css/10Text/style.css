@@ -39,12 +39,26 @@ p {
   font-size: 25px;
 }
 
+h1 {
+  text-indent: 100px;
+}
+
 .p1 {
   text-align: center;
+  text-decoration: underline rgb(75, 7, 201) double 10px;
+  letter-spacing: 10px;
+}
+
+.p1-5 {
+  white-space: nowrap;
 }
 
 .p2 {
   text-align: right;
+  text-decoration: overline rgb(75, 7, 201) dashed 10px;
+  margin-top: 50px;
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+  word-spacing: 40px;
 }
 
 .p3 {
@@ -53,6 +67,7 @@ p {
   width: 200px;
   height: 200px;
   text-align: justify;
+  text-decoration: line-through rebeccapurple wavy 5px;
 }
 
 /* Alinear texto al final
@@ -60,12 +75,26 @@ La text-align-lastpropiedad especifica cómo alinear la última línea de un tex
 
 .p4 {
   text-align-last: right;
+  text-decoration-line: overline;
+  line-height: 3;
+  /* sombra horizontal | sombra vertical | desenfoque | color */
+  text-shadow: 2px 2px 5px red;
 }
 .p5 {
   text-align-last: center;
+  text-decoration-line: line-through;
+  text-decoration-color: blue;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 10px;
+  text-transform: lowercase;
 }
 .p6 {
   text-align-last: justify;
+  text-decoration-line: underline;
+  text-decoration-color: green;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 10px;
+  text-transform: capitalize;
 }
 
 /* Dirección del texto
@@ -74,6 +103,11 @@ Las propiedades directiony unicode-bidise pueden usar para cambiar la dirección
 .p7 {
   direction: rtl;
   unicode-bidi: bidi-override;
+  text-decoration-line: overline underline;
+  text-decoration-color: red;
+  text-decoration-style: double;
+  text-decoration-thickness: 10px;
+  text-transform: uppercase;
 }
 
 /* Alineamiento vertical
@@ -104,3 +138,74 @@ La vertical-alignpropiedad establece la alineación vertical de un elemento. */
 .p12 img {
   vertical-align: super;
 }
+
+/* Decoración de texto CSS
+En este capítulo aprenderá acerca de las siguientes propiedades:
+
+text-decoration-line
+text-decoration-color
+text-decoration-style
+text-decoration-thickness
+text-decoration
+Agregar una línea de decoración al texto
+La text-decoration-linepropiedad se utiliza para agregar una línea de decoración al texto.
+
+Sugerencia: puede combinar más de un valor, como sobrerayado y subrayado, para mostrar líneas tanto encima como debajo de un texto. */
+
+/* Nota: No se recomienda subrayar el texto que no sea un enlace, ya que esto suele confundir al lector. */
+
+/* Especifique un color para la línea de decoración
+La text-decoration-colorpropiedad se utiliza para establecer el color de la línea de decoración. */
+
+/* Especifique un estilo para la línea de decoración
+La text-decoration-stylepropiedad se utiliza para marcar el estilo de la línea de decoración. */
+
+/* Especifique el grosor de la línea de decoración
+La text-decoration-thicknesspropiedad se utiliza para establecer el grosor de la línea de decoración. */
+
+/* La propiedad abreviada
+La text-decorationpropiedad es una propiedad abreviada para:
+
+text-decoration-line(requerido)
+text-decoration-color(opcional)
+text-decoration-style(opcional)
+text-decoration-thickness(opcional) */
+
+/*
+Un pequeño consejo
+ Todos los enlaces en HTML están subrayados por defecto. A veces ves que los enlaces tienen un estilo sin subrayar. text-decoration: none;se utiliza para eliminar el subrayado de los enlaces */
+
+a {
+  text-decoration: none;
+}
+
+/* Transformación de texto
+La text-transformpropiedad se utiliza para especificar letras mayúsculas y minúsculas en un texto.
+
+Se puede usar para convertir todo en letras mayúsculas o minúsculas, o poner en mayúscula la primera letra de cada palabra: */
+
+/* sangría de texto
+La text-indentpropiedad se utiliza para especificar la sangría de la primera línea de un texto: */
+
+/* Espaciado de letras
+La letter-spacingpropiedad se utiliza para especificar el espacio entre los caracteres de un texto.
+
+El siguiente ejemplo demuestra cómo aumentar o disminuir el espacio entre caracteres: */
+
+/* Altura de la línea
+La line-heightpropiedad se utiliza para especificar el espacio entre líneas: */
+
+/* Espaciado entre palabras
+La word-spacingpropiedad se utiliza para especificar el espacio entre las palabras en un texto.
+
+El siguiente ejemplo demuestra cómo aumentar o disminuir el espacio entre palabras: */
+
+/* espacio en blanco
+La white-spacepropiedad especifica cómo se maneja el espacio en blanco dentro de un elemento.
+
+Este ejemplo demuestra cómo deshabilitar el ajuste de texto dentro de un elemento: */
+
+/* Sombra de texto
+La text-shadowpropiedad agrega sombra al texto.
+
+En su uso más simple, solo especificas la sombra horizontal (2px) y la sombra vertical (2px): */
