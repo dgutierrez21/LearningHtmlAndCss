@@ -3,19 +3,24 @@ Para especificar los bordes de la tabla en CSS, use la borderpropiedad.
 
 El siguiente ejemplo especifica un borde sólido para los elementos <table>, <th> y <td>: */
 
-
-
-table, th, td {
-    border: 1px solid black;
-    margin-top: 20px;
+.table1,
+.table1 th,
+.table2 td,
+.table2 td,
+.table2 th,
+.table3,
+.table3 td,
+.table3 th {
+  border: 1px solid black;
+  margin-top: 20px;
 }
 
 /* Mesa de ancho completo
 La tabla anterior puede parecer pequeña en algunos casos. Si necesita una tabla que abarque toda la pantalla (ancho completo), agréguela width: 100%al elemento <table>: */
 
 .table2 {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
 
 /* bordes dobles
@@ -26,6 +31,45 @@ Para eliminar los bordes dobles, eche un vistazo al siguiente ejemplo. */
 /* Contraer bordes de tabla
 La border-collapsepropiedad establece si los bordes de la tabla deben contraerse en un solo borde: */
 
+/* Alineamiento vertical
+La vertical-alignpropiedad establece la alineación vertical (como superior, inferior o central) del contenido en <th> o <td>.
+
+De forma predeterminada, la alineación vertical del contenido de una tabla es media (para los elementos <th> y <td>).
+
+El siguiente ejemplo establece la alineación vertical del texto hacia abajo para los elementos <td>: */
+
+/* Acolchado de mesa
+Para controlar el espacio entre el borde y el contenido de una tabla, use la paddingpropiedad en los elementos <td> y <th>: */
+
 .table3 {
-    border-collapse: collapse;
+  border-collapse: collapse;
+  width: 500px;
+}
+
+.table3 th,
+.table3 td {
+  height: 70px;
+  vertical-align: bottom;
+  padding-left: 10px;
+}
+
+/* Agregue la border-bottompropiedad a <th> y <td> para divisores horizontales: */
+
+.table4 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table4 th,
+.table4 td {
+  border-bottom: 1px solid black;
+}
+
+.table4 tr:hover {
+  background-color: coral;
+}
+
+.table5 tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
