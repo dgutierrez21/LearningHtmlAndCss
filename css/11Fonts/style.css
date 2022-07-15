@@ -1,0 +1,19 @@
+/* La propiedad de fuente CSS
+Para acortar el código, también es posible especificar todas las propiedades de fuente individuales en una propiedad.
+
+La fontpropiedad es una propiedad abreviada para:
+
+font-style
+font-variant
+font-weight
+font-size/line-height
+font-family
+Nota: Los valores font-sizey son obligatorios. font-familySi falta uno de los otros valores, se utiliza su valor predeterminado. */
+
+h1 {
+  font: italic small-caps bold 50px/30px arial, serif;
+}
+
+p {
+  font: italic small-caps bold 25px/60px serif, arial;
+}
