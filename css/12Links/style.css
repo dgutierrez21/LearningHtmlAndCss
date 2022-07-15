@@ -1,0 +1,63 @@
+/* Estilo de enlaces
+Los enlaces se pueden diseñar con cualquier propiedad CSS (por ejemplo color, font-family, background, etc.). */
+
+/* Además, los enlaces pueden tener un estilo diferente según el estado en el que se encuentren.
+
+Los cuatro estados de enlace son:
+
+a:link- un enlace normal, no visitado
+a:visited- un enlace que el usuario ha visitado
+a:hover- un enlace cuando el usuario pasa el mouse sobre él
+a:active- un enlace en el momento en que se hace clic */
+
+/* Al establecer el estilo para varios estados de enlace, existen algunas reglas de orden:
+
+a:hover DEBE venir después de a:link y a:visited
+a:active DEBE venir después de a:hover */
+
+/* Decoración de texto
+La text-decorationpropiedad se usa principalmente para eliminar los subrayados de los enlaces: */
+
+a {
+  font-size: 30px;
+  margin: 0 20px;
+}
+
+.enlace1:link {
+  color: brown;
+}
+
+.enlace1:visited {
+  color: chartreuse;
+}
+
+.enlace1:hover {
+  color: darkorange;
+}
+
+.enlace1:active {
+  color: deeppink;
+}
+
+div a:nth-child(even) {
+  text-decoration: none;
+}
+
+/* Botones de enlace
+Este ejemplo muestra un ejemplo más avanzado en el que combinamos varias propiedades de CSS para mostrar enlaces como cuadros/botones: */
+
+.btnEnlace {
+  background-color: #f44;
+  color: white;
+  padding: 14px 26px;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+  border-radius: 50px;
+}
+
+.btnEnlace:hover {
+  background-color: black;
+}
