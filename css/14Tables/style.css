@@ -1,0 +1,31 @@
+/* Bordes de la tabla
+Para especificar los bordes de la tabla en CSS, use la borderpropiedad.
+
+El siguiente ejemplo especifica un borde sólido para los elementos <table>, <th> y <td>: */
+
+
+
+table, th, td {
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+/* Mesa de ancho completo
+La tabla anterior puede parecer pequeña en algunos casos. Si necesita una tabla que abarque toda la pantalla (ancho completo), agréguela width: 100%al elemento <table>: */
+
+.table2 {
+    width: 100%;
+    text-align: center;
+}
+
+/* bordes dobles
+Observe que la tabla de los ejemplos anteriores tiene bordes dobles. Esto se debe a que tanto la tabla como los elementos <th> y <td> tienen bordes separados.
+
+Para eliminar los bordes dobles, eche un vistazo al siguiente ejemplo. */
+
+/* Contraer bordes de tabla
+La border-collapsepropiedad establece si los bordes de la tabla deben contraerse en un solo borde: */
+
+.table3 {
+    border-collapse: collapse;
+}
