@@ -1,0 +1,90 @@
+/* Desbordamiento de CSS
+La overflowpropiedad especifica si recortar el contenido o agregar barras de desplazamiento cuando el contenido de un elemento es demasiado grande para caber en el área especificada.
+
+La overflowpropiedad tiene los siguientes valores:
+
+visible- Defecto. El desbordamiento no se recorta. El contenido se muestra fuera de la caja del elemento.
+hidden- El desbordamiento se recorta y el resto del contenido será invisible
+scroll- El desbordamiento se recorta y se agrega una barra de desplazamiento para ver el resto del contenido
+auto- Similar a scroll, pero agrega barras de desplazamiento solo cuando es necesario */
+
+/* Nota: la overflowpropiedad solo funciona para elementos de bloque con una altura especificada.
+
+Nota: En OS X Lion (en Mac), las barras de desplazamiento están ocultas de forma predeterminada y solo se muestran cuando se usan (aunque esté configurado "desbordamiento: desplazamiento"). */
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.div {
+  width: 200px;
+  background-color: coral;
+  height: 65px;
+  border: 3px solid;
+}
+
+/* desbordamiento: visible
+De forma predeterminada, el desbordamiento es visible, lo que significa que no se recorta y se representa fuera del cuadro del elemento: */
+
+.div01 {
+  overflow: visible;
+  margin-bottom: 60px;
+}
+
+/* desbordamiento: oculto
+Con el hiddenvalor, el desbordamiento se recorta y el resto del contenido se oculta: */
+
+.div02 {
+  overflow: hidden;
+}
+
+/* desbordamiento: desplazamiento
+Al establecer el valor en scroll, el desbordamiento se recorta y se agrega una barra de desplazamiento para desplazarse dentro del cuadro. Tenga en cuenta que esto agregará una barra de desplazamiento tanto horizontal como verticalmente (incluso si no la necesita): */
+
+.div03 {
+  overflow: scroll;
+  resize: both;
+}
+
+/* desbordamiento: automático
+El autovalor es similar a scroll, pero agrega barras de desplazamiento solo cuando es necesario: */
+
+.div04 {
+  overflow: auto;
+  resize: both;
+}
+
+/* desbordamiento-x y desbordamiento-y
+Las propiedades overflow-xy overflow-yespecifican si cambiar el desbordamiento de contenido solo horizontal o verticalmente (o ambos):
+
+overflow-xespecifica qué hacer con los bordes izquierdo/derecho del contenido.
+overflow-yespecifica qué hacer con los bordes superior/inferior del contenido. */
+
+.div05 {
+  overflow-y: scroll;
+}
+
+/* La overflow-wrap propiedad especifica si el navegador puede o no romper líneas con palabras largas, si desbordan el contenedor. */
+
+.divWrap {
+  width: 150px;
+  border: 3px solid black;
+  margin-top: 30px;
+}
+
+div.a {
+  overflow-wrap: normal;
+}
+
+div.b {
+  overflow-wrap: anywhere;
+}
+
+div.c {
+  overflow-wrap: break-word;
+}
+
+/* https://youtu.be/UOKQ6gw21NA */
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap */
