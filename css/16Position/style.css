@@ -1,0 +1,133 @@
+/* La position propiedad especifica el tipo de método de posicionamiento utilizado para un elemento (estático, relativo, fijo, absoluto o pegajoso). */
+
+/* La propiedad de posición
+La positionpropiedad especifica el tipo de método de posicionamiento utilizado para un elemento.
+
+Hay cinco valores de posición diferentes:
+
+static
+relative
+fixed
+absolute
+sticky */
+
+/* A continuación, los elementos se colocan utilizando las propiedades superior, inferior, izquierda y derecha. Sin embargo, estas propiedades no funcionarán a menos que la position propiedad se establezca primero. También funcionan de manera diferente según el valor de la posición. */
+
+/* posición: estática;
+Los elementos HTML se colocan estáticos de forma predeterminada.
+
+Los elementos posicionados estáticos no se ven afectados por las propiedades superior, inferior, izquierda y derecha.
+
+Un elemento con position: static;no está posicionado de ninguna manera especial; siempre se posiciona de acuerdo con el flujo normal de la página:
+
+Este elemento <div> tiene posición: estática;
+Aquí está el CSS que se utiliza: */
+
+div.static {
+  position: static;
+  border: 2px solid;
+}
+
+/* posición: relativa;
+Un elemento con position: relative;se coloca en relación con su posición normal.
+
+Establecer las propiedades superior, derecha, inferior e izquierda de un elemento relativamente posicionado hará que se ajuste fuera de su posición normal. El resto del contenido no se ajustará para encajar en ningún espacio dejado por el elemento.
+
+Este elemento <div> tiene posición: relativa;
+Aquí está el CSS que se utiliza: */
+
+div.relative {
+  position: relative;
+  left: 100px;
+  top: 50px;
+  border: 3px solid;
+}
+
+/* posición: fija;
+Un elemento con position: fixed;se coloca en relación con la ventana gráfica, lo que significa que siempre permanece en el mismo lugar, incluso si se desplaza la página. Las propiedades superior, derecha, inferior e izquierda se utilizan para colocar el elemento.
+
+Un elemento fijo no deja un espacio en la página donde normalmente habría estado ubicado.
+
+Observe el elemento fijo en la esquina inferior derecha de la página. Aquí está el CSS que se utiliza:
+
+Ejemplo */
+
+div.fixed {
+  border: 3px solid;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+/* posición: absoluta;
+Un elemento con position: absolute;se coloca en relación con el ancestro posicionado más cercano (en lugar de posicionarse en relación con la ventana gráfica, como fijo).
+
+Sin embargo; si un elemento con posición absoluta no tiene ancestros con posición, utiliza el cuerpo del documento y se mueve junto con el desplazamiento de la página.
+
+Nota: Los elementos de posición absoluta se eliminan del flujo normal y pueden superponerse a los elementos.
+
+Aquí hay un ejemplo simple:
+
+Este elemento <div> tiene posición: relativa;Este elemento <div> tiene posición: absoluta;
+Aquí está el CSS que se utiliza: */
+
+div.relative02 {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border: 3px solid;
+  margin-top: 80px;
+}
+
+div.absolute {
+  border: 3px solid;
+  position: absolute;
+  right: 10px;
+  top: 80px;
+  width: 200px;
+  height: 100px;
+}
+
+/* posición: pegajosa;
+Un elemento con position: sticky;se posiciona en función de la posición de desplazamiento del usuario.
+
+Un elemento fijo alterna entre relativey fixed, dependiendo de la posición de desplazamiento. Se coloca en relación hasta que se alcanza una posición de desplazamiento determinada en la ventana gráfica; luego, se "pega" en su lugar (como posición: fija). */
+
+/* Nota: Internet Explorer no admite el posicionamiento fijo. Safari requiere un prefijo -webkit- (ver ejemplo a continuación). También debe especificar al menos uno de , topo para que funcione el posicionamiento fijo.right bottom left */
+
+/* En este ejemplo, el elemento adhesivo se adhiere a la parte superior de la página ( top: 0), cuando llega a su posición de desplazamiento. */
+
+p {
+  margin-top: 100px;
+}
+
+div.sticky {
+  border: 3px solid black;
+  margin-top: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: green;
+  color: #fff;
+}
+
+/* Posicionar texto en una imagen */
+
+.container {
+  position: relative;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+}
+
+.container p {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  margin: 0;
+  font-size: 40px;
+  font-weight: bold;
+}
