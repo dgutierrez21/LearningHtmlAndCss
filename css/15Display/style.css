@@ -1,0 +1,145 @@
+/* La displaypropiedad es la propiedad CSS más importante para controlar el diseño. */
+
+/* La propiedad de visualización
+La displaypropiedad especifica si/cómo se muestra un elemento.
+
+Cada elemento HTML tiene un valor de visualización predeterminado según el tipo de elemento que sea. El valor de visualización predeterminado para la mayoría de los elementos es blocko inline. */
+
+/* Elementos a nivel de bloque
+Un elemento a nivel de bloque siempre comienza en una nueva línea y ocupa todo el ancho disponible (se extiende hacia la izquierda y hacia la derecha tanto como sea posible).
+
+El elemento <div> es un elemento a nivel de bloque.
+Ejemplos de elementos a nivel de bloque:
+
+<div>
+<h1> - <h6>
+<p>
+<form>
+<header>
+<footer>
+<section> */
+
+/* Elementos en línea
+Un elemento en línea no comienza en una nueva línea y solo ocupa el ancho necesario.
+
+Este es un elemento <span> en línea dentro de un párrafo.
+
+Ejemplos de elementos en línea:
+
+<span>
+<a>
+<img> */
+
+/* display: none ;
+display: none;se usa comúnmente con JavaScript para ocultar y mostrar elementos sin eliminarlos ni volver a crearlos. */
+
+/* Anular el valor de visualización predeterminado
+Como se mencionó, cada elemento tiene un valor de visualización predeterminado. Sin embargo, puede anular esto.
+
+Cambiar un elemento en línea a un elemento de bloque, o viceversa, puede ser útil para hacer que la página se vea de una manera específica y seguir los estándares web.
+
+Un ejemplo común es crear <li>elementos en línea para menús horizontales: */
+
+ul li {
+  display: inline;
+}
+
+/* Nota: Establecer la propidad de visualización de un elemento solo cambia la forma en que se muestra el elemento , NO el tipo de elemento que es. Por lo tanto, un elemento en línea con display: block;no puede tener otros elementos de bloque dentro. */
+
+/* El siguiente ejemplo muestra elementos <span> como elementos de bloque: */
+
+span {
+  display: block;
+}
+
+/* El siguiente ejemplo muestra elementos <a> como elementos de bloque: */
+
+a {
+  display: block;
+}
+
+/* Se puede ocultar un elemento estableciendo la displaypropiedad en none. El elemento se ocultará y la página se mostrará como si el elemento no estuviera allí: */
+
+h2 {
+  display: none;
+}
+
+h3 {
+  visibility: hidden;
+}
+
+/* La pantalla: valor de bloque en línea
+En comparación con display: inline, la principal diferencia es que display: inline-blockpermite establecer un ancho y alto en el elemento.
+
+Además, con display: inline-block, se respetan los márgenes/rellenos superior e inferior, pero con display: inline no.
+
+En comparación con display: block, la principal diferencia es que display: inline-block no agrega un salto de línea después del elemento, por lo que el elemento puede ubicarse junto a otros elementos.
+
+El siguiente ejemplo muestra el diferente comportamiento de display: inline, display: inline-block y display: block: */
+
+h4 {
+  font-size: 20px;
+}
+
+.a {
+  display: inline; /*Valor por defecto en el elemento span*/
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;
+  background-color: yellow;
+}
+
+.b {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;
+  background-color: yellow;
+}
+
+.c {
+  display: block;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;
+  background-color: yellow;
+}
+
+/* Uso de bloques en línea para crear enlaces de navegación
+Un uso común para display: inline-block es mostrar los elementos de la lista horizontalmente en lugar de verticalmente. El siguiente ejemplo crea enlaces de navegación horizontales: */
+
+.nav {
+  background-color: black;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul {
+  list-style-type: none;
+}
+
+.nav li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+  margin: 0px -5px;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+  margin: 0;
+}
+
+.nav li a:hover {
+  color: red;
+}
+
+.nav2 li {
+  display: inline-block;
+}
