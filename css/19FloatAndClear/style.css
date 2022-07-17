@@ -1,0 +1,132 @@
+/* La propiedad flotante
+La floatpropiedad se utiliza para posicionar y dar formato al contenido, por ejemplo, dejar que una imagen flote a la izquierda del texto en un contenedor.
+
+La floatpropiedad puede tener uno de los siguientes valores:
+
+left- El elemento flota a la izquierda de su contenedor
+right- El elemento flota a la derecha de su contenedor
+none- El elemento no flota (se mostrará justo donde aparece en el texto). esto es por defecto
+inherit- El elemento hereda el valor flotante de su padre
+En su uso más simple, la floatpropiedad se puede usar para envolver texto alrededor de imágenes. */
+
+.img1 {
+  width: 170px;
+  float: right;
+  margin: 0 20px;
+}
+
+.img2 {
+  width: 170px;
+  float: left;
+  margin: 0 20px;
+}
+
+.img3 {
+  width: 170px;
+  float: none;
+  margin: 0 20px;
+}
+
+/* Ejemplo: flotar uno al lado del otro
+Normalmente, los elementos div se mostrarán uno encima del otro. Sin embargo, si usamos float: leftpodemos dejar que los elementos floten uno al lado del otro: */
+
+.divFloat {
+  width: 50px;
+  height: 50px;
+  float: left;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.d1 {
+  background-color: red;
+}
+
+.d2 {
+  background-color: green;
+}
+
+.d3 {
+  background-color: blue;
+}
+
+.clearh2 {
+  clear: left;
+}
+
+/* La propiedad clara
+Cuando usamos la floatpropiedad, y queremos el siguiente elemento debajo (no a la derecha ni a la izquierda), tendremos que usar la clear propiedad.
+
+La clearpropiedad especifica lo que debería suceder con el elemento que está al lado de un elemento flotante.
+
+La clearpropiedad puede tener uno de los siguientes valores:
+
+none- El elemento no se empuja debajo de los elementos flotantes izquierdo o derecho. esto es por defecto
+left- El elemento se empuja debajo de los elementos flotantes izquierdos
+right- El elemento se empuja debajo de los elementos flotantes a la derecha
+both- El elemento se empuja debajo de los elementos flotantes izquierdo y derecho
+inherit- El elemento hereda el valor claro de su padre
+Al borrar flotantes, debe hacer coincidir el claro con el flotante: si un elemento flota hacia la izquierda, entonces debe borrar hacia la izquierda. Su elemento flotante seguirá flotando, pero el elemento borrado aparecerá debajo de él en la página web. */
+
+.divClear1,
+.divClear2,
+.divClear3,
+.divClear4 {
+  border: 3px solid;
+}
+
+.divClear1,
+.divClear3 {
+  border-color: green;
+  width: 50px;
+  float: left;
+}
+
+.divClear2,
+.divClear4 {
+  border-color: red;
+}
+
+.divClear4 {
+  clear: left;
+}
+
+/* El truco del arreglo claro
+Si un elemento flotante es más alto que el elemento contenedor, se "desbordará" fuera de su contenedor. Luego podemos agregar un truco clearfix para resolver este problema: */
+
+/* Clearfix overflow: auto funciona bien siempre que pueda mantener el control de sus márgenes y relleno (de lo contrario, es posible que vea barras de desplazamiento). Sin embargo, el nuevo y moderno truco clearfix es más seguro de usar, y el siguiente código se usa para la mayoría de las páginas web: */
+
+.divSinClearFix {
+  border: 2px solid green;
+  padding: 5px;
+}
+
+.divSinClearFix img {
+  float: right;
+}
+
+h2.afterdiv {
+  clear: right;
+}
+
+.divConClearFix img {
+  float: right;
+}
+
+.divConClearFix {
+  border: 2px solid green;
+  padding: 5px;
+}
+
+.divConClearFix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* https://www.youtube.com/watch?v=VsYqbdBOP50 */
+
+/* Más Ejemplos Float  */
+
+/* https://www.w3schools.com/css/css_float_examples.asp */
