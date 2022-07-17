@@ -1,0 +1,112 @@
+/* ¿Qué son las pseudoclases?
+Una pseudoclase se usa para definir un estado especial de un elemento.
+
+Por ejemplo, se puede utilizar para:
+
+Aplicar estilo a un elemento cuando un usuario pasa el mouse sobre él
+Estilo de enlaces visitados y no visitados de manera diferente
+Dale estilo a un elemento cuando se enfoca */
+
+/* Sintaxis
+La sintaxis de las pseudoclases:
+
+selector:pseudo-class {
+property: value;
+} */
+
+.div1 a {
+  font-size: 30px;
+  margin: 0 20px;
+}
+
+.enlace1:link {
+  color: brown;
+}
+
+.enlace1:visited {
+  color: chartreuse;
+}
+
+.enlace1:hover {
+  color: darkorange;
+}
+
+.enlace1:active {
+  color: deeppink;
+}
+
+.div1 a:nth-child(even) {
+  text-decoration: none;
+}
+
+/* Botones de enlace
+Este ejemplo muestra un ejemplo más avanzado en el que combinamos varias propiedades de CSS para mostrar enlaces como cuadros/botones: */
+
+.btnEnlace {
+  background-color: #f44;
+  color: white;
+  padding: 14px 26px;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+  border-radius: 50px;
+}
+
+.btnEnlace:hover {
+  background-color: black;
+}
+
+/* CSS - La pseudo-clase :first-child
+La :first-childpseudoclase coincide con un elemento específico que es el primer hijo de otro elemento.
+
+Coincide con el primer elemento <p>
+En el siguiente ejemplo, el selector coincide con cualquier elemento <p> que sea el primer hijo de cualquier elemento: */
+
+.div2 p:first-child {
+  background-color: yellow;
+}
+
+.div3 p i:first-child {
+  color: blue;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Hacer coincidir todos los elementos <i> en todos los primeros elementos secundarios <p>
+En el siguiente ejemplo, el selector coincide con todos los elementos <i> en los elementos <p> que son el primer hijo de otro elemento: */
+
+.div4 p:first-child i {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn {
+  background-color: #f44;
+  color: white;
+  padding: 14px 26px;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+  border-radius: 50px;
+}
+
+.pHover {
+  padding: 20px;
+  background-color: yellow;
+  transition: all 0.3s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn:hover + .pHover {
+  opacity: 1;
+}
+
+/* TODAS LAS PSEUDO-CLASES */
+
+/* https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes#indice_de_las_pseudo-clases_est%C3%A1ndar */
