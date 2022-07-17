@@ -1,0 +1,49 @@
+/* Combinadores de CSS
+Un combinador es algo que explica la relación entre los selectores.
+
+Un selector CSS puede contener más de un selector simple. Entre los selectores simples, podemos incluir un combinador.
+
+Hay cuatro combinadores diferentes en CSS:
+
+selector de descendientes (espacio)
+selector de niños (>)
+selector de hermano adyacente (+)
+selector general de hermanos (~) */
+
+/* Selector de descendientes
+El selector de descendientes coincide con todos los elementos que son descendientes de un elemento especificado.
+
+El siguiente ejemplo selecciona todos los elementos <p> dentro de los elementos <div>:  */
+
+.div1 p {
+  background-color: yellow;
+}
+
+/* Selector de niños (>)
+El selector de niños selecciona todos los elementos que son los niños de un elemento específico.
+
+El siguiente ejemplo selecciona todos los elementos <p> que son hijos de un elemento <div>: */
+
+.div2 > p {
+  background-color: yellow;
+}
+
+/* Selector de hermanos adyacentes (+)
+El selector de hermanos adyacente se usa para seleccionar un elemento que está directamente después de otro elemento específico.
+
+Los elementos hermanos deben tener el mismo elemento principal, y "adyacente" significa "inmediatamente después".
+
+El siguiente ejemplo selecciona el primer elemento <p> que se coloca inmediatamente después de los elementos <div>: */
+
+.div3 + p {
+  background-color: yellow;
+}
+
+/* Selector general de hermanos (~)
+El selector de hermanos general selecciona todos los elementos que son hermanos siguientes de un elemento específico.
+
+El siguiente ejemplo selecciona todos los elementos <p> que son los siguientes hermanos de los elementos <div>:  */
+
+.div4 ~ p {
+    background-color: yellow;
+}
