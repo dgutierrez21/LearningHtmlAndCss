@@ -1,0 +1,132 @@
+/* ¿Qué son los pseudoelementos?
+Un pseudo-elemento CSS se usa para diseñar partes específicas de un elemento.
+
+Por ejemplo, se puede utilizar para:
+
+Aplicar estilo a la primera letra, o línea, de un elemento
+Insertar contenido antes o después del contenido de un elemento */
+
+/* Sintaxis
+La sintaxis de los pseudo-elementos:
+
+selector::pseudo-element {
+property: value;
+} */
+
+/* El ::pseudoelemento de primera línea
+El ::first-linepseudo-elemento se usa para agregar un estilo especial a la primera línea de un texto.
+
+El siguiente ejemplo da formato a la primera línea del texto en todos los elementos <p>: */
+
+/* Nota: el ::first-line pseudoelemento solo se puede aplicar a elementos a nivel de bloque.
+
+Las siguientes propiedades se aplican al ::first-line pseudo-elemento:
+
+propiedades de la fuente
+propiedades del color
+propiedades de fondo
+espacio entre palabras
+espaciado de letras
+decoración de texto
+alineación vertical
+transformación de texto
+altura de la línea
+claro */
+
+p {
+  font-size: 30px;
+}
+
+.p1,
+.p2,
+.p3 {
+  width: 700px;
+}
+
+.p1::first-line {
+  color: red;
+}
+
+/* El pseudoelemento ::primera letra
+El ::first-letterpseudo-elemento se usa para agregar un estilo especial a la primera letra de un texto.
+
+El siguiente ejemplo da formato a la primera letra del texto en todos los elementos <p>:  */
+
+/* Nota: el ::first-letterpseudoelemento solo se puede aplicar a elementos a nivel de bloque.
+
+Las siguientes propiedades se aplican al pseudoelemento ::primera letra: 
+
+propiedades de la fuente
+propiedades del color 
+propiedades de fondo
+propiedades de margen
+propiedades de relleno
+propiedades de borde
+decoración de texto
+alineación vertical (solo si "flotante" es "ninguno")
+transformación de texto
+altura de la línea
+flotar
+claro */
+
+.p2::first-letter {
+  color: blue;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.p3::first-line {
+  color: red;
+}
+
+.p3::first-letter {
+  color: blue;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* CSS - El ::antes del pseudo-elemento
+El ::beforepseudo-elemento se puede utilizar para insertar algún contenido antes del contenido de un elemento.
+
+El siguiente ejemplo inserta una imagen antes del contenido de cada elemento <h1>: */
+
+.p4::before {
+  content: url("https://findicons.com/files/icons/376/the_blacy/128/big_smile.png");
+}
+
+/* CSS - El ::después del pseudo-elemento
+El ::after pseudoelemento se puede utilizar para insertar algún contenido después del contenido de un elemento.
+
+El siguiente ejemplo inserta una imagen después del contenido de cada elemento <h1>: */
+
+.p4::after {
+  content: url("https://findicons.com/files/icons/814/very_emotional/128/idiotic_smile.png");
+}
+
+/* CSS - El pseudoelemento ::marker
+El ::markerpseudo-elemento selecciona los marcadores de los elementos de la lista.
+
+El siguiente ejemplo aplica estilo a los marcadores de los elementos de la lista: */
+.ul1 li {
+  font-size: 30px;
+}
+
+.ul1 li::marker {
+  color: red;
+}
+
+/* CSS - El pseudo-elemento ::selection
+El ::selectionpseudoelemento coincide con la parte de un elemento que selecciona un usuario.
+
+Las siguientes propiedades CSS se pueden aplicar a ::selection: color, background, cursory outline.
+
+El siguiente ejemplo hace que el texto seleccionado sea rojo sobre un fondo amarillo: */
+
+::selection {
+  color: red;
+  background-color: yellow;
+}
+
+/* Lista completa */
+
+/* https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements#lista_de_pseudoelementos */
