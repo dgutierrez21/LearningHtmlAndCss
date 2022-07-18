@@ -1,0 +1,157 @@
+/* CSS Múltiples Fondos
+CSS le permite agregar múltiples imágenes de fondo para un elemento, a través de la background-imagepropiedad.
+
+Las diferentes imágenes de fondo están separadas por comas y las imágenes se apilan una encima de la otra, donde la primera imagen está más cerca del espectador.
+
+El siguiente ejemplo tiene dos imágenes de fondo, la primera imagen es una flor (alineada en la parte inferior y derecha) y la segunda imagen es un fondo de papel (alineado en la esquina superior izquierda): */
+
+.div1,
+.div2,
+.div3,
+.div4 {
+  margin-top: 30px;
+}
+
+.div1 {
+  background-image: url("https://www.w3schools.com/css/img_flwr.gif"),
+    url("https://www.w3schools.com/css/paper.gif");
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+  padding: 15px;
+}
+
+/* Se pueden especificar varias imágenes de fondo utilizando las propiedades de fondo individuales (como se indica arriba) o la backgroundpropiedad abreviada.
+
+El siguiente ejemplo usa la backgroundpropiedad abreviada (mismo resultado que el ejemplo anterior): */
+
+.div2 {
+  background: url("https://www.w3schools.com/css/img_flwr.gif") right bottom
+      no-repeat,
+    url("https://www.w3schools.com/css/paper.gif") left top repeat;
+  padding: 15px;
+}
+
+/* Tamaño de fondo CSS
+La propiedad CSS background-sizele permite especificar el tamaño de las imágenes de fondo.
+
+El tamaño se puede especificar en longitudes, porcentajes o usando una de las dos palabras clave: contener o cubrir.
+
+El siguiente ejemplo cambia el tamaño de una imagen de fondo a mucho más pequeña que la imagen original (usando píxeles): */
+
+.div3 {
+  background: url("https://www.w3schools.com/css/img_flwr.gif") left top
+      no-repeat,
+    url("https://www.w3schools.com/css/paper.gif") left top repeat;
+  background-size: 100px 80px;
+  padding: 15px;
+}
+
+.div4 {
+  background: url("https://www.w3schools.com/css/img_tree.gif") left top
+      no-repeat,
+    url("https://www.w3schools.com/css/img_flwr.gif") right bottom no-repeat,
+    url("https://www.w3schools.com/css/paper.gif") left top repeat;
+  padding: 15px;
+  background-size: 50px, 200px, auto;
+}
+
+/* Imagen de fondo de tamaño completo
+Ahora queremos tener una imagen de fondo en un sitio web que cubra toda la ventana del navegador en todo momento.
+
+Los requisitos son los siguientes:
+
+Rellene toda la página con la imagen (sin espacios en blanco)
+Escale la imagen según sea necesario
+Centrar la imagen en la página
+No causar barras de desplazamiento
+El siguiente ejemplo muestra cómo hacerlo; Utilice el elemento <html> (el elemento <html> siempre tiene al menos la altura de la ventana del navegador). Luego establezca un fondo fijo y centrado en él. Luego ajusta su tamaño con la propiedad background-size: */
+
+html {
+  background: url("https://www.w3schools.com/css/img_man.jpg") no-repeat center
+    fixed;
+  background-size: cover;
+}
+
+/* Imagen de hero
+También puede usar diferentes propiedades de fondo en un <div> para crear una imagen de héroe (una imagen grande con texto) y colocarla donde desee. */
+
+.heroImg {
+  background: url("https://www.w3schools.com/css/img_man.jpg") no-repeat center;
+  background-size: cover;
+  height: 500px;
+  color: #fff;
+  position: relative;
+}
+
+.heroText {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heroText h2 {
+  font-size: 32px;
+}
+
+.heroText button {
+  cursor: pointer;
+}
+
+/* Propiedad de origen de fondo CSS
+La propiedad CSS background-originespecifica dónde se coloca la imagen de fondo.
+
+La propiedad toma tres valores diferentes:
+
+border-box: la imagen de fondo comienza en la esquina superior izquierda del borde
+padding-box - (predeterminado) la imagen de fondo comienza desde la esquina superior izquierda del borde del relleno
+cuadro de contenido: la imagen de fondo comienza en la esquina superior izquierda del contenido
+El siguiente ejemplo ilustra la background-originpropiedad: */
+
+.divOrigin {
+  border: 10px solid red;
+  padding: 35px;
+  background: url("https://www.w3schools.com/css/img_flwr.gif");
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+
+.div5 {
+  background-origin: padding-box; /* Valor por defecto */
+}
+
+.div6 {
+  background-origin: border-box;
+}
+
+.div7 {
+  background-origin: content-box;
+}
+
+/* Propiedad CSS background-clip
+La propiedad CSS background-clipespecifica el área de pintura del fondo.
+
+La propiedad toma tres valores diferentes:
+
+border-box - (predeterminado) el fondo se pinta en el borde exterior del borde
+padding-box: el fondo está pintado en el borde exterior del relleno
+cuadro de contenido: el fondo se pinta dentro del cuadro de contenido
+El siguiente ejemplo ilustra la background-clippropiedad: */
+
+.divClip {
+  border: 10px dotted red;
+  margin-top: 30px;
+  background-color: yellow;
+  padding: 35px;
+}
+
+.div8 {
+  background-clip: border-box; /* Valor por defecto */
+}
+.div9 {
+  background-clip: padding-box;
+}
+.div10 {
+  background-clip: content-box;
+}
