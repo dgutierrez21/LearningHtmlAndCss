@@ -1,0 +1,55 @@
+/* Imágenes de borde CSS
+Con la propiedad CSS border-image, puede configurar una imagen para que se use como borde alrededor de un elemento.
+
+Propiedad de imagen de borde CSS
+La propiedad CSS border-imagele permite especificar una imagen para usar en lugar del borde normal alrededor de un elemento.
+
+La propiedad tiene tres partes:
+
+La imagen a usar como borde
+Dónde cortar la imagen
+Defina si las secciones intermedias deben repetirse o estirarse
+Usaremos la siguiente imagen (llamada "border.png"):
+
+Borde
+
+La border-imagepropiedad toma la imagen y la divide en nueve secciones, como un tablero de tres en raya. Luego coloca las esquinas en las esquinas y las secciones centrales se repiten o se estiran según lo especifique.
+
+Nota: ¡ Para border-imageque funcione, el elemento también necesita el borderconjunto de propiedades!
+
+Aquí, las secciones centrales de la imagen se repiten para crear el borde: */
+
+div {
+  margin-top: 30px;
+}
+
+.div1 {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url("https://www.w3schools.com/css/border.png") 30 round;
+}
+
+/* Aquí, las secciones centrales de la imagen se estiran para crear el borde: */
+
+.div2 {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url("https://www.w3schools.com/css/border.png") 30 stretch;
+}
+
+/* Sugerencia: La border-imagepropiedad es en realidad una propiedad abreviada de las propiedades border-image-source, border-image-slice, border-image-widthy .border-image-outsetborder-image-repeat */
+
+/* CSS border-image - Diferentes valores de sector
+Diferentes valores de corte cambian completamente el aspecto del borde: */
+
+.div3 {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url("https://www.w3schools.com/css/border.png") 30% round;
+}
+
+.div4 {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url("https://www.w3schools.com/css/border.png") 15% stretch;
+}
