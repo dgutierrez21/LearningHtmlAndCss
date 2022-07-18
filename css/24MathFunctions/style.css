@@ -1,0 +1,46 @@
+/* Las funciones matemáticas de CSS permiten utilizar expresiones matemáticas como valores de propiedad. Aquí, explicaremos las funciones calc(), max()y min(). */
+
+/* La función calc()
+La calc()función realiza un cálculo para ser utilizado como el valor de la propiedad. */
+
+/* Sintaxis CSS
+calc(expression) */
+
+div {
+  background-color: red;
+  padding: 10px;
+  border: 3px solid black;
+  color: #fff;
+}
+
+.div1 {
+  width: calc(100% - 800px);
+  position: absolute;
+  left: 400px;
+}
+
+/* La función max()
+La max()función utiliza el valor más grande, de una lista de valores separados por comas, como valor de propiedad.
+
+Sintaxis CSS
+max(value1, value2, ...) */
+
+.div2 {
+  background-color: blue;
+  color: #fff;
+  height: 100px;
+  width: max(50%, 300px);
+}
+
+/* La función min()
+La min()función utiliza el valor más pequeño, de una lista de valores separados por comas, como valor de propiedad.
+
+Sintaxis CSS
+min(value1, value2, ...) */
+
+.div3 {
+  background-color: yellow;
+  height: 100px;
+  width: min(50%, 300px);
+  color: black;
+}
