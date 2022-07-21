@@ -1,0 +1,158 @@
+/* Transformaciones CSS 2D
+Las transformaciones CSS le permiten mover, rotar, escalar y sesgar elementos.
+
+*/
+
+/* Métodos de transformación CSS 2D
+Con la propiedad CSS transformpuede utilizar los siguientes métodos de transformación 2D:
+
+translate()
+rotate()
+scaleX()
+scaleY()
+scale()
+skewX()
+skewY()
+skew()
+matrix() */
+
+/* El método translate
+
+El translate()método mueve un elemento desde su posición actual (según los parámetros dados para el eje X y el eje Y).
+
+El siguiente ejemplo mueve el elemento <div> 50 píxeles a la derecha y 100 píxeles hacia abajo desde su posición actual: */
+
+.divFlex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 200px;
+  justify-content: center;
+  margin-bottom: 300px;
+}
+
+.divT {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.div1 {
+  transform: translate(-200px, 200px);
+}
+
+/* El método rotar()
+Girar
+El rotate()método gira un elemento en el sentido de las agujas del reloj o en el sentido contrario a las agujas del reloj según un grado determinado.
+
+El siguiente ejemplo gira el elemento <div> en el sentido de las agujas del reloj 20 grados: */
+
+.div2 {
+  transform: rotate(20deg);
+}
+
+/* El uso de valores negativos rotará el elemento en sentido contrario a las agujas del reloj.
+
+El siguiente ejemplo gira el elemento <div> en sentido contrario a las agujas del reloj 20 grados: */
+
+.div3 {
+  transform: rotate(-20deg);
+}
+
+/* El método scale()
+Escala
+El scale()método aumenta o disminuye el tamaño de un elemento (según los parámetros dados para el ancho y alto).
+
+El siguiente ejemplo aumenta el elemento <div> para que sea dos veces su ancho original y tres veces su altura original:  */
+
+.div4 {
+  transform: scale(2, 3);
+}
+
+/* El siguiente ejemplo reduce el elemento <div> a la mitad de su ancho y alto originales:  */
+
+.div5 {
+  transform: scale(0.5);
+}
+
+/* El método scaleX()
+El scaleX()método aumenta o disminuye el ancho de un elemento.
+
+El siguiente ejemplo aumenta el elemento <div> al doble de su ancho original:  */
+
+.div6 {
+  transform: scaleX(2);
+  /* #2 forma */
+  transform: scale(2, 1);
+}
+
+/* El siguiente ejemplo reduce el elemento <div> a la mitad de su ancho original:  */
+
+.div7 {
+  transform: scaleX(0.5);
+  /* #2 forma */
+  transform: scale(0.5, 1);
+}
+
+/* El método scaleY()
+El scaleY()método aumenta o disminuye la altura de un elemento.
+
+El siguiente ejemplo aumenta el elemento <div> al triple de su altura original */
+
+.div8 {
+  transform: scaleY(2);
+  /* Forma 2 */
+  transform: scale(1, 2);
+}
+
+/* El siguiente ejemplo reduce el elemento <div> a la mitad de su altura original:  */
+
+.div9 {
+  transform: scaleY(0.5);
+  /* forma 2 */
+  transform: scale(1, 0.5);
+}
+
+/* El método skewX()
+El skewX()método sesga un elemento a lo largo del eje X en el ángulo dado.
+
+El siguiente ejemplo sesga el elemento <div> 20 grados a lo largo del eje X: */
+
+.div10 {
+  transform: skewX(20deg);
+}
+
+/* El método skewY()
+El skewY()método sesga un elemento a lo largo del eje Y por el ángulo dado.
+
+El siguiente ejemplo sesga el elemento <div> 20 grados a lo largo del eje Y: */
+
+.div11 {
+  transform: skewY(20deg);
+}
+
+/* El método sesgado()
+El skew()método sesga un elemento a lo largo de los ejes X e Y en los ángulos dados.
+
+El siguiente ejemplo sesga el elemento <div> 20 grados a lo largo del eje X y 10 grados a lo largo del eje Y: */
+
+.div12 {
+  transform: skew(-40deg, -10deg);
+}
+
+/* Si no se especifica el segundo parámetro, tiene valor cero. Entonces, el siguiente ejemplo sesga el elemento <div> 20 grados a lo largo del eje X: */
+
+.div13 {
+  transform: skew(40deg);
+}
+
+/* El método matrix()
+Girar
+El matrix()método combina todos los métodos de transformación 2D en uno.
+
+El método matrix() toma seis parámetros, que contienen funciones matemáticas, que le permiten rotar, escalar, mover (traducir) y sesgar elementos.
+
+Los parámetros son los siguientes: matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY()) */
+
+.div14 {
+  transform: matrix(1, -0.3, 0, 1, 0, 0);
+}
