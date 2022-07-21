@@ -1,0 +1,42 @@
+/* Métodos de transformación CSS 3D
+Con la propiedad CSS transform puede utilizar los siguientes métodos de transformación 3D:
+
+rotateX()
+rotateY()
+rotateZ() */
+
+/* El método de rotaciónX()
+Rotar X
+El rotateX()método rota un elemento alrededor de su eje X en un grado dado: */
+
+.divFlex {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 100px;
+}
+
+.divT {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  color: #fff;
+  transition: transform 7s;
+    width: 200px;
+  height: 100px;
+}
+
+.div1:hover {
+  transform: rotateX(150deg);
+}
+
+.div2:hover {
+  transform: rotateY(150deg);
+}
+
+/* El método de rotación ()
+El rotateZ()método rota un elemento alrededor de su eje Z en un grado dado: */
+
+.div3:hover {
+  transform: rotateZ(150deg);
+}
