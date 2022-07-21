@@ -1,0 +1,105 @@
+/* Efectos de sombra CSS
+Con CSS puede agregar sombra al texto y a los elementos.
+
+En estos capítulos aprenderá acerca de las siguientes propiedades:
+
+text-shadow
+box-shadow
+Sombra de texto CSS
+La propiedad CSS text-shadowaplica sombra al texto.
+
+En su uso más simple, solo especificas la sombra horizontal (2px) y la sombra vertical (2px): */
+
+/* Alineacion en x | alineacion en y | desenfoque | color */
+
+p {
+  font-size: 30px;
+}
+
+h1 {
+  text-shadow: 2px 2px 5px red;
+}
+
+.p1 {
+  text-shadow: 0 0 3px #ff0000;
+}
+
+/* Múltiples Sombras
+Para agregar más de una sombra al texto, puede agregar una lista de sombras separadas por comas.
+
+El siguiente ejemplo muestra una sombra luminosa de neón roja y azul:
+
+¡Efecto de sombra de texto! */
+
+.p2 {
+  text-shadow: 0 0 3px red, 0 0 3px blue;
+}
+
+/* El siguiente ejemplo muestra un texto blanco con una sombra negra, azul y azul oscuro:
+
+¡Efecto de sombra de texto! */
+
+.p3 {
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+/* También puede usar la propiedad text-shadow para crear un borde simple alrededor de un texto (sin sombras):
+
+Borde alrededor del texto! */
+
+.p4 {
+  color: aqua;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/* Propiedad CSS box-shadow
+La propiedad CSS box-shadowse usa para aplicar una o más sombras a un elemento.
+
+Especifique una sombra horizontal y vertical
+En su uso más simple, solo especifica una sombra horizontal y una vertical. El color predeterminado de la sombra es el color del texto actual. */
+
+.div {
+  background-color: blue;
+  color: #fff;
+  width: 500px;
+  height: 100px;
+}
+
+/* Alineacion en x | alineacion en y | desenfoque | propagación | color | parametro de inserción */
+
+.div0 {
+  box-shadow: 10px 10px 5px 12px red inset;
+}
+
+.div1 {
+  box-shadow: 10px 10px 5px 12px red;
+}
+
+/* Agregar múltiples sombras
+Un elemento también puede tener múltiples sombras: */
+
+.div2 {
+  box-shadow: 10px 10px fuchsia, 20px 20px red, 30px 30px green;
+}
+
+/* Tarjetas
+También puede usar la box-shadowpropiedad para crear tarjetas de papel: */
+
+.target {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 150px 0 100px;
+}
+
+.target img {
+  width: 400px;
+}
+
+.target div {
+  width: 400px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
