@@ -1,0 +1,128 @@
+/* Animaciones CSS
+¡CSS permite la animación de elementos HTML sin usar JavaScript o Flash!
+
+CSS
+En este capítulo aprenderá acerca de las siguientes propiedades:
+
+@keyframes
+animation-name
+animation-duration
+animation-delay
+animation-iteration-count
+animation-direction
+animation-timing-function
+animation-fill-mode
+animation */
+
+/* ¿Qué son las animaciones CSS?
+Una animación permite que un elemento cambie gradualmente de un estilo a otro.
+
+Puede cambiar tantas propiedades CSS como desee, tantas veces como desee.
+
+Para usar la animación CSS, primero debe especificar algunos fotogramas clave para la animación.
+
+Los fotogramas clave contienen los estilos que tendrá el elemento en determinados momentos.
+
+La regla @keyframes
+Cuando especifica estilos CSS dentro de la @keyframes regla, la animación cambiará gradualmente del estilo actual al nuevo estilo en ciertos momentos.
+
+Para que una animación funcione, debe vincular la animación a un elemento.
+
+El siguiente ejemplo vincula la animación "example" al elemento <div>. La animación durará 4 segundos y cambiará gradualmente el color de fondo del elemento <div> de "rojo" a "amarillo": */
+
+.divFlex {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 100px;
+}
+
+.divA {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  color: #fff;
+}
+
+.div1 {
+  animation-name: div1;
+  animation-duration: 4s;
+}
+
+@keyframes div1 {
+  from {
+    background-color: blue;
+  }
+  to {
+    background-color: yellow;
+  }
+}
+
+/* Nota: La animation-durationpropiedad define cuánto tiempo debe tardar en completarse una animación. Si animation-durationno se especifica la propiedad, no se producirá ninguna animación, porque el valor predeterminado es 0s (0 segundos). 
+
+En el ejemplo anterior, hemos especificado cuándo cambiará el estilo usando las palabras clave "desde" y "hasta" (que representa 0 % (inicio) y 100 % (completado)).
+
+También es posible utilizar porcentaje. Al usar el porcentaje, puede agregar tantos cambios de estilo como desee.
+
+El siguiente ejemplo cambiará el color de fondo del elemento <div> cuando la animación esté completa en un 25 %, en un 50 % y nuevamente cuando la animación esté completa en un 100 %: */
+
+.div2 {
+  animation-name: div2;
+  animation-duration: 8s;
+}
+
+@keyframes div2 {
+  0% {
+    background-color: blue;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: red;
+  }
+  75% {
+    background-color: green;
+  }
+  100% {
+    background-color: deeppink;
+  }
+}
+
+.div3 {
+  position: absolute;
+  animation-name: div3;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-delay: 1.5s;
+  left: 10%;
+  top: 10%;
+}
+
+@keyframes div3 {
+  0% {
+    background-color: blue;
+    left: 10%;
+    top: 10%;
+  }
+  25% {
+    background-color: yellow;
+    left: 80%;
+    top: 10%;
+  }
+  50% {
+    background-color: red;
+    left: 80%;
+    top: 80%;
+  }
+  75% {
+    background-color: green;
+    left: 10%;
+    top: 80%;
+  }
+  100% {
+    background-color: blue;
+    left: 10%;
+    top: 10%;
+  }
+}
