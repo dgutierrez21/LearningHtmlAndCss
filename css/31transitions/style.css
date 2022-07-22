@@ -1,0 +1,148 @@
+/* Transiciones CSS
+Las transiciones de CSS le permiten cambiar los valores de propiedad sin problemas, durante un período determinado.
+
+CSS
+En este capítulo aprenderá acerca de las siguientes propiedades:
+
+transition
+transition-delay
+transition-duration
+transition-property
+transition-timing-function */
+
+/* ¿Cómo usar las transiciones CSS?
+Para crear un efecto de transición, debe especificar dos cosas:
+
+la propiedad CSS a la que desea agregar un efecto
+la duración del efecto
+Nota: Si no se especifica la parte de duración, la transición no tendrá efecto, porque el valor predeterminado es 0.
+
+El siguiente ejemplo muestra un elemento rojo <div> de 100px * 100px. El elemento <div> también ha especificado un efecto de transición para la propiedad de ancho, con una duración de 2 segundos: */
+
+.divFlex {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 100px;
+}
+
+.divT {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  color: #fff;
+}
+
+/* El efecto de transición comenzará cuando la propiedad CSS especificada (ancho) cambie de valor.
+
+Ahora, especifiquemos un nuevo valor para la propiedad de ancho cuando un usuario pasa el mouse sobre el elemento <div>: */
+
+.div1 {
+  transition: height 2s;
+}
+
+.div1:hover {
+  height: 200px;
+}
+
+/* Tenga en cuenta que cuando el cursor se aleja del elemento, volverá gradualmente a su estilo original. */
+
+/* Cambiar varios valores de propiedad
+El siguiente ejemplo agrega un efecto de transición para la propiedad ancho y alto, con una duración de 2 segundos para el ancho y 4 segundos para el alto: */
+
+.div2 {
+  transition: height 1s, width 3s;
+}
+
+.div2:hover {
+  width: 200px;
+  height: 200px;
+}
+
+/* Especificar la curva de velocidad de la transición
+La transition-timing-functionpropiedad especifica la curva de velocidad del efecto de transición.
+
+La propiedad Transition-timing-function puede tener los siguientes valores:
+
+ease- especifica un efecto de transición con un comienzo lento, luego rápido, luego termina lentamente (esto es predeterminado)
+linear- especifica un efecto de transición con la misma velocidad de principio a fin
+ease-in- especifica un efecto de transición con un comienzo lento
+ease-out- especifica un efecto de transición con un final lento
+ease-in-out- especifica un efecto de transición con un comienzo y un final lentos
+cubic-bezier(n,n,n,n)- le permite definir sus propios valores en una función cubic-bezier
+El siguiente ejemplo muestra algunas de las diferentes curvas de velocidad que se pueden utilizar: */
+
+.div3 {
+  transition: height 2s ease;
+}
+
+.div3:hover {
+  height: 200px;
+}
+
+.div4 {
+  transition: height 2s ease-in;
+}
+
+.div4:hover {
+  height: 200px;
+}
+.div5 {
+  transition: height 2s ease-in-out;
+}
+
+.div5:hover {
+  height: 200px;
+}
+.div6 {
+  transition: height 2s ease-out;
+}
+
+.div6:hover {
+  height: 200px;
+}
+.div7 {
+  transition: height 2s linear;
+}
+
+/* Retrasar el efecto de transición
+La transition-delaypropiedad especifica un retraso (en segundos) para el efecto de transición.
+
+El siguiente ejemplo tiene un retraso de 1 segundo antes de comenzar: */
+
+.div7 {
+  transition: height 2s linear 2s;
+}
+
+.div7:hover {
+  height: 200px;
+}
+
+/* Transición + Transformación
+El siguiente ejemplo agrega un efecto de transición a la transformación: */
+
+.cont {
+  position: relative;
+}
+
+.div8 {
+  transition: transform 2s ease-in-out, right 2s ease-in-out;
+  position: absolute;
+  right: 47%;
+}
+
+.div8.active {
+  right: 5%;
+  transform: rotateZ(1080deg);
+}
+
+.btn {
+  text-align: center;
+  margin: 0 auto;
+  padding: 15px;
+  margin-top: 50px;
+  background-color: crimson;
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+}
