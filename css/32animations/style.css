@@ -126,3 +126,346 @@ El siguiente ejemplo cambiará el color de fondo del elemento <div> cuando la an
     top: 10%;
   }
 }
+
+/* Retrasar una animación
+La animation-delaypropiedad especifica un retraso para el inicio de una animación.
+
+El siguiente ejemplo tiene un retraso de 2 segundos antes de iniciar la animación:
+
+Ejemplo */
+
+.div23 {
+  animation-name: div23;
+  animation-duration: 8s;
+  animation-delay: 2s;
+}
+
+@keyframes div23 {
+  0% {
+    background-color: blue;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: red;
+  }
+  75% {
+    background-color: green;
+  }
+  100% {
+    background-color: deeppink;
+  }
+}
+
+/* También se permiten valores negativos. Si usa valores negativos, la animación comenzará como si ya se hubiera estado reproduciendo durante N segundos.
+
+En el siguiente ejemplo, la animación comenzará como si ya se hubiera estado reproduciendo durante 2 segundos: */
+
+.div24 {
+  animation-name: div24;
+  animation-duration: 8s;
+  animation-delay: -2s;
+}
+
+@keyframes div24 {
+  0% {
+    background-color: blue;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: red;
+  }
+  75% {
+    background-color: green;
+  }
+  100% {
+    background-color: deeppink;
+  }
+}
+
+/* Establecer cuántas veces debe ejecutarse una animación
+La animation-iteration-countpropiedad especifica el número de veces que debe ejecutarse una animación.
+
+El siguiente ejemplo ejecutará la animación 3 veces antes de que se detenga: */
+
+.div25 {
+  animation-name: div25;
+  animation-duration: 8s;
+  animation-delay: -2s;
+  animation-iteration-count: 3;
+}
+
+@keyframes div25 {
+  0% {
+    background-color: blue;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: red;
+  }
+  75% {
+    background-color: green;
+  }
+  100% {
+    background-color: deeppink;
+  }
+}
+
+/* Ejecutar animación en dirección inversa o ciclos alternativos
+La animation-directionpropiedad especifica si una animación debe reproducirse hacia adelante, hacia atrás o en ciclos alternos.
+
+La propiedad animation-direction puede tener los siguientes valores:
+
+normal- La animación se reproduce normalmente (hacia delante). esto es por defecto
+reverse- La animación se reproduce en dirección inversa (hacia atrás)
+alternate - La animación se reproduce primero hacia delante y luego hacia atrás.
+alternate-reverse- La animación se reproduce primero hacia atrás y luego hacia adelante.
+El siguiente ejemplo ejecutará la animación en dirección inversa (hacia atrás): */
+
+.div26 {
+  animation-name: div26;
+  animation-duration: 8s;
+  animation-delay: -2s;
+  animation-iteration-count: 3;
+  animation-direction: reverse;
+}
+
+@keyframes div26 {
+  0% {
+    background-color: blue;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: red;
+  }
+  75% {
+    background-color: green;
+  }
+  100% {
+    background-color: deeppink;
+  }
+}
+
+/* El siguiente ejemplo usa el valor "alternate" para hacer que la animación se ejecute primero hacia adelante y luego hacia atrás: */
+
+.div27 {
+  animation-name: div27;
+  animation-duration: 8s;
+  animation-delay: -2s;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+}
+
+@keyframes div27 {
+  0% {
+    background-color: blue;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: red;
+  }
+  75% {
+    background-color: green;
+  }
+  100% {
+    background-color: deeppink;
+  }
+}
+
+/* El siguiente ejemplo usa el valor "alternativo-reverso" para hacer que la animación se ejecute primero hacia atrás y luego hacia adelante: */
+
+.div28 {
+  animation-name: div28;
+  animation-duration: 8s;
+  animation-delay: -2s;
+  animation-iteration-count: 3;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes div28 {
+  0% {
+    background-color: blue;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: red;
+  }
+  75% {
+    background-color: green;
+  }
+  100% {
+    background-color: deeppink;
+  }
+}
+
+/* Especificar la curva de velocidad de la animación
+La animation-timing-functionpropiedad especifica la curva de velocidad de la animación.
+
+La propiedad animation-timing-function puede tener los siguientes valores:
+
+ease- Especifica una animación con un inicio lento, luego rápido, luego termina lentamente (esto es predeterminado)
+linear- Especifica una animación con la misma velocidad de principio a fin
+ease-in- Especifica una animación con un comienzo lento
+ease-out- Especifica una animación con un final lento
+ease-in-out- Especifica una animación con un comienzo y un final lentos
+cubic-bezier(n,n,n,n)- Le permite definir sus propios valores en una función cubic-bezier
+El siguiente ejemplo muestra algunas de las diferentes curvas de velocidad que se pueden utilizar: */
+
+.divTiming {
+  flex-direction: column;
+}
+
+.myMove {
+  position: relative;
+  animation: myMove 5s infinite;
+}
+
+.div29 {
+  animation-timing-function: linear;
+}
+.div30 {
+  animation-timing-function: ease;
+}
+.div31 {
+  animation-timing-function: ease-in;
+}
+.div32 {
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes myMove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 300px;
+  }
+}
+
+/* Especificar el modo de relleno para una animación
+Las animaciones CSS no afectan a un elemento antes de que se reproduzca el primer fotograma clave o después de que se reproduzca el último fotograma clave. La propiedad animation-fill-mode puede anular este comportamiento.
+
+La animation-fill-modepropiedad especifica un estilo para el elemento de destino cuando la animación no se está reproduciendo (antes de que comience, después de que finalice o ambos).
+
+La propiedad animation-fill-mode puede tener los siguientes valores:
+
+none- Valor por defecto. La animación no aplicará ningún estilo al elemento antes o después de que se ejecute
+forwards- El elemento conservará los valores de estilo establecidos por el último fotograma clave (depende de la dirección de la animación y el número de iteraciones de la animación)
+backwards- El elemento obtendrá los valores de estilo establecidos por el primer fotograma clave (depende de la dirección de la animación) y los conservará durante el período de retraso de la animación.
+both- La animación seguirá las reglas tanto para adelante como para atrás, extendiendo las propiedades de animación en ambas direcciones
+
+El siguiente ejemplo permite que el elemento <div> conserve los valores de estilo del último fotograma clave cuando finaliza la animación: */
+
+.div33 {
+  animation-name: div33;
+  animation-duration: 8s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes div33 {
+  0% {
+    background-color: blue;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: red;
+  }
+  75% {
+    background-color: green;
+  }
+  100% {
+    background-color: deeppink;
+  }
+}
+
+.div34 {
+  animation-name: div34;
+  animation-duration: 8s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes div34 {
+  0% {
+    background-color: maroon;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: red;
+  }
+  75% {
+    background-color: green;
+  }
+  100% {
+    background-color: deeppink;
+  }
+}
+
+/* El siguiente ejemplo permite que el elemento <div> obtenga los valores de estilo establecidos por el primer fotograma clave antes de que comience la animación y retiene los valores de estilo del último fotograma clave cuando finaliza la animación: */
+
+.div35 {
+  animation-name: div35;
+  animation-duration: 8s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+
+@keyframes div35 {
+  0% {
+    background-color: maroon;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: red;
+  }
+  75% {
+    background-color: green;
+  }
+  100% {
+    background-color: deeppink;
+  }
+}
+/* 
+Propiedad abreviada de animación
+El siguiente ejemplo utiliza seis de las propiedades de animación: */
+
+.div36 {
+  /* name | duration | timing-function | delay | iteration-count | direction | fill-mode | play-state */
+
+  animation: div36 8s linear 2s infinite alternate ;
+}
+
+@keyframes div36 {
+  0% {
+    background-color: maroon;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: red;
+  }
+  75% {
+    background-color: green;
+  }
+  100% {
+    background-color: deeppink;
+  }
+}
