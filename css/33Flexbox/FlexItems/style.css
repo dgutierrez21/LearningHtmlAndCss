@@ -1,0 +1,119 @@
+/* Elementos flexibles de CSS
+Elementos secundarios (artículos)
+Los elementos secundarios directos de un contenedor flexible se convierten automáticamente en elementos flexibles (flex). */
+
+/* Las propiedades del elemento flexible son:
+
+order
+flex-grow
+flex-shrink
+flex-basis
+flex
+align-self */
+
+/* La propiedad de la orden
+La orderpropiedad especifica el orden de los elementos flexibles. */
+
+/* El primer elemento flexible del código no tiene que aparecer como el primer elemento del diseño.
+
+El valor del pedido debe ser un número, el valor predeterminado es 0. */
+
+.flex-container {
+  background-color: cornflowerblue;
+  margin-bottom: 30px;
+}
+
+.flex-item {
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+  margin: 30px 30px;
+  text-align: center;
+}
+
+.flex-item p {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.flexbox1 {
+  display: flex;
+}
+
+.flexbox1 .flex-item:nth-child(1) {
+  order: 1;
+}
+.flexbox1 .flex-item:nth-child(2) {
+  order: 2;
+}
+
+/* La propiedad de crecimiento flexible
+La flex-growpropiedad especifica cuánto crecerá un elemento flexible en relación con el resto de los elementos flexibles. */
+
+.flexbox2 {
+  display: flex;
+}
+
+.flexbox2 .flex-item:nth-child(3) {
+  flex-grow: 1;
+}
+
+/* La propiedad de contracción por flexión
+La flex-shrink propiedad especifica cuánto se encogerá un elemento flexible en relación con el resto de los elementos flexibles. */
+
+/* El valor debe ser un número, el valor predeterminado es 1. */
+
+.flexbox3 {
+  display: flex;
+}
+
+.flexbox3 .flex-item:nth-child(3) {
+  flex-shrink: 0;
+}
+
+/* La propiedad de base flexible
+La flex-basispropiedad especifica la longitud inicial de un elemento flexible. */
+
+/* Establezca la longitud inicial del tercer elemento flexible en 200 píxeles */
+
+.flexbox4 {
+  display: flex;
+}
+
+.flexbox4 .flex-item:nth-child(3) {
+  flex-basis: 200px;
+}
+
+/* La propiedad flexible
+La flexpropiedad es una propiedad abreviada para las propiedades flex-grow, flex-shrinky flex-basis. */
+
+/* Haga que el tercer elemento flexible no se pueda crecer (0), no se pueda encoger (0) y con una longitud inicial de 200 píxeles: */
+
+.flexbox5 {
+  display: flex;
+}
+
+.flexbox5 .flex-item:nth-child(3) {
+  flex: 0 0 200px;
+}
+
+/* La propiedad align-self
+La align-selfpropiedad especifica la alineación del elemento seleccionado dentro del contenedor flexible.
+
+La align-self propiedad anula la alineación predeterminada establecida por la align-itemspropiedad del contenedor. */
+
+.flexbox6 {
+  display: flex;
+  height: 300px;
+}
+
+.flexbox6 .flex-item:nth-child(3) {
+  align-self: center;
+}
+.flexbox6 .flex-item:nth-child(1) {
+  align-self: flex-end;
+}
+
+.flexbox6 .flex-item:nth-child(2) {
+  align-self: flex-start;
+}
