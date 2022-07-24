@@ -1,0 +1,203 @@
+.gridContainer {
+  background-color: darkturquoise;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+/* https://www.youtube.com/watch?v=El0OJ6h_2ZI */
+
+.gridItem {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 30px;
+  background-color: black;
+  color: #fff;
+}
+
+/* Elementos secundarios (artículos)
+Un contenedor de cuadrícula contiene elementos de cuadrícula .
+
+De forma predeterminada, un contenedor tiene un elemento de cuadrícula para cada columna, en cada fila, pero puede diseñar los elementos de cuadrícula para que abarquen varias columnas o filas.
+
+La propiedad grid-column:
+La grid-columnpropiedad define en qué columna(s) colocar un elemento.
+
+Usted define dónde comenzará el elemento y dónde terminará. */
+
+/* Nota: La grid-columnpropiedad es una propiedad abreviada para el grid-column-starty las grid-column-endpropiedades. */
+
+/* Para colocar un elemento, puede hacer referencia a los números de línea o usar la palabra clave "span" para definir cuántas columnas abarcará el elemento.
+
+Ejemplo
+Haga que "elemento1" comience en la columna 1 y termine antes de la columna 5: */
+
+.gridContainer1 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.gridContainer1 .gridItem1 {
+  grid-column: 1 / 5;
+}
+.gridContainer1 .gridItem3 {
+  grid-column: 1 / span 3;
+}
+.gridContainer1 .gridItem4 {
+  grid-column: 4 / span 2;
+}
+
+/* La propiedad de fila de cuadrícula:
+La grid-rowpropiedad define en qué fila colocar un elemento.
+
+Usted define dónde comenzará el elemento y dónde terminará. */
+/* 
+Nota: La grid-rowpropiedad es una propiedad abreviada para el grid-row-starty las grid-row-endpropiedades.
+
+Para colocar un elemento, puede hacer referencia a los números de línea o usar la palabra clave "span" para definir cuántas filas abarcará el elemento: */
+
+.gridContainer2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.gridContainer2 .gridItem1 {
+  grid-row: 1 / 5;
+}
+.gridContainer2 .gridItem2 {
+  grid-row: 1 / span 4;
+}
+
+/* La propiedad del área de cuadrícula
+La grid-areapropiedad se puede utilizar como una propiedad abreviada para grid-row-start, grid-column-starty grid-row-endlas grid-column-endpropiedades. */
+
+.gridContainer3 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.gridContainer3 .gridItem8 {
+  /* los dos primeros valores es donde inicia y los otros dos donde finaliza */
+  /* row / column / row / column */
+  grid-area: 1 / 2 / 5 / 6;
+}
+.gridContainer4 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.gridContainer4 .gridItem8 {
+  /* los dos primeros valores es donde inicia y los otros dos donde finaliza */
+  /* row / column / row / column */
+  grid-area: 2 / 1 / span 2 / span 3;
+}
+
+/* Elementos de la cuadrícula de nombres
+La grid-areapropiedad también se puede utilizar para asignar nombres a los elementos de la cuadrícula. */
+
+/* Se puede hacer referencia a los elementos de cuadrícula con nombre mediante la grid-template-areaspropiedad del contenedor de cuadrícula. */
+
+/* Item1 recibe el nombre "myArea" y abarca las cinco columnas en un diseño de cuadrícula de cinco columnas: */
+
+.gridContainer5 .gridItem1 {
+  grid-area: MiArea;
+}
+.gridContainer5 {
+  display: grid;
+  gap: 10px;
+  grid-template-areas: "MiArea MiArea MiArea MiArea MiArea";
+}
+
+/* Cada fila está definida por apóstrofes (' ')
+
+Las columnas de cada fila se definen dentro de los apóstrofes, separadas por un espacio.
+
+Nota: un signo de punto representa un elemento de cuadrícula sin nombre. */
+
+/* Deje que "myArea" abarque dos columnas en un diseño de cuadrícula de cinco columnas (los signos de punto representan elementos sin nombre): */
+
+.gridContainer6 .gridItem1 {
+  grid-area: miArea;
+}
+
+.gridContainer6 {
+  display: grid;
+  gap: 10px;
+  grid-template-areas: "miArea miArea . . .";
+}
+
+/* Para definir dos filas, defina la columna de la segunda fila dentro de otro conjunto de apóstrofes: */
+
+/* Haz que "item1" abarque dos columnas y dos filas: */
+
+.gridContainer7 .gridItem1 {
+  grid-area: miArea;
+}
+
+.gridContainer7 {
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "miArea miArea . . ."
+    "miArea miArea . . .";
+}
+
+/* Asigne un nombre a todos los elementos y cree una plantilla de página web lista para usar: */
+
+.gridContainer8 .gridItemHeader {
+  grid-area: header;
+}
+.gridContainer8 .gridItemMenu {
+  grid-area: menu;
+}
+.gridContainer8 .gridItemMain {
+  grid-area: main;
+}
+.gridContainer8 .gridItemright {
+  grid-area: right;
+}
+.gridContainer8 .gridItemFooter {
+  grid-area: footer;
+}
+
+.gridContainer8 {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "menu main main main right right"
+    "menu footer footer footer footer footer";
+  gap: 10px;
+}
+
+/* El orden de los artículos
+El diseño de cuadrícula nos permite colocar los elementos en cualquier lugar que deseemos.
+
+El primer elemento del código HTML no tiene que aparecer como el primer elemento de la cuadrícula. */
+
+.gridContainer9 {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gridContainer9 .gridItem1 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.gridContainer9 .gridItem2 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.gridContainer9 .gridItem3 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.gridContainer9 .gridItem4 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.gridContainer9 .gridItem5 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.gridContainer9 .gridItem6 {
+  grid-area: 2 / 2 / 3 / 3;
+}
