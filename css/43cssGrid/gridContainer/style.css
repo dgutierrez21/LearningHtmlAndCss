@@ -1,0 +1,151 @@
+/* Diseño de cuadrícula
+El módulo de diseño de cuadrícula de CSS ofrece un sistema de diseño basado en cuadrículas, con filas y columnas, lo que facilita el diseño de páginas web sin tener que usar flotadores y posiciones. */
+
+/* Contenedor de rejilla
+Para hacer que un elemento HTML se comporte como un contenedor de cuadrícula, debe establecer la displaypropiedad en grido inline-grid.
+
+Los contenedores de cuadrícula consisten en elementos de cuadrícula, colocados dentro de columnas y filas. */
+
+/* La propiedad grid-template-columns
+La grid-template-columnspropiedad define el número de columnas en su diseño de cuadrícula y puede definir el ancho de cada columna.
+
+El valor es una lista separada por espacios, donde cada valor define el ancho de la columna respectiva.
+
+Si desea que su diseño de cuadrícula contenga 4 columnas, especifique el ancho de las 4 columnas o "automático" si todas las columnas deben tener el mismo ancho. */
+
+.gridContainer {
+  background-color: darkturquoise;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.gridItem {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 30px;
+  background-color: black;
+  color: #fff;
+}
+
+.gridContainer1 {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+}
+
+/* Nota: si tiene más de 4 elementos en una cuadrícula de 4 columnas, la cuadrícula agregará automáticamente una nueva fila para colocar los elementos. */
+
+/* La grid-template-columnspropiedad también se puede utilizar para especificar el tamaño (ancho) de las columnas. */
+
+.gridContainer2 {
+  display: grid;
+  grid-template-columns: 80px 200px auto 40px;
+  gap: 10px;
+}
+
+/* La propiedad grid-template-rows
+La grid-template-rowspropiedad define la altura de cada fila. */
+
+/* El valor es una lista separada por espacios, donde cada valor define la altura de la fila respectiva: */
+
+.gridContainer3 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  grid-template-rows: 80px 200px 100px;
+}
+
+/* La propiedad de justificar el contenido
+La justify-contentpropiedad se utiliza para alinear toda la cuadrícula dentro del contenedor. */
+
+/* La propiedad de justificar el contenido
+La justify-contentpropiedad se utiliza para alinear toda la cuadrícula dentro del contenedor. */
+
+/* Nota: el ancho total de la cuadrícula debe ser menor que el ancho del contenedor para que la justify-contentpropiedad tenga algún efecto. */
+
+.gridContainer4 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  gap: 10px;
+  justify-content: center;
+}
+
+.gridContainer5 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+
+.gridContainer6 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  gap: 10px;
+  justify-content: space-around;
+}
+.gridContainer7 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  gap: 10px;
+  justify-content: space-between;
+}
+.gridContainer8 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  gap: 10px;
+  justify-content: start;
+}
+.gridContainer9 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  gap: 10px;
+  justify-content: end;
+}
+
+/* La propiedad de alineación de contenido
+La align-content propiedad se usa para alinear verticalmente toda la cuadrícula dentro del contenedor. */
+
+/* Nota: la altura total de la cuadrícula debe ser menor que la altura del contenedor para que la align-contentpropiedad tenga algún efecto. */
+
+.gridContainer10 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  gap: 10px;
+  height: 800px;
+  align-content: center;
+}
+.gridContainer11 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  gap: 10px;
+  height: 800px;
+  align-content: space-evenly;
+}
+.gridContainer12 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  gap: 10px;
+  height: 800px;
+  align-content: space-around;
+}
+.gridContainer13 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  gap: 10px;
+  height: 800px;
+  align-content: space-between;
+}
+.gridContainer14 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  gap: 10px;
+  height: 800px;
+  align-content: start;
+}
+.gridContainer15 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  gap: 10px;
+  height: 800px;
+  align-content: end;
+}
