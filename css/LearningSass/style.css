@@ -1,0 +1,72 @@
+p {
+  margin-bottom: 30px;
+}
+
+.p1 {
+  font-size: 30px;
+  color: red;
+  font-weight: bold;
+}
+
+.container nav ul li {
+  list-style-type: none;
+  font-size: 30px;
+}
+
+.p2 {
+  font-family: Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.p3 {
+  color: #EE82EE;
+}
+
+.p4 {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 5px solid blue;
+  text-shadow: 50px 10px green;
+}
+
+.p5 {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 5px solid blue;
+  text-shadow: 50px 10px green;
+}
+
+.p6 {
+  border: 10px solid blue;
+}
+
+.p7 {
+  border: 20px solid green;
+}
+
+.botonBasico, .botonEnviar, .botonReportar {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.botonReportar {
+  background-color: red;
+}
+
+.botonEnviar {
+  background-color: blue;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,250 @@
+// ¿Qué es Sass?
+// Sass significa Hoja de estilo sintácticamente impresionante _ _ _
+// Sass es una extensión de CSS Sass es un preprocesador de CSS
+// Sass es completamente compatible con todas las versiones de CSS
+// Sass reduce la repetición de CSS y,
+// por lo tanto,
+// ahorra tiempo Sass fue diseñado por Hampton Catlin y desarrollado por Natalie Weizenbaum en 2006 Sass es gratis para descargar y usar ¿Por qué usar Sass? Las hojas de estilo son cada vez más grandes,
+// más complejas y más difíciles de mantener. Aquí es donde un preprocesador de CSS puede ayudar. Sass le permite usar funciones que no existen en CSS,
+// como variables,
+// reglas anidadas,
+// mezclas,
+// importaciones,
+// herencia,
+// funciones integradas y otras cosas.
+
+// ******************************************************
+
+// Variables Sass #ff0000
+// Las variables son una forma de almacenar información que puede reutilizar más adelante. Con Sass,
+// puede almacenar información en variables,
+// como: instrumentos de cuerda números colores booleanos liza nulos Sass usa el símbolo $,
+// seguido de un nombre,
+// para declarar variables:
+
+// El siguiente ejemplo declara 4 variables llamadas myFont,
+// myColor,
+// myFontSize y myWidth. Después de declarar las variables,
+// puede usar las variables donde quiera:
+
+$miFuente: Helvetica, sans-serif;
+$miColor: red;
+$miTamanioFuente: 30px;
+$miAncho: 300px;
+$anchoFuntePrincipal: bold;
+
+p {
+  margin-bottom: 30px;
+}
+
+.p1 {
+  font-size: $miTamanioFuente;
+  color: $miColor;
+  font-weight: $anchoFuntePrincipal;
+}
+
+// Reglas anidadas de Sass #ff0000
+// Sass le permite anidar selectores CSS de la misma manera que HTML.
+
+// Mire un ejemplo de algún código Sass para la navegación de un sitio:
+
+.container {
+  nav {
+    ul {
+      li {
+        list-style-type: none;
+        font-size: $miTamanioFuente;
+      }
+    }
+  }
+}
+
+// Tenga en cuenta que en Sass, los selectores ul, li están anidados dentro del nav selector.
+
+// Mientras que en CSS, las reglas se definen una por una (no anidadas):
+
+// Debido a que puede anidar propiedades en Sass, es más limpio y más fácil de leer que el CSS estándar.
+
+// Propiedades anidadas de Sass #ff0000
+// Muchas propiedades CSS tienen el mismo prefijo, como font-family, font-size y font-weight o text-align, text-transform y text-overflow.
+
+// Con Sass puedes escribirlos como propiedades anidadas:
+
+.p2 {
+  font: {
+    family: $miFuente;
+    size: $miTamanioFuente;
+    weight: $anchoFuntePrincipal;
+  }
+}
+
+// Sass @import y parciales #ff0000
+// Sass mantiene el código CSS SECO (No se repita). Una forma de escribir código SECO es mantener el código relacionado en archivos separados.
+
+// Puede crear archivos pequeños con fragmentos de código CSS para incluirlos en otros archivos Sass. Ejemplos de dichos archivos pueden ser: restablecer archivo, variables, colores, fuentes, tamaños de fuente, etc.
+
+// Importación de archivos Sass
+// Al igual que CSS, Sass también admite la @import directiva.
+
+// La @importdirectiva le permite incluir el contenido de un archivo en otro.
+
+// @importLa directiva CSS tiene un gran inconveniente debido a problemas de rendimiento; crea una solicitud HTTP adicional cada vez que lo llama. Sin embargo, la directiva Sass @import incluye el archivo en el CSS; ¡así que no se requiere una llamada HTTP adicional en tiempo de ejecución!
+
+// Sintaxis de importación de Sass:
+
+// @import filename;
+// Sugerencia: no necesita especificar una extensión de archivo, Sass asume automáticamente que se refiere a un archivo .sass o .scss. También puede importar archivos CSS. La @import directiva importa el archivo y cualquier variable o combinación definida en el archivo importado se puede usar en el archivo principal.
+
+// Puede importar tantos archivos como necesite en el archivo principal:
+
+@import "reset";
+
+// Sass Parciales
+// De forma predeterminada, Sass transpila todos los archivos .scss directamente. Sin embargo, cuando desea importar un archivo, no necesita transpilarlo directamente.
+
+// Sass tiene un mecanismo para esto: si comienza el nombre del archivo con un guión bajo, Sass no lo transpilará. Los archivos nombrados de esta manera se denominan parciales en Sass.
+
+// Entonces, un archivo Sass parcial se nombra con un guión bajo inicial:
+
+// Sintaxis parcial de Sass:
+
+//  _filename;
+// El siguiente ejemplo muestra un archivo Sass parcial llamado "_colors.scss". (Este archivo no se transferirá directamente a "colors.css"):
+
+// Ahora, si importa el archivo parcial, omita el guión bajo. Sass entiende que debe importar el archivo "_colors.scss":
+
+@import "colors";
+
+.p3 {
+  color: $myPink;
+}
+
+// Sass @mixin y @include #ff0000
+
+// Sass Mixin #ff0000
+
+// La @mixin directiva le permite crear código CSS que se reutilizará en todo el sitio web.
+
+// La @include directiva se crea para permitirle usar (incluir) el mixin.
+
+// Definición de un Mixin
+
+// Un mixin se define con la @mixin directiva.
+
+// Sass @mixin Sintaxis:
+
+// @mixin name {
+//   property: value;
+//   property: value;
+//   ...
+// }
+// El siguiente ejemplo crea un mixin llamado "texto importante":
+
+@mixin texto-importante {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 5px solid blue;
+  text-shadow: 50px 10px green;
+}
+
+// Consejo: un consejo sobre guiones y guiones bajos en Sass: los guiones y los guiones bajos se consideran iguales. ¡Esto significa que @mixin important-text { } y @mixin important_text { } se consideran el mismo mixin!
+
+// Usando un mixin #ff0000
+// La @includedirectiva se usa para incluir un mixin.
+
+// Sass @include mixin Sintaxis:
+
+// selector {
+//   @include mixin-name;
+// }
+// Entonces, para incluir la combinación de texto importante creada anteriormente:
+
+.p4 {
+  @include texto-importante();
+}
+
+.p5 {
+  @include texto-importante();
+}
+
+// El transpiler Sass convertirá lo anterior a CSS normal
+
+// Un mixin también puede incluir otros mixins:
+
+// Ejemplo sintaxis
+
+// @mixin special-text {
+//   @include important-text;
+//   @include link;
+//   @include special-border;
+// }
+
+// Pasar variables a un Mixin #ff0000
+// Los mixins aceptan argumentos. De esta manera puedes pasar variables a un mixin.
+
+// Aquí se explica cómo definir un mixin con argumentos:
+
+@mixin border1($color, $width) {
+  border: $width solid $color;
+}
+
+.p6 {
+  @include border1(blue, 10px);
+}
+
+@mixin border2($color: green, $width: 20px) {
+  border: $width solid $color;
+}
+
+.p7 {
+  @include border2;
+}
+
+// Uso de un Mixin para prefijos de proveedores
+// Otro buen uso de un mixin es para prefijos de proveedores.
+
+// Aquí hay un ejemplo para transformar:
+
+// Sintaxis SCSS:
+
+// @mixin transform($property) {
+//   -webkit-transform: $property;
+//   -ms-transform: $property;
+//   transform: $property;
+// }
+
+// .myBox {
+//   @include transform(rotate(20deg));
+// }
+
+// Sass @extend y Herencia #ff0000
+// Directiva Sass @extend
+// La @extenddirectiva le permite compartir un conjunto de propiedades CSS de un selector a otro.
+
+// La @extenddirectiva es útil si tiene elementos con estilos casi idénticos que solo difieren en algunos pequeños detalles.
+
+// El siguiente ejemplo de Sass primero crea un estilo básico para los botones (este estilo se usará para la mayoría de los botones). Luego, creamos un estilo para un botón "Informe" y un estilo para un botón "Enviar". Tanto el botón "Informe" como el botón "Enviar" heredan todas las propiedades CSS de la clase .button-basic, a través de la @extenddirectiva. Además, tienen sus propios colores definidos:
+
+.botonBasico {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.botonReportar {
+  @extend .botonBasico;
+  background-color: red;
+}
+
+.botonEnviar {
+  @extend .botonBasico;
+  background-color: blue;
+}
+
+// Al usar la @extend directiva, no necesita especificar varias clases para un elemento en su código HTML, como este: <button class="button-basic button-report">Informar esto</button>. Solo necesita especificar .button-report para obtener ambos conjuntos de estilos.
+
+// La @extend directiva ayuda a mantener su código Sass muy SECO.
+

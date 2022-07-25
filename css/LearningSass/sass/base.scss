@@ -1,0 +1,7 @@
+$font-stack: helvetica, san-serif;
+$primary-color: red;
+
+@mixin parrafo {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
