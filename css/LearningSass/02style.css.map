@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["sass/02style.scss","sass/base.scss"],"names":[],"mappings":"AAWA;ECPE;EACA,OAJc","file":"02style.css"}
+{"version":3,"sourceRoot":"","sources":["sass/02style.scss","sass/base.scss","sass/_list-reset.scss"],"names":[],"mappings":"AAYA;ECFE;EACA,OAVc;;;ADkBhB;EElBI;EACA;EACA","file":"02style.css"}

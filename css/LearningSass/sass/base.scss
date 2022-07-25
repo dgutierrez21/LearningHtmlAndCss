@@ -1,6 +1,12 @@
 $font-stack: helvetica, san-serif;
 $primary-color: red;
 
+// La @forwardregla carga una hoja de estilo Sass y hace que sus combinaciones , funciones y variables estén disponibles cuando su hoja de estilo se carga con la @useregla . Hace posible organizar bibliotecas Sass en muchos archivos, al tiempo que permite a sus usuarios cargar un único archivo de punto de entrada.
+
+
+
+@forward "list-reset";
+
 @mixin parrafo {
   font: 100% $font-stack;
   color: $primary-color;

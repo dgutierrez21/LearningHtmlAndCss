@@ -4,7 +4,8 @@
 
 @use "base.scss" as b;
 
-// Cargando Miembros enlace permanenteCargando miembros
+// Cargando Miembros enlace permanente
+// Cargando miembros
 // Puede acceder a variables, funciones y mixins desde otro módulo escribiendo <namespace>.<variable>, <namespace>.<function>()o @include <namespace>.<mixin>(). DE FORMA PREDETERMINADA, EL ESPACIO DE NOMBRES ES SOLO EL ÚLTIMO COMPONENTE DE LA URL del módulo  .
 
 // Los miembros (variables, funciones y mixins) cargados @usesolo son visibles en la hoja de estilo que los carga. Otras hojas de estilo necesitarán escribir sus propias @usereglas si también quieren acceder a ellas. Esto ayuda a que sea más fácil averiguar exactamente de dónde viene cada miembro. Si desea cargar miembros de muchos archivos a la vez, puede usar la @forwardregla para reenviarlos a todos desde un archivo compartido.
@@ -14,3 +15,8 @@
 }
 
 // https://www.youtube.com/watch?v=9tmfuGsu99o
+
+
+ul {
+  @include b.list-reset;
+}
