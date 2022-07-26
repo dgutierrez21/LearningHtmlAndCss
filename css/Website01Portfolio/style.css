@@ -203,3 +203,91 @@ nav ul li a:hover::after {
   background-color: #ff004f;
   transform: translateY(-10px);
 }
+
+/* *************** PORTFOLIO ************* */
+
+#portfolio {
+  padding: 15px 0;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.work {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.work img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.layer {
+  position: absolute;
+  padding: 0 40px;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(#ff004f, rgba(0, 0, 0, 0.6));
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 15px;
+  transition: height 0.5s;
+}
+
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.layer a {
+  width: 60px;
+  height: 60px;
+  color: #ff004f;
+  background-color: #fff;
+  font-size: 18px;
+  border-radius: 50%;
+  margin-top: 20px;
+  text-align: center;
+  line-height: 60px;
+}
+
+.work:hover img {
+  transform: scale(1.1);
+}
+
+.work:hover .layer {
+  height: 100%;
+}
+
+.btn {
+  text-decoration: none;
+  display: block;
+  margin: 50px auto;
+  /* El fit-content comporta como fit-content(stretch) . En la práctica, esto significa que la caja utilizará el espacio disponible, pero nunca más que max-content .
+
+  Cuando se usa tal como se establece tamaño de la caja para width , height , min-width , min-height , max-width y max-height los tamaños máximo y mínimo se refieren al tamaño del contenido. */
+  width: fit-content;
+  border: 1px solid #ff004f;
+  padding: 14px 50px;
+  border-radius: 6px;
+  color: #fff;
+  transition: background-color 0.4s;
+}
+
+.btn:hover {
+  background-color: #ff004f;
+}
