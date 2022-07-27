@@ -72,6 +72,32 @@ nav ul li a:hover::after {
   font-size: 30px;
 }
 
+.header-text p {
+  position: relative;
+}
+
+.header-text p span {
+  position: absolute;
+  top: -130%;
+  left: 220px;
+  font-size: 50px;
+  animation-name: salutation;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  transform: rotate(-15deg);
+  transform-origin: right bottom;
+}
+
+@keyframes salutation {
+  100% {
+    transform: rotate(10deg);
+    transform-origin: right bottom;
+  }
+}
+
 .header-text h1 {
   font-size: 60px;
 }
