@@ -19,13 +19,15 @@
       <div class="container">
         <nav>
           <img src="./img/logo.png" class="logo" />
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+          <ul id="sideMenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-times" onclick="funcNav()"></i>
           </ul>
+          <i class="fa-solid fa-bars" onclick="funcNav()"></i>
         </nav>
         <div class="header-text">
           <p>Web Developer <span>👋</span></p>
@@ -233,8 +235,9 @@
     </footer>
 
     <script>
-      var tablinks = document.querySelectorAll(".tab-links");
-      var tabcontents = document.querySelectorAll(".tab-contents");
+      let tablinks = document.querySelectorAll(".tab-links");
+      let tabcontents = document.querySelectorAll(".tab-contents"),
+        nav = document.querySelector("#sideMenu");
 
       function opentab(tabname) {
         for (tablink of tablinks) {
@@ -245,6 +248,10 @@
         }
         event.currentTarget.classList.add("active-link");
         document.querySelector(`#${tabname}`).classList.add("active-tab");
+      }
+
+      function funcNav() {
+        nav.classList.toggle("active");
       }
     </script>
   </body>

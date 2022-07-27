@@ -5,6 +5,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #080808;
   color: #fff;
@@ -415,4 +419,107 @@ footer {
 
 ::-webkit-scrollbar-thumb:active {
   background-color: #33ff00;
+}
+
+/* *************** CSS FOR SMALL SCREENS ************* */
+
+nav .fa-solid {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #header {
+    background-image: url("./img/phone-background.png");
+  }
+
+  .header-text {
+    margin-top: 140%;
+    font-size: 16px;
+  }
+
+  .header-text h1 {
+    font-size: 30px;
+  }
+
+  nav .fa-solid {
+    display: block;
+    font-size: 35px;
+  }
+
+  nav .fa-bars {
+    position: fixed;
+    right: 25px;
+    z-index: 500;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 7px 9px;
+  }
+
+  nav .fa-times {
+    font-size: 40px;
+  }
+
+  nav ul {
+    display: block;
+    position: fixed;
+    background-color: #ff004f;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 1000;
+    transition: right 0.5s ease-in-out;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 65px 35px;
+  }
+
+  nav ul li a {
+    font-size: 25px;
+  }
+
+  nav ul .fa-solid {
+    position: absolute;
+    cursor: pointer;
+    right: 35px;
+    top: 25px;
+  }
+
+  nav ul.active {
+    right: 0;
+  }
+
+  .sub-title {
+    font-size: 40px;
+  }
+
+  .about-col-1,
+  .about-col-2 {
+    flex-basis: 100%;
+  }
+
+  .about-col-1 {
+    margin-bottom: 30px;
+  }
+
+  .about-col-2 {
+    font-size: 14px;
+  }
+
+  .tab-links {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .contact-left,
+  .contact-right {
+    flex: 100%;
+  }
+
+  footer {
+    border-right: none;
+  }
 }
