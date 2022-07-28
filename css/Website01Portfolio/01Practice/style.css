@@ -96,11 +96,8 @@ nav img {
   padding: 10px 10%;
 }
 
-header .container {
-}
-
 .header-text {
-  margin: 20% 0 0;
+  margin: 15% 0 0;
 }
 
 .header-text p {
@@ -133,4 +130,57 @@ header .container {
 
 .header-text h1 span {
   color: #ff004f;
+}
+
+.networks {
+  margin-top: 30px;
+  display: flex;
+}
+
+.networks a {
+  text-decoration: none;
+  transition: color 0.4s, transform 0.4s;
+  color: #fff;
+  font-size: 40px;
+  margin-right: 40px;
+}
+
+.networks a:hover {
+  color: #ff004f;
+  transform: translateY(-7px);
+}
+
+.scrollContainer {
+  animation: scroll 2s ease-in-out 1s infinite alternate;
+  margin-top: 8%;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+}
+
+.scroll {
+  width: 50px;
+  height: 50px;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  transform: rotate(45deg);
+  position: relative;
+}
+
+@keyframes scroll {
+  100% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+}
+
+.scroll::after {
+  position: absolute;
+  content: "";
+  margin-top: 17px;
+  width: 42px;
+  height: 42px;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  transform: translatex(17px);
 }
