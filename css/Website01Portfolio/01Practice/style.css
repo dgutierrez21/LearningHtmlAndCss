@@ -1,5 +1,6 @@
 :root {
   --primaryColor: #080808;
+  --secundaryColor: #00bc94;
 }
 
 * {
@@ -74,7 +75,7 @@ nav ul li a {
 nav ul li a::after {
   position: absolute;
   content: "";
-  background-color: #ff004f;
+  background-color: var(--secundaryColor);
   width: 0;
   height: 5px;
   right: 0;
@@ -129,7 +130,7 @@ nav img {
 }
 
 .header-text h1 span {
-  color: #ff004f;
+  color: var(--secundaryColor);
 }
 
 .networks {
@@ -146,12 +147,12 @@ nav img {
 }
 
 .networks a:hover {
-  color: #ff004f;
+  color: var(--secundaryColor);
   transform: translateY(-7px);
 }
 
 .scrollContainer {
-  animation: scroll 2s ease-in-out 1s infinite alternate;
+  animation: scroll 1.5s ease-in-out 1s infinite alternate;
   margin-top: 8%;
   display: flex;
   justify-content: center;
@@ -161,8 +162,8 @@ nav img {
 .scroll {
   width: 50px;
   height: 50px;
-  border-right: 3px solid #fff;
-  border-bottom: 3px solid #fff;
+  border-right: 3px solid var(--secundaryColor);
+  border-bottom: 3px solid var(--secundaryColor);
   transform: rotate(45deg);
   position: relative;
 }
@@ -180,8 +181,8 @@ nav img {
   margin-top: 17px;
   width: 42px;
   height: 42px;
-  border-right: 3px solid #fff;
-  border-bottom: 3px solid #fff;
+  border-right: 3px solid var(--secundaryColor);
+  border-bottom: 3px solid var(--secundaryColor);
   transform: translatex(17px);
 }
 
@@ -222,7 +223,7 @@ h3.active-title::after {
 h4 {
   margin-bottom: 5px;
   font-size: 18px;
-  color: #ff004f;
+  color: var(--secundaryColor);
 }
 
 .aboutTitlesContainer {
@@ -240,7 +241,7 @@ h4 {
 .aboutTitles::after {
   position: absolute;
   content: "";
-  background-color: #ff004f;
+  background-color: var(--secundaryColor);
   width: 0;
   height: 5px;
   right: 0;
@@ -282,7 +283,7 @@ h4 {
 .service {
   background-color: #262626;
   padding: 30px 30px;
-  transition: transform 0.4s, background-color .4s;
+  transition: transform 0.4s, background-color 0.4s;
   border-radius: 20px;
 }
 
@@ -307,6 +308,6 @@ h4 {
 }
 
 .service:hover {
-  background-color: #ff004f;
+  background-color: var(--secundaryColor);
   transform: translateY(-10px);
 }
