@@ -15,7 +15,9 @@
     />
   </head>
   <body>
-    <header>
+    <!-- /* ****************** HEADER ****************** */ -->
+
+    <header id="home">
       <div class="container">
         <nav>
           <img src="./img/path7239-2.png" alt="" />
@@ -51,5 +53,84 @@
         </div>
       </div>
     </header>
+
+    <!-- /* ****************** HEADER ****************** */ -->
+
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="containerImg">
+            <img src="./img/user.png" alt="" />
+          </div>
+
+    <!-- /* ****************** ABOUT ****************** */ -->
+
+          <div class="aboutMe">
+            <h2>About Me</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
+              neque, iusto iste soluta quam maiores quos pariatur blanditiis
+              cumque autem laboriosam dicta ea deleniti, expedita facilis amet.
+              Animi voluptatibus architecto, consequuntur amet accusantium nobis
+              sapiente assumenda dolorum sit dolor alias?
+            </p>
+            <div class="aboutTitlesContainer">
+              <h3 class="aboutTitles active-title" onclick="openTab('skills')">
+                Skills
+              </h3>
+              <h3 class="aboutTitles" onclick="openTab('experience')">
+                Experience
+              </h3>
+              <h3 class="aboutTitles" onclick="openTab('education')">
+                Education
+              </h3>
+            </div>
+            <div class="ContentAboutMe active-content" id="skills">
+              <h4>UI/UX</h4>
+              <p>Desingning Web/App Interfaces</p>
+              <h4>Web Development</h4>
+              <p>Web App Development</p>
+              <h4>App Development</h4>
+              <p>Building Android/iOS Apps</p>
+            </div>
+            <div class="ContentAboutMe" id="experience">
+              <h4>2021 - current</h4>
+              <p>UI/UX Design Training at ET Institute</p>
+              <h4>2019 - 2021</h4>
+              <p>Team Lead at StarApp LLC.</p>
+              <h4>2017 - 2019</h4>
+              <p>UI/UX Design Executive at Coin Digital Ltd.</p>
+              <h4>2016 - 2017</h4>
+              <p>InterShip at Ekart eCommerce. Digital Ltd.</p>
+            </div>
+            <div class="ContentAboutMe" id="education">
+              <h4>2016</h4>
+              <p>UI/UX Design Training at ET Institute.</p>
+              <h4>2015</h4>
+              <p>MBA From MIT Bangalore.</p>
+              <h4>2014</h4>
+              <p>BBA From ISM Bangalore.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let aboutTitles = document.querySelectorAll(".aboutTitles"),
+        aboutContents = document.querySelectorAll(".ContentAboutMe");
+
+      function openTab(tabName) {
+        for (const aboutTitle of aboutTitles) {
+          aboutTitle.classList.remove("active-title");
+        }
+        event.currentTarget.classList.add("active-title");
+
+        for (const aboutContent of aboutContents) {
+          aboutContent.classList.remove("active-content");
+        }
+        document.querySelector(`#${tabName}`).classList.add("active-content");
+      }
+    </script>
   </body>
 </html>
