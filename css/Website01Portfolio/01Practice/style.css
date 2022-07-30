@@ -489,14 +489,12 @@ h4 {
   }
 }
 
-/* ****************** SERVICES ****************** */
+/* ****************** CONTACT ****************** */
 
 .contact {
   padding: 80px 0;
 }
 
-.contact .row {
-}
 .contactLeft {
   flex-basis: 35%;
 }
