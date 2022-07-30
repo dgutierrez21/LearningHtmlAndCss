@@ -530,6 +530,7 @@ textarea {
   color: var(--secundaryColor);
   font-size: 30px;
   margin-right: 15px;
+  vertical-align: middle;
 }
 
 .contactLeft .btn {
@@ -541,4 +542,18 @@ textarea {
   background-color: #080808;
   border: none;
   margin: 0 auto;
+}
+
+/* ****************** FOOTER ****************** */
+
+footer {
+  padding: 10px 0;
+  text-align: center;
+  background-color: var(--secundaryColor);
+  color: #080808;
+}
+
+footer p {
+  font-size: 18px;
+  font-weight: bold;
 }
