@@ -311,3 +311,180 @@ h4 {
   background-color: var(--secundaryColor);
   transform: translateY(-10px);
 }
+
+/* ****************** SERVICES ****************** */
+
+.portfolio {
+  padding: 80px 0;
+}
+
+.portfolio h2 {
+  margin-bottom: 40px;
+}
+
+.works {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.work {
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.work img {
+  width: 100%;
+  border-radius: 40px;
+  transition: transform 0.4s;
+}
+
+.workDescription {
+  position: absolute;
+  top: 0;
+  padding: 0 40px;
+  text-align: center;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(
+    180deg,
+    var(--secundaryColor),
+    rgba(0, 0, 0, 0.5)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: height 0.5s;
+}
+
+.workDescription h3 {
+  font-size: 25px;
+}
+
+.workDescription p {
+  margin: 15px 0 30px;
+}
+
+.workDescription a {
+  color: var(--secundaryColor);
+  background-color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 20px;
+}
+
+.work:hover .workDescription {
+  height: 100%;
+}
+
+.work:hover.work img {
+  transform: scale(1.1);
+}
+
+.btn {
+  display: block;
+  padding: 14px 50px;
+  margin: 50px auto;
+  width: fit-content;
+  color: var(--secundaryColor);
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  background-color: var(--secundaryColor);
+  color: black;
+  box-shadow: 0 0 5px var(--secundaryColor), 0 0 25px var(--secundaryColor),
+    0 0 50px var(--secundaryColor), 0 0 200px var(--secundaryColor);
+}
+
+.btn span {
+  position: absolute;
+  display: block;
+}
+
+.btn span:nth-child(1) {
+  background: linear-gradient(90deg, transparent, var(--secundaryColor));
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.btn span:nth-child(2) {
+  background: linear-gradient(180deg, transparent, var(--secundaryColor));
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  animation: animate2 1s linear 0.25s infinite;
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.btn span:nth-child(3) {
+  background: linear-gradient(270deg, transparent, var(--secundaryColor));
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  animation: animate3 1s linear 0.5s infinite;
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.btn span:nth-child(4) {
+  background: linear-gradient(360deg, transparent, var(--secundaryColor));
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  animation: animate4 1s linear 0.75s infinite;
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
