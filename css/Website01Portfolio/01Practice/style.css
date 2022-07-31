@@ -551,9 +551,26 @@ footer {
   text-align: center;
   background-color: var(--secundaryColor);
   color: #080808;
+  border-right: 7px solid #080808;
 }
 
 footer p {
   font-size: 18px;
   font-weight: bold;
+}
+
+/* ****************** SCROLLBAR ****************** */
+
+::-webkit-scrollbar {
+  width: 10px;
+  color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00bc94;
+  border-radius: 50px;
 }
