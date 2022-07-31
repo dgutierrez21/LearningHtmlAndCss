@@ -336,6 +336,7 @@ h4 {
 
 .work img {
   width: 100%;
+  height: 100%;
   border-radius: 40px;
   transition: transform 0.4s;
 }
@@ -573,4 +574,147 @@ footer p {
 ::-webkit-scrollbar-thumb {
   background-color: #00bc94;
   border-radius: 50px;
+}
+
+nav .fa-bars,
+nav ul .fa-xmark {
+  display: none;
+}
+
+/* MOBILE CSS */
+
+@media (max-width: 576px) {
+  /* ****************** NAVIGATION ****************** */
+
+  nav ul {
+    position: fixed;
+    height: 100vh;
+    width: 60vw;
+    top: 0;
+    right: -60vw;
+    background-color: var(--secundaryColor);
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+    align-items: center;
+    transition: right 0.5s;
+  }
+
+  nav ul.active {
+    right: 0;
+  }
+
+  nav ul li a {
+    font-size: 30px;
+    color: var(--primaryColor);
+    font-weight: bold;
+  }
+
+  nav ul .fa-xmark {
+    display: inline-block;
+    font-size: 50px;
+    position: absolute;
+    right: 16%;
+    top: 4%;
+    color: var(--primaryColor);
+  }
+
+  nav img {
+    width: 175px;
+  }
+
+  nav .fa-bars {
+    display: inline-block;
+    position: fixed;
+    right: 9%;
+    font-size: 35px;
+    z-index: 500;
+    padding: 2px 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+  }
+
+  /* ****************** HEADER TEXT ****************** */
+
+  .header-text {
+    margin: 30% 0 0 0;
+  }
+
+  .header-text p {
+    font-size: 20px;
+  }
+
+  .header-text h1 {
+    font-size: 50px;
+    margin-top: 10px;
+  }
+
+  .header-text h1 .greeting {
+    display: none;
+  }
+
+  /* ****************** NETWORKS ****************** */
+
+  .networks {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .networks a {
+    margin: 0;
+  }
+
+  /* ****************** ABOUT ****************** */
+
+  #about {
+    padding-bottom: 0;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+
+  h2 {
+    margin-top: 30px;
+  }
+
+  .row .containerImg,
+  .row .aboutMe {
+    flex-basis: 100%;
+  }
+
+  .aboutMe p {
+    margin-top: 10px;
+    text-align: justify;
+  }
+
+  .aboutTitlesContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .aboutTitles {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  /* ****************** CONTACT ****************** */
+
+  .contact {
+    padding: 0 0 40px;
+  }
+
+  .contact h2 {
+    margin-top: 0;
+  }
+
+  .contactLeft,
+  .contactRight {
+    flex-basis: 100%;
+  }
+
+  .contactLeft .btn {
+    margin: 30px auto;
+  }
 }
