@@ -58,6 +58,7 @@ nav {
 
 nav ul {
   display: flex;
+  flex-wrap: wrap;
   gap: 60px;
 }
 
@@ -168,4 +169,85 @@ nav ul li a:hover::after {
 .arrow1 {
   width: 70px;
   height: 70px;
+}
+
+/* <!-- *************** ABOUT ***************** --> */
+
+.about {
+  padding: 80px 0;
+}
+
+.aboutMe {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.containerImg {
+  flex-basis: 35%;
+}
+
+.containerImg img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.informationAboutMe {
+  flex-basis: 60%;
+}
+
+.informationAboutMe p,
+.titles {
+  color: var(--quaternaryColor);
+}
+
+h2 {
+  font-size: 60px;
+}
+
+.titles {
+  display: flex;
+  gap: 30px;
+  font-size: 25px;
+  position: relative;
+  margin: 15px 0;
+}
+
+.titles h3 {
+  position: relative;
+  cursor: pointer;
+}
+
+.titles h3::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: var(--secundaryColor);
+  bottom: -10px;
+  left: 0;
+  border-radius: 50px;
+  transition: width 0.4s;
+}
+
+.informationAboutMe h4 {
+  color: var(--secundaryColor);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.informationAboutMe p {
+  margin-bottom: 10px;
+}
+
+.titles h3.active::after {
+  width: 100%;
+}
+
+.information {
+  display: none;
+}
+
+.information.active {
+  display: block;
 }
