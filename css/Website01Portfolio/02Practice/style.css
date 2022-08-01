@@ -1,0 +1,25 @@
+:root {
+  --primaryColor: #080808;
+  --secundaryColor: #00bc94;
+  --tertiaryColor: #262626;
+  --quaternaryColor: #9f9f9f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primaryColor);
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
