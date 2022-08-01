@@ -90,3 +90,82 @@ nav ul li a:hover::after {
 .logo {
   width: 300px;
 }
+
+/* <!-- *************** HEADER-TEXT ***************** --> */
+
+.header-text {
+  margin-top: 20%;
+  font-size: 30px;
+}
+
+.name {
+  color: var(--secundaryColor);
+}
+
+.header-text h1 {
+  position: relative;
+}
+
+.greeting {
+  position: absolute;
+  animation: greeting 3.5s ease-in-out 0.5s infinite alternate;
+  transform: rotate(-15deg);
+  transform-origin: bottom right;
+  top: -20%;
+  margin-left: 80px;
+}
+
+@keyframes greeting {
+  100% {
+    transform: rotate(15deg);
+  }
+}
+
+.networks {
+  display: flex;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.networks a i {
+  color: #fff;
+  font-size: 40px;
+  transition: all 0.4s;
+}
+
+.networks a i:hover {
+  transform: translateY(-7px);
+  color: var(--secundaryColor);
+}
+
+.arrows {
+  display: flex;
+  justify-content: center;
+  animation: arrows 2s ease-in-out 0.5s infinite alternate;
+  margin-top: 2%;
+  opacity: 0;
+}
+
+.containerArrows {
+  display: inline-block;
+  transform: rotate(45deg);
+}
+
+@keyframes arrows {
+  100% {
+    transform: translateY(50%);
+    opacity: 1;
+  }
+}
+
+.arrow {
+  width: 80px;
+  height: 80px;
+  border-right: 3px solid var(--secundaryColor);
+  border-bottom: 3px solid var(--secundaryColor);
+}
+
+.arrow1 {
+  width: 70px;
+  height: 70px;
+}
