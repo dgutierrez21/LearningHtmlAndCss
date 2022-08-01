@@ -276,6 +276,12 @@
       </div>
     </footer>
 
+    <!-- /* ****************** Go to top button ****************** */ -->
+
+    <a href="#home" class="btn btnGoToTopButton"
+      ><i class="fa-solid fa-chevron-up"></i
+    ></a>
+
     <script>
       let aboutTitles = document.querySelectorAll(".aboutTitles"),
         aboutContents = document.querySelectorAll(".ContentAboutMe"),
@@ -300,6 +306,18 @@
       function closeNav() {
         nav.classList.remove("active");
       }
+
+      // ****************** Go to top button ******************
+
+      window.onscroll = function () {
+        if (document.documentElement.scrollTop > 2250) {
+          document.querySelector(".btnGoToTopButton").classList.add("active");
+        } else {
+          document
+            .querySelector(".btnGoToTopButton")
+            .classList.remove("active");
+        }
+      };
     </script>
   </body>
 </html>
