@@ -246,6 +246,7 @@ h2 {
 
 .information {
   display: none;
+  margin-top: 30px;
 }
 
 .information.active {
