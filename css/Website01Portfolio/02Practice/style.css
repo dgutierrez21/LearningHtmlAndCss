@@ -461,3 +461,41 @@ h2 {
     bottom: 100%;
   }
 }
+
+/* <!-- *************** CONTACT ***************** --> */
+
+.contact {
+  padding: 80px 0;
+}
+
+.containerContact {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contactLeft {
+  flex-basis: 35%;
+}
+
+.contactLeft p {
+  margin: 30px 0;
+  font-size: 20px;
+}
+
+.contactLeft p i {
+  font-size: 30px;
+  margin-right: 20px;
+  vertical-align: middle;
+  color: var(--secundaryColor);
+}
+
+.contactRight {
+  flex-basis: 60%;
+}
+
+.contactRight form {
+  display: flex;
+  flex-direction: column;
+}
