@@ -466,7 +466,7 @@ h2 {
 /* <!-- *************** CONTACT ***************** --> */
 
 .contact {
-  padding: 100px 0;
+  padding: 100px 0 30px;
 }
 
 .containerContact {
@@ -545,3 +545,6 @@ footer p {
   padding: 10px;
   font-size: 18px;
 }
+
+/* <!-- *************** SCROLLBAR ***************** --> */
+
