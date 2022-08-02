@@ -641,4 +641,34 @@ nav .fa-bars {
     justify-content: center;
     margin-top: 35px;
   }
+
+  /* <!-- *************** ABOUT ***************** --> */
+
+  .containerImg,
+  .informationAboutMe {
+    flex-basis: 100%;
+  }
+
+  .informationAboutMe {
+    margin-top: 30px;
+  }
+
+  .titles {
+    font-size: 16px;
+  }
+
+  /* <!-- *************** CONTACT ***************** --> */
+
+  .contact {
+    padding-top: 0;
+  }
+
+  .contactRight,
+  .contactLeft {
+    flex-basis: 100%;
+  }
+
+  .contactLeft .btn {
+    margin: 45px auto 0;
+  }
 }
