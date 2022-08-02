@@ -465,7 +465,7 @@ h2 {
 /* <!-- *************** CONTACT ***************** --> */
 
 .contact {
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 .containerContact {
@@ -491,11 +491,42 @@ h2 {
   color: var(--secundaryColor);
 }
 
+.contactLeft .btn {
+  margin: 45px 0;
+}
+
 .contactRight {
   flex-basis: 60%;
+  padding-top: 15px;
 }
 
 .contactRight form {
   display: flex;
   flex-direction: column;
+  gap: 30px;
+}
+
+.contactRight form input,
+.contactRight form textarea {
+  background-color: var(--tertiaryColor);
+  outline: none;
+  border: none;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 15px 10px;
+  color: #fff;
+}
+
+.contactRight form textarea {
+  height: 100px;
+  resize: none;
+}
+
+.contactRight .btn {
+  background-color: var(--primaryColor);
+  border: none;
+}
+
+.contactRight .btn:hover {
+  background-color: var(--secundaryColor);
 }
