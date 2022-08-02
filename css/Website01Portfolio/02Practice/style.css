@@ -291,3 +291,173 @@ h2 {
   transform: translateY(-10px);
   background-color: var(--secundaryColor);
 }
+
+/* <!-- *************** WORKS ***************** --> */
+
+.works {
+  padding: 80px 0;
+}
+
+.worksContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin: 60px 0;
+}
+
+.work {
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+.work:hover .description {
+  height: 100%;
+}
+
+.work img {
+  width: 100%;
+  border-radius: 30px;
+  transition: transform 0.4s;
+}
+
+.work:hover.work img {
+  transform: scale(1.1);
+}
+
+.description {
+  position: absolute;
+  top: 0;
+  height: 0;
+  background: linear-gradient(var(--secundaryColor), rgba(0, 0, 0, 0.5) 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+  text-align: center;
+  transition: height 0.4s;
+  overflow: hidden;
+}
+
+.description h3 {
+  font-size: 25px;
+}
+
+.description p {
+  margin: 20px 0 20px;
+}
+
+.description a {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.description a i {
+  font-size: 20px;
+  color: var(--secundaryColor);
+}
+
+.btn {
+  display: block;
+  color: var(--secundaryColor);
+  padding: 14px 50px;
+  width: fit-content;
+  text-decoration: none;
+  margin: 0 auto;
+  font-size: 20px;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn:hover {
+  background-color: var(--secundaryColor);
+  font-weight: bold;
+  color: var(--primaryColor);
+  box-shadow: 0 0 5px var(--secundaryColor), 0 0 25px var(--secundaryColor),
+    0 0 50px var(--secundaryColor), 0 0 200px var(--secundaryColor);
+}
+
+.btn span {
+  position: absolute;
+  display: block;
+}
+
+.btn span:nth-child(1) {
+  background: linear-gradient(90deg, transparent, var(--secundaryColor));
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.btn span:nth-child(2) {
+  background: linear-gradient(180deg, transparent, var(--secundaryColor));
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  animation: animate2 1s linear 0.25s infinite;
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.btn span:nth-child(3) {
+  background: linear-gradient(270deg, transparent, var(--secundaryColor));
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  animation: animate3 1s linear 0.5s infinite;
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.btn span:nth-child(4) {
+  background: linear-gradient(360deg, transparent, var(--secundaryColor));
+  bottom: -100%;
+  left: 0;
+  height: 100%;
+  width: 2px;
+  animation: animate4 1s linear 0.75s infinite;
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
