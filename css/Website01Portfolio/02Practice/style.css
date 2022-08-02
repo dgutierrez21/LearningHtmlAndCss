@@ -530,3 +530,17 @@ h2 {
 .contactRight .btn:hover {
   background-color: var(--secundaryColor);
 }
+
+/* <!-- *************** FOOTER ***************** --> */
+
+footer {
+  text-align: center;
+  background-color: var(--secundaryColor);
+}
+
+footer p {
+  color: var(--primaryColor);
+  font-weight: bold;
+  padding: 10px;
+  font-size: 18px;
+}
