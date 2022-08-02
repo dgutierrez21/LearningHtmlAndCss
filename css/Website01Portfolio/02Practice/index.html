@@ -260,6 +260,12 @@
       </div>
     </footer>
 
+    <!-- // *************** Go up button ***************** -->
+
+    <a class="btn btnGoUp" href="#home"
+      ><i class="fa-solid fa-chevron-up"></i
+    ></a>
+
     <script>
       // <!-- *************** ABOUT ***************** -->
       let titles = document.querySelectorAll(".titles h3"),
@@ -288,6 +294,16 @@
       function closeNav() {
         nav.classList.remove("active");
       }
+
+      // <!-- *************** Go up button ***************** -->
+
+      window.onscroll = function () {
+        if (document.documentElement.scrollTop > 2250) {
+          document.querySelector(".btnGoUp").classList.add("active");
+        } else {
+          document.querySelector(".btnGoUp").classList.remove("active");
+        }
+      };
     </script>
   </body>
 </html>
