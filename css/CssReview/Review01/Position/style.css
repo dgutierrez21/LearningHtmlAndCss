@@ -1,0 +1,73 @@
+/* La positionpropiedad especifica el tipo de método de posicionamiento utilizado para un elemento (estático, relativo, fijo, absoluto o pegajoso). */
+
+/* La propiedad de posición
+La positionpropiedad especifica el tipo de método de posicionamiento utilizado para un elemento.
+
+Hay cinco valores de posición diferentes:
+
+static
+relative
+fixed
+absolute
+sticky
+A continuación, los elementos se colocan utilizando las propiedades superior, inferior, izquierda y derecha. Sin embargo, estas propiedades no funcionarán a menos que la position propiedad se establezca primero. También funcionan de manera diferente según el valor de la posición. */
+
+.div {
+  border: 4px solid green;
+}
+
+.div1 {
+  position: static;
+}
+
+.div2 {
+  position: relative;
+  left: 500px;
+  bottom: 100px;
+}
+
+/* posición: absoluta;
+Un elemento con position: absolute;se coloca en relación con el ancestro posicionado más cercano (en lugar de posicionarse en relación con la ventana gráfica, como fijo).
+
+Sin embargo; si un elemento con posición absoluta no tiene ancestros con posición, utiliza el cuerpo del documento y se mueve junto con el desplazamiento de la página.
+
+Nota: Los elementos de posición absoluta se eliminan del flujo normal y pueden superponerse a los elementos. */
+
+.div3 {
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+
+.div4 {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  bottom: 0;
+  right: 0;
+}
+
+/* posición: pegajosa;
+Un elemento con position: sticky;se posiciona en función de la posición de desplazamiento del usuario.
+
+Un elemento fijo alterna entre relativey fixed, dependiendo de la posición de desplazamiento. Se coloca en relación hasta que se alcanza una posición de desplazamiento determinada en la ventana gráfica; luego, se "pega" en su lugar (como posición: fija). */
+
+.div5 {
+  position: sticky;
+  top: 0;
+}
+
+/* posición: fijo;
+Un elemento con position: fixed;se coloca en relación con la ventana gráfica, lo que significa que siempre permanece en el mismo lugar, incluso si se desplaza la página. Las propiedades superior, derecha, inferior e izquierda se utilizan para colocar el elemento.
+
+Un elemento fijo no deja un espacio en la página donde normalmente habría estado ubicado.
+
+Observe el elemento fijo en la esquina inferior derecha de la página. Aquí está el CSS que se utiliza: */
+
+.div6 {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  right: 0;
+}
