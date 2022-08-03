@@ -1,0 +1,31 @@
+/* Adjunto de fondo CSS
+La background-attachmentpropiedad especifica si la imagen de fondo debe desplazarse o ser fija (no se desplazará con el resto de la página): */
+
+.div1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(https://p4.wallpaperbetter.com/wallpaper/494/554/450/coupe-mclaren-720s-wallpaper-preview.jpg);
+  background-repeat: no-repeat;
+  height: 500px;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+/* Cuando se usa la propiedad abreviada, el orden de los valores de propiedad es:
+
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+No importa si falta uno de los valores de propiedad, siempre que los demás estén en este orden. Tenga en cuenta que no usamos la propiedad background-attachment en los ejemplos anteriores, ya que no tiene un valor. */
+
+.div2 {
+  height: 500px;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(https://p4.wallpaperbetter.com/wallpaper/232/67/746/mclaren-mclaren-720s-coupe-sport-car-wallpaper-preview.jpg)
+      no-repeat fixed center;
+  background-size: contain;
+}
