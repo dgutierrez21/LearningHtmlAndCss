@@ -188,7 +188,7 @@ img {
 
 .home {
   background-color: var(--bg-color);
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .home__container {
