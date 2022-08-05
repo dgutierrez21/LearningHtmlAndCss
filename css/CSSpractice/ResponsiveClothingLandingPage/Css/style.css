@@ -122,3 +122,64 @@ img {
 .main {
   overflow: hidden; /* For animation Scroll */
 }
+
+/* =================== HEADER & NAV =================== */
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  z-index: var(--z-fixed);
+  width: 100%;
+  transition: 0.4s;
+}
+
+.nav {
+  display: flex;
+  height: var(--header-height);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+@media screen and (max-width: 1023px) {
+  .nav__menu {
+    position: fixed;
+    bottom: 1.5rem;
+    background-color: var(--body-color);
+    box-shadow: 0 4px hsla(220, 18%, 40%, 0.15);
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 1.25rem 2.8rem;
+    border-radius: 0.5rem;
+  }
+
+  .nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav__link {
+    display: grid;
+    justify-items: center;
+    row-gap: 0.25rem;
+    color: var(--text-color-light);
+    font-weight: var(--font-medium);
+  }
+
+  .nav__link i {
+    font-size: 1.25rem;
+  }
+
+  .nav__link span {
+    font-size: 0.688rem;
+  }
+}
