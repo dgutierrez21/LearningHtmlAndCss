@@ -19,6 +19,11 @@
 
     <!-- =================== SWIPER CSS =================== -->
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
     <!-- =================== CSS =================== -->
 
     <link rel="stylesheet" href="Css/style.css" />
@@ -171,10 +176,10 @@
       <section class="products section" id="products">
         <h2 class="section__title">Best Products</h2>
 
-        <div class="products__container container">
+        <div class="products__container container swiper">
           <!-- empty div to insert then the swiper js classes -->
-          <div>
-            <article class="products__card">
+          <div class="swiper-wrapper">
+            <article class="products__card swiper-slide">
               <img
                 src="./img/product1.jpg"
                 alt="product image"
@@ -185,7 +190,7 @@
               <span class="products__price"> $124.99 </span>
             </article>
 
-            <article class="products__card">
+            <article class="products__card swiper-slide">
               <img
                 src="./img/product2.jpg"
                 alt="product image"
@@ -196,7 +201,7 @@
               <span class="products__price"> $33.44 </span>
             </article>
 
-            <article class="products__card">
+            <article class="products__card swiper-slide">
               <img
                 src="./img/product3.jpg"
                 alt="product image"
@@ -207,7 +212,7 @@
               <span class="products__price"> $55.00 </span>
             </article>
 
-            <article class="products__card">
+            <article class="products__card swiper-slide">
               <img
                 src="./img/product4.jpg"
                 alt="product image"
@@ -218,6 +223,8 @@
               <span class="products__price"> $203.00 </span>
             </article>
           </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
       </section>
     </main>
@@ -234,6 +241,6 @@
 
     <!-- =================== SWIPER JS =================== -->
 
-    <script src=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>
