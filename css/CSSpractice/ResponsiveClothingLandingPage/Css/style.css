@@ -367,3 +367,19 @@ img {
   color: var(--title-color);
   font-weight: var(--font-medium);
 }
+
+/* =================== BRANDS =================== */
+
+.brand__container {
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+}
+
+.brand__img {
+  width: 120px;
+  height: 120px;
+}
+
+.brand__img:nth-child(even) {
+  margin-top: 2rem;
+}
