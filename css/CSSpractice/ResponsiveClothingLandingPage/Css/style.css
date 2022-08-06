@@ -186,6 +186,12 @@ img {
 
 /* Change background header */
 
+/* active link */
+
+.active-link {
+  color: var(--title-color);
+}
+
 .scroll-header {
   background-color: var(--body-color);
   box-shadow: 0 1px 4px hsl(220, 4%, 15%, 0.1);
