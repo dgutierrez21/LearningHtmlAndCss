@@ -42,3 +42,41 @@ h2 {
 .flex__container1 .flex__item4 {
   order: 2;
 }
+
+/* flex-grow */
+
+/* Esto define la capacidad de crecimiento de un elemento flexible si es necesario. Acepta un valor sin unidades que sirve como proporción. Determina qué cantidad de espacio disponible dentro del contenedor flexible debe ocupar el artículo.
+
+Si todos los elementos se han flex-growestablecido en 1, el espacio restante en el contenedor se distribuirá por igual a todos los niños. Si uno de los hijos tiene un valor de 2, ese hijo ocuparía el doble de espacio que cualquiera de los otros (o lo intentará, al menos). */
+
+/* Los números negativos no son válidos. */
+
+.flex__container2 {
+  display: flex;
+}
+
+.flex__container2 .flex__item1 {
+  flex-grow: 0; /* default is 0 */
+}
+
+.flex__container2 .flex__item2 {
+  flex-grow: 1;
+}
+
+.flex__container2 .flex__item3 {
+  flex-grow: 3;
+}
+
+.flex__container2 .flex__item4 {
+  flex-grow: 2;
+}
+
+.flex__container3 {
+  display: flex;
+}
+
+.flex__container3 .flex__item1,
+.flex__container3 .flex__item2,
+.flex__container3 .flex__item3 {
+  flex-grow: 1;
+}
