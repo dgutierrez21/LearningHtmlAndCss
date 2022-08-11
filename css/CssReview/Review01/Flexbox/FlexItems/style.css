@@ -108,3 +108,39 @@ Si todos los elementos se han flex-growestablecido en 1, el espacio restante en 
 .flex__container4 .flex__item3 {
   flex-shrink: 2;
 }
+
+/* flex-basis */
+
+/* Esto define el tamaño predeterminado de un elemento antes de que se distribuya el espacio restante. 
+Puede ser una longitud (por ejemplo, 20 %, 5 rem, etc.) o una palabra clave. 
+La autopalabra clave significa "mirar mi propiedad de ancho o alto" (lo cual fue hecho temporalmente por la main-sizepalabra clave hasta que quedó en desuso). 
+La palabra clave significa "dimensionarlo en función del contenido del elemento". 
+Esta palabra clave aún no es compatible , contentpor lo que es difícil probarla y saber qué hacen sus hermanos .max-contentmin-contentfit-content */
+
+/* Si se establece en 0, el espacio adicional alrededor del contenido no se tiene en cuenta. Si se establece en auto, el espacio adicional se distribuye en función de su flex-growvalor. */
+
+.flex__container5 {
+  display: flex;
+}
+
+.flex__container5 .flex__item1 {
+  flex-basis: 15%;
+}
+
+.flex__container5 .flex__item2 {
+  flex-basis: 50%;
+}
+
+.flex__container5 .flex__item3 {
+  flex-basis: 35%;
+}
+
+@media (max-width: 768px) {
+  .flex__container5 {
+    flex-wrap: wrap;
+  }
+
+  .flex__container5 .flex__item {
+    flex-basis: 100%;
+  }
+}
