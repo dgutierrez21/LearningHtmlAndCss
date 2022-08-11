@@ -141,3 +141,58 @@ También hay dos palabras clave adicionales que puede combinar con estos valores
   display: flex;
   justify-content: space-between;
 }
+/*
+align-items
+ Esto define el comportamiento predeterminado de cómo se distribuyen los elementos flexibles a lo largo del eje transversal en la línea actual. Piense en ello como la justify-contentversión para el eje transversal (perpendicular al eje principal). */
+
+/* stretch(predeterminado): estirar para llenar el contenedor (aún respeta el ancho mínimo/ancho máximo)
+flex-start// start: self-start los elementos se colocan al principio del eje transversal. La diferencia entre estos es sutil, y se trata de respetar las flex-directionreglas o las writing-modereglas.
+flex-end// end: self-end los elementos se colocan al final del eje transversal. La diferencia nuevamente es sutil y se trata de respetar flex-directionreglas contra writing-modereglas.
+center: los elementos están centrados en el eje transversal
+baseline: los elementos están alineados como sus líneas base se alinean
+Las palabras clave modificadoras safey unsafese pueden usar junto con el resto de estas palabras clave (aunque tenga en cuenta la compatibilidad con el navegador ), y tratan de ayudarlo a evitar la alineación de elementos de modo que el contenido se vuelva inaccesible. */
+
+.flex__container17 {
+  display: flex;
+  align-items: stretch;
+}
+
+.flex__container18 {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex__container19 {
+  display: flex;
+  align-items: flex-end;
+}
+
+.flex__container20 {
+  display: flex;
+  align-items: center;
+}
+
+.flex__container21 {
+  display: flex;
+  align-items: baseline;
+}
+
+.flex__container21 div:nth-child(1) {
+  font-size: 30px;
+}
+
+.flex__container21 div:nth-child(2) {
+  font-size: 60px;
+}
+
+.flex__container21 div:nth-child(3) {
+  font-size: 120px;
+}
+
+.flex__container21 div:nth-child(4) {
+  font-size: 60px;
+}
+
+.flex__container21 div:nth-child(5) {
+  font-size: 30px;
+}
