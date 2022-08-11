@@ -80,3 +80,31 @@ Si todos los elementos se han flex-growestablecido en 1, el espacio restante en 
 .flex__container3 .flex__item3 {
   flex-grow: 1;
 }
+
+/* flex-shrink */
+
+/* Esto define la capacidad de que un elemento flexible se encoja si es necesario. */
+
+/* Los números negativos no son válidos. */
+
+.flex__container4 {
+  display: flex;
+}
+
+.flex__container4 .flex__item1,
+.flex__container4 .flex__item2,
+.flex__container4 .flex__item3 {
+  width: 100%;
+}
+
+.flex__container4 .flex__item1 {
+  flex-shrink: 1; /* default 1 */
+}
+
+.flex__container4 .flex__item2 {
+  flex-shrink: 3;
+}
+
+.flex__container4 .flex__item3 {
+  flex-shrink: 2;
+}
