@@ -23,9 +23,8 @@ Esto define un contenedor flexible; en línea o bloque dependiendo del valor dad
   font-weight: bold;
 }
 
-
 .flex__container2 {
-    display: inline-flex;
+  display: inline-flex;
 }
 
 /* flex-direction
@@ -39,23 +38,46 @@ column: igual que rowpero de arriba a abajo
 column-reverse: igual que row-reversepero de abajo hacia arriba */
 
 .flex__container3 {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .flex__container4 {
-    display: flex;
-    flex-direction: row-reverse;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .flex__container5 {
-    display: flex;
-    flex-direction: column;
-    height: auto;
+  display: flex;
+  flex-direction: column;
+  height: auto;
 }
 
 .flex__container6 {
-    display: flex;
-    flex-direction: column-reverse;
-    height: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  height: auto;
+}
+
+/* envoltura flexible
+dos filas de cajas, la primera envolviendo a la segunda
+De forma predeterminada, todos los elementos flexibles intentarán encajar en una línea. Puede cambiar eso y permitir que los elementos se ajusten según sea necesario con esta propiedad. */
+
+/* nowrap(predeterminado): todos los elementos flexibles estarán en una línea
+wrap: los elementos flexibles se ajustarán a varias líneas, de arriba a abajo.
+wrap-reverse: los elementos flexibles se ajustarán a varias líneas de abajo hacia arriba. */
+
+.flex__container7 {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.flex__container8 {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+}
+.flex__container9 {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  height: auto;
 }
