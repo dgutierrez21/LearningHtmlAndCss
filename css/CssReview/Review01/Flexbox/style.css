@@ -281,3 +281,54 @@ stretch: las líneas se estiran para ocupar el espacio restante */
   align-items: flex-start;
   align-content: stretch;
 }
+
+/* gap, row-gap, column-gap */
+
+/* La gappropiedad controla explícitamente el espacio entre elementos flexibles. Se aplica ese espacio solo entre elementos que no están en los bordes exteriores. */
+
+/* El comportamiento podría considerarse como un canalón mínimo , como si el canalón fuera más grande de alguna manera (debido a algo como justify-content: space-between;), entonces la brecha solo tendrá efecto si ese espacio termina siendo más pequeño.
+
+No es exclusivamente para flexbox, también gapfunciona en cuadrícula y diseño de varias columnas. */
+
+.flex__container30 div,
+.flex__container31 div,
+.flex__container32 div,
+.flex__container33 div {
+  margin: 0;
+}
+
+.flex__container30 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 500px;
+  align-content: flex-start;
+  row-gap: 30px;
+}
+
+.flex__container31 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 500px;
+  align-content: flex-start;
+  column-gap: 30px;
+}
+
+.flex__container32 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 500px;
+  align-content: flex-start;
+  gap: 30px;
+}
+
+.flex__container33 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 500px;
+  align-content: flex-start;
+  gap: 30px 60px; /* row-gap column gap */
+}
