@@ -3,6 +3,10 @@
 display
 Esto define un contenedor flexible; en línea o bloque dependiendo del valor dado. Permite un contexto flexible para todos sus hijos directos. */
 
+h2 {
+  font-size: 30px;
+}
+
 .flex__container {
   border: 5px solid black;
   margin-bottom: 30px;
@@ -59,7 +63,7 @@ column-reverse: igual que row-reversepero de abajo hacia arriba */
   height: auto;
 }
 
-/* envoltura flexible
+/* flex-wrap
 dos filas de cajas, la primera envolviendo a la segunda
 De forma predeterminada, todos los elementos flexibles intentarán encajar en una línea. Puede cambiar eso y permitir que los elementos se ajusten según sea necesario con esta propiedad. */
 
