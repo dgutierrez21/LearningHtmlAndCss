@@ -81,3 +81,12 @@ wrap-reverse: los elementos flexibles se ajustarán a varias líneas de abajo ha
   flex-wrap: wrap-reverse;
   height: auto;
 }
+
+/* flex-flow
+Esta es una forma abreviada de las propiedades flex-directiony flex-wrap, que juntas definen los ejes principal y transversal del contenedor flexible. El valor predeterminado es row nowrap. */
+
+.flex__container10 {
+    display: flex;
+    flex-flow: column wrap;
+    height: 400px;
+}
