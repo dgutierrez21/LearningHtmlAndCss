@@ -27,3 +27,35 @@ Esto define un contenedor flexible; en línea o bloque dependiendo del valor dad
 .flex__container2 {
     display: inline-flex;
 }
+
+/* flex-direction
+se muestran los cuatro valores posibles de dirección de flexión: de arriba a abajo, de abajo a arriba, de derecha a izquierda y de izquierda a derecha
+
+Esto establece el eje principal, definiendo así la dirección en que se colocan los artículos flexibles en el contenedor flexible. Flexbox es (aparte del envoltorio opcional) un concepto de diseño de una sola dirección. Piense en los elementos flexibles como dispuestos principalmente en filas horizontales o columnas verticales. */
+
+/* row(predeterminado): de izquierda a derecha en ltr; de derecha a izquierda enrtl
+row-reverse: de derecha a izquierda en ltr; de izquierda a derecha enrtl
+column: igual que rowpero de arriba a abajo
+column-reverse: igual que row-reversepero de abajo hacia arriba */
+
+.flex__container3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex__container4 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.flex__container5 {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.flex__container6 {
+    display: flex;
+    flex-direction: column-reverse;
+    height: auto;
+}
