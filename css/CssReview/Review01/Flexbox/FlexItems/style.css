@@ -1,0 +1,44 @@
+h2 {
+  text-align: center;
+  font-size: 60px;
+}
+
+/* order */
+
+/* De forma predeterminada, los elementos flexibles se presentan en el orden de origen. Sin embargo, la orderpropiedad controla el orden en que aparecen en el contenedor flexible. */
+
+/* Los elementos con el mismo orden vuelven al orden de origen. */
+
+.flex__container {
+  border: 5px solid black;
+  padding: 10px;
+  gap: 30px;
+}
+
+.flex__item {
+  width: 100px;
+  font-size: 60px;
+  text-align: center;
+  background-color: blue;
+  color: #fff;
+}
+
+.flex__container1 {
+  display: flex;
+}
+
+.flex__container1 .flex__item1 {
+  order: 0; /* default is 0 */
+}
+
+.flex__container1 .flex__item2 {
+  order: 3;
+}
+
+.flex__container1 .flex__item3 {
+  order: 4;
+}
+
+.flex__container1 .flex__item4 {
+  order: 2;
+}
