@@ -10,7 +10,6 @@ h2 {
 .flex__container {
   border: 5px solid black;
   margin-bottom: 30px;
-  height: 200px;
 }
 
 .flex__container1 {
@@ -155,26 +154,31 @@ Las palabras clave modificadoras safey unsafese pueden usar junto con el resto d
 .flex__container17 {
   display: flex;
   align-items: stretch;
+  height: 200px;
 }
 
 .flex__container18 {
   display: flex;
   align-items: flex-start;
+  height: 200px;
 }
 
 .flex__container19 {
   display: flex;
   align-items: flex-end;
+  height: 200px;
 }
 
 .flex__container20 {
   display: flex;
   align-items: center;
+  height: 200px;
 }
 
 .flex__container21 {
   display: flex;
   align-items: baseline;
+  height: 200px;
 }
 
 .flex__container21 div:nth-child(1) {
@@ -195,4 +199,85 @@ Las palabras clave modificadoras safey unsafese pueden usar junto con el resto d
 
 .flex__container21 div:nth-child(5) {
   font-size: 30px;
+}
+
+/* align-content */
+
+/* Esto alinea las líneas de un contenedor flexible cuando hay espacio adicional en el eje transversal, de forma similar a como justify-contentse alinean los elementos individuales dentro del eje principal.
+
+Nota: Esta propiedad solo tiene efecto en contenedores flexibles de varias líneas, donde flex-wrapse establece en wrapo wrap-reverse). Un contenedor flexible de una sola línea (es decir, donde flex-wrapse establece en su valor predeterminado, no-wrap) no reflejará align-content. */
+
+/* normal(predeterminado): los artículos se empaquetan en su posición predeterminada como si no se hubiera establecido ningún valor.
+flex-start/ start: artículos embalados al inicio del contenedor. El (más compatible) flex-starthonra el flex-directionmientras que starthonra la writing-modedirección.
+flex-end/ end: artículos embalados hasta el final del contenedor. El (más soporte) flex-endhonra el flex-directionmientras que el final honra la writing-modedirección.
+center: elementos centrados en el contenedor
+space-between: artículos distribuidos uniformemente; la primera línea está al principio del contenedor mientras que la última está al final
+space-around: artículos distribuidos uniformemente con el mismo espacio alrededor de cada línea
+space-evenly: los elementos se distribuyen uniformemente con el mismo espacio a su alrededor
+stretch: las líneas se estiran para ocupar el espacio restante */
+
+/* Las palabras clave modificadoras safey unsafese pueden usar junto con el resto de estas palabras clave (aunque tenga en cuenta la compatibilidad con el navegador ), y tratan de ayudarlo a evitar la alineación de elementos de modo que el contenido se vuelva inaccesible. */
+
+.flex__container22 {
+  display: flex;
+  height: 500px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: normal;
+}
+
+.flex__container23 {
+  display: flex;
+  height: 500px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.flex__container24 {
+  display: flex;
+  height: 500px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-end;
+}
+
+.flex__container25 {
+  display: flex;
+  height: 500px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: center;
+}
+
+.flex__container26 {
+  display: flex;
+  height: 500px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: space-evenly;
+}
+
+.flex__container27 {
+  display: flex;
+  height: 500px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: space-around;
+}
+
+.flex__container28 {
+  display: flex;
+  height: 500px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: space-between;
+}
+
+.flex__container29 {
+  display: flex;
+  height: 500px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: stretch;
 }
