@@ -144,3 +144,33 @@ Esta palabra clave aún no es compatible , contentpor lo que es difícil probarl
     flex-basis: 100%;
   }
 }
+
+/* flex */
+
+/* Esta es la abreviatura de flex-grow, flex-shrink y flex-basis combinados. 
+El segundo y tercer parámetro (flex-shrink y flex-basis) son opcionales. El valor por defecto es 0 1 auto, 
+pero si lo establece con un solo valor numérico, como flex: 5;, eso cambia la flex-basis a 0%, 
+así que es como establecer flex-grow: 5; flex-shrink: 1; flex-basis: 0%;. */
+
+.flex__container6 {
+  display: flex;
+}
+
+.flex__container6 .flex__item1 {
+  /* grow | shrink | basis */
+  flex: 0 30%;
+}
+
+.flex__container6 .flex__item2 {
+  /* grow | shrink | basis */
+  flex: 0 1 auto; /* default values */
+}
+
+.flex__container6 .flex__item3 {
+  /* grow | shrink | basis */
+  flex: 1 2;
+}
+
+/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
+/* https://css-tricks.com/understanding-flex-grow-flex-shrink-and-flex-basis/ */
