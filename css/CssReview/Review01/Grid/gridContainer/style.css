@@ -89,3 +89,55 @@ Valores:
   /* Que es equivalente a esto: */
   /* grid-template-rows: 100px 100px 100px; */
 }
+
+/* grid-template-areas
+
+Define una plantilla de cuadrícula haciendo referencia a los nombres de las áreas de cuadrícula que se especifican con la  grid-area propiedad. Repetir el nombre de un área de cuadrícula hace que el contenido abarque esas celdas. Un punto significa una celda vacía. La sintaxis en sí proporciona una visualización de la estructura de la cuadrícula.
+
+Valores:
+
+<grid-area-name> – el nombre de un área de cuadrícula especificada con grid-area
+. – un punto significa una celda de cuadrícula vacía
+none – no se definen áreas de cuadrícula */
+
+/* Eso creará una cuadrícula de cuatro columnas de ancho por tres filas de alto. Toda la fila superior estará compuesta por el  área del encabezado  . La fila del medio estará compuesta por dos  áreas principales  , una celda vacía y un  área de barra lateral  . La última fila es todo  pie de página . */
+
+.grid__container6 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
+}
+
+.grid__container6 .grid__item {
+  width: auto;
+  text-align: center;
+}
+
+.grid__container6 .grid__item:nth-child(1) {
+  grid-area: header;
+}
+.grid__container6 .grid__item:nth-child(2) {
+  grid-area: main;
+}
+.grid__container6 .grid__item:nth-child(3) {
+  grid-area: sidebar;
+}
+.grid__container6 .grid__item:nth-child(4) {
+  grid-area: footer;
+}
+
+/* Cada fila de su declaración debe tener el mismo número de celdas.
+
+Puede usar cualquier número de puntos adyacentes para declarar una sola celda vacía. 
+Siempre que los puntos no tengan espacios entre ellos, representan una sola celda.
+
+Tenga en cuenta que no está nombrando líneas con esta sintaxis, solo áreas. 
+Cuando usa esta sintaxis, las líneas en cada extremo de las áreas en realidad se nombran automáticamente. 
+Si el nombre de su área de cuadrícula es  foo , el nombre de la línea de fila inicial y la línea de columna inicial del área será  foo -start , 
+y el nombre de su última línea de fila y última línea de columna será  foo -end . 
+Esto significa que algunas líneas pueden tener varios nombres, como la línea del extremo izquierdo en el ejemplo anterior, 
+que tendrá tres nombres: inicio de encabezado, inicio principal e inicio de pie de página. */
