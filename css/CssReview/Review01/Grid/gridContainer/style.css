@@ -1,19 +1,19 @@
 .grid__container {
-    border: 5px solid black;
-    padding: 10px;
+  border: 5px solid black;
+  padding: 10px;
 }
 
 h2 {
-    font-size: 60px;
-    text-align: center;
+  font-size: 60px;
+  text-align: center;
 }
 
 .grid__item {
-    height: 100px;
-    font-size: 50px;
-    background-color: blue;
-    color: #fff;
-    border: 2.5px solid red;
+  width: 100px;
+  font-size: 50px;
+  background-color: blue;
+  color: #fff;
+  border: 2.5px solid red;
 }
 
 /* display: grid; */
@@ -26,9 +26,66 @@ grid – genera una grilla a nivel de bloque
 inline-grid – genera una cuadrícula de nivel en línea */
 
 .grid__container1 {
-    display: grid;
+  display: grid;
 }
 
 .grid__container2 {
-    display: inline-grid;
+  display: inline-grid;
+}
+
+/* grid-template-columns
+grid-template-rows */
+
+/*
+Define las columnas y filas de la cuadrícula con una lista de valores separados por espacios. Los valores representan el tamaño de la pista y el espacio entre ellos representa la línea de cuadrícula.
+
+Valores:
+
+<track-size> – puede ser una longitud, un porcentaje o una fracción del espacio libre en la cuadrícula (usando la  fr unidad)
+<line-name> – un nombre arbitrario de su elección */
+
+/* A las líneas de cuadrícula se les asignan automáticamente números positivos a partir de estas asignaciones (siendo -1 una alternativa para la última fila). */
+
+.grid__container3 {
+  display: grid;
+  grid-template-columns: 150px 250px 1fr;
+  grid-template-rows: 150px 250px 350px;
+  margin-bottom: 30px;
+}
+
+.grid__container4 .grid__item {
+  width: auto;
+}
+
+/* Pero puede optar por nombrar explícitamente las líneas. Tenga en cuenta la sintaxis de paréntesis para los nombres de línea: */
+
+/* Tenga en cuenta que una línea puede tener más de un nombre. */
+
+.grid__container4 {
+  display: grid;
+  grid-template-columns: [first] 60px [line2] 50px [line3] auto [col4-start] 50px [five] 80px [end];
+  grid-template-rows: [row1-start] 80px [row1-end] 160px [third-line] auto [last-line];
+  margin-bottom: 30px;
+}
+
+/* Si varias líneas comparten el mismo nombre, se puede hacer referencia a ellas por su nombre de línea y número.
+
+.item {
+  grid-column-start: col-start 2;
+} */
+
+/* Si su definición contiene partes repetidas, puede usar la  repeat() notación para simplificar las cosas: */
+
+/* La  fr unidad le permite establecer el tamaño de una pista como una fracción del espacio libre del contenedor de cuadrícula. Por ejemplo, esto establecerá cada elemento en un tercio del ancho del contenedor de la cuadrícula: */
+
+/* El espacio libre se calcula  después de  cualquier elemento no flexible. */
+
+.grid__container5 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Que es equivalente a esto: */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-rows: repeat(3, 100px);
+  /* Que es equivalente a esto: */
+  /* grid-template-rows: 100px 100px 100px; */
 }
