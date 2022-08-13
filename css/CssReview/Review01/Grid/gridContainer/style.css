@@ -373,3 +373,37 @@ baseline– alinear elementos a lo largo de la línea de base del texto . Hay mo
 }
 
 /* Este comportamiento también se puede establecer en elementos de cuadrícula individuales a través de la  align-self propiedad. */
+
+/* place-items */
+
+/* colocar elementos
+place-items establece las  propiedades align-items y  justify-items en una sola declaración.
+
+Valores:
+
+<align-items> / <justify-items>  – El primer valor establece  align-items, el segundo valor  justify-items. Si se omite el segundo valor, el primer valor se asigna a ambas propiedades.
+Para más detalles, consulte  align-items y  justify-items.
+
+Esto puede ser muy útil para un centrado multidireccional súper rápido: */
+
+.grid__container20 .grid__item {
+  width: 100px;
+  height: 100px;
+}
+
+.grid__container20 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  place-items: center;
+}
+.grid__container21 .grid__item {
+  width: 100px;
+  height: 100px;
+}
+
+.grid__container21 {
+  display: grid;
+  grid-template-rows: repeat(1, 300px);
+  place-items: center;
+}
