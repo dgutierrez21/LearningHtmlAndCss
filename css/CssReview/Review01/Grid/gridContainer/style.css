@@ -141,3 +141,42 @@ Si el nombre de su área de cuadrícula es  foo , el nombre de la línea de fila
 y el nombre de su última línea de fila y última línea de columna será  foo -end . 
 Esto significa que algunas líneas pueden tener varios nombres, como la línea del extremo izquierdo en el ejemplo anterior, 
 que tendrá tres nombres: inicio de encabezado, inicio principal e inicio de pie de página. */
+
+/* grid-template
+
+Una abreviatura para establecer  grid-template-rows,  grid-template-columnsy  grid-template-areas en una sola declaración.
+
+Valores:
+
+none – establece las tres propiedades en sus valores iniciales
+<grid-template-rows> /  <grid-template-columns>  – establece  grid-template-columns y  grid-template-rows a los valores especificados, respectivamente, y establece  grid-template-areas a none */
+
+/* Nota: La función repeat() no está permitida en estos listados de pistas, ya que las pistas están pensadas para alinearse visualmente una a una con las filas/columnas en el "arte ASCII". */
+
+.grid__container7 {
+  display: grid;
+  grid-template:
+    "header header header header" 100px
+    "main main . sidebar" 100px
+    "footer footer footer footer" 100px / 1fr 1fr 1fr 1fr;
+}
+
+.grid__container7 .grid__item {
+  width: auto;
+  text-align: center;
+}
+
+.grid__container7 .grid__item:nth-child(1) {
+  grid-area: header;
+}
+.grid__container7 .grid__item:nth-child(2) {
+  grid-area: main;
+}
+.grid__container7 .grid__item:nth-child(3) {
+  grid-area: sidebar;
+}
+.grid__container7 .grid__item:nth-child(4) {
+  grid-area: footer;
+}
+
+/* Dado  grid-template que no restablece las   propiedades de cuadrícula implícitasgrid-auto-columns ( ,  grid-auto-rowsy  grid-auto-flow), que es probablemente lo que desea hacer en la mayoría de los casos, se recomienda usar la  grid propiedad en lugar de  grid-template. */
