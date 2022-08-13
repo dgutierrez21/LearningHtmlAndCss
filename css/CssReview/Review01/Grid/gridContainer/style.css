@@ -304,3 +304,72 @@ stretch – llena todo el ancho de la celda (este es el valor predeterminado) */
 }
 
 /* Este comportamiento también se puede establecer en elementos de cuadrícula individuales a través de la  justify-self propiedad. */
+
+/* align-items
+
+Alinea los elementos de la cuadrícula a lo largo del eje del  bloque (columna)  (a diferencia de  justify-items lo que se alinea a lo largo del  eje en línea (fila)  ). Este valor se aplica a todos los elementos de la cuadrícula dentro del contenedor.
+
+Valores:
+
+stretch – llena toda la altura de la celda (este es el valor predeterminado)
+start – alinea los elementos para que queden al ras con el borde inicial de su celda
+end – alinea los elementos para que queden al ras con el borde final de su celda
+center – alinea los elementos en el centro de su celda
+baseline– alinear elementos a lo largo de la línea de base del texto . Hay modificadores que usarán la línea de base de la primera o la última línea en el caso de texto de varias líneas baseline.first baselinelast baseline */
+
+.grid__container15 .grid__item,
+.grid__container16 .grid__item,
+.grid__container17 .grid__item,
+.grid__container18 .grid__item,
+.grid__container19 .grid__item {
+  width: auto;
+}
+
+.grid__container15 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  align-items: stretch; /* default value */
+}
+
+.grid__container15 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  align-items: stretch; /* default value */
+}
+
+.grid__container16 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  align-items: start;
+}
+
+.grid__container17 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  align-items: end;
+}
+
+.grid__container18 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  align-items: center;
+}
+
+.grid__container19 .grid__item:nth-child(2),
+.grid__container19 .grid__item:nth-child(3) {
+  font-size: 120px;
+}
+
+.grid__container19 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  align-items: baseline;
+}
+
+/* Este comportamiento también se puede establecer en elementos de cuadrícula individuales a través de la  align-self propiedad. */
