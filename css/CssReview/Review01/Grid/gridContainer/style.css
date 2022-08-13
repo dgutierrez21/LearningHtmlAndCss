@@ -560,3 +560,38 @@ space-evenly – coloca una cantidad uniforme de espacio entre cada elemento de 
   grid-template-columns: repeat(2, 1fr);
   align-content: space-between;
 }
+
+/* place-content
+
+place-content establece las  propiedades align-content y  justify-content en una sola declaración.
+
+Valores:
+
+<align-content> / <justify-content>  – El primer valor establece  align-content, el segundo valor  justify-content. Si se omite el segundo valor, el primer valor se asigna a ambas propiedades.
+Todos los principales navegadores, excepto Edge, admiten la  place-content propiedad abreviada. */
+
+.grid__container35 .grid__item,
+.grid__container36 .grid__item {
+  width: 100px;
+  height: 100px;
+}
+
+.grid__container35 {
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  place-content: end space-between;
+}
+
+.grid__container36 {
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  place-content: center;
+}
