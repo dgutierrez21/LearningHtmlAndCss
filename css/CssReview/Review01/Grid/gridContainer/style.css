@@ -407,3 +407,68 @@ Esto puede ser muy útil para un centrado multidireccional súper rápido: */
   grid-template-rows: repeat(1, 300px);
   place-items: center;
 }
+
+/* justify-content
+
+A veces, el tamaño total de su cuadrícula puede ser menor que el tamaño de su contenedor de cuadrícula. Esto podría suceder si todos los elementos de la cuadrícula tienen el tamaño de unidades no flexibles como  px. En este caso, puede establecer la alineación de la cuadrícula dentro del contenedor de la cuadrícula. Esta propiedad alinea la cuadrícula a lo largo del  eje en línea (fila)  (a diferencia de  align-content lo que alinea la cuadrícula a lo largo del  eje de bloque (columna)  ).
+
+Valores:
+
+start – alinea la cuadrícula para que quede al ras con el borde inicial del contenedor de la cuadrícula
+end – alinea la rejilla para que quede al ras con el borde final del contenedor de la rejilla
+center – alinea la cuadrícula en el centro del contenedor de la cuadrícula
+space-around– coloca una cantidad uniforme de espacio entre cada elemento de la cuadrícula, con espacios de la mitad del tamaño en los extremos
+space-between – coloca una cantidad uniforme de espacio entre cada elemento de la cuadrícula, sin espacio en los extremos
+space-evenly – coloca una cantidad uniforme de espacio entre cada elemento de la cuadrícula, incluidos los extremos */
+
+.grid__container22 .grid__item,
+.grid__container23 .grid__item,
+.grid__container24 .grid__item,
+.grid__container25 .grid__item,
+.grid__container26 .grid__item,
+.grid__container27 .grid__item,
+.grid__container28 .grid__item {
+  width: 100px;
+  height: 100px;
+}
+
+.grid__container22 {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  justify-content: start; /* default value */
+  margin-bottom: 60px;
+}
+
+.grid__container23 {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  justify-content: end;
+  margin-bottom: 60px;
+}
+
+.grid__container24 {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.grid__container25 {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  justify-content: space-evenly;
+  margin-bottom: 60px;
+}
+
+.grid__container26 {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  justify-content: space-around;
+  margin-bottom: 60px;
+}
+
+.grid__container27 {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  justify-content: space-between;
+}
