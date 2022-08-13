@@ -427,48 +427,136 @@ space-evenly – coloca una cantidad uniforme de espacio entre cada elemento de 
 .grid__container25 .grid__item,
 .grid__container26 .grid__item,
 .grid__container27 .grid__item,
-.grid__container28 .grid__item {
-  width: 100px;
+.grid__container27_5 .grid__item {
+  width: auto;
   height: 100px;
 }
 
 .grid__container22 {
   display: grid;
-  grid-template-columns: repeat(2, 100px);
-  justify-content: start; /* default value */
+  grid-template-rows: repeat(2, 300px);
+  grid-template-columns: repeat(2, auto);
+  justify-content: stretch; /* default value */
   margin-bottom: 60px;
 }
 
 .grid__container23 {
   display: grid;
-  grid-template-columns: repeat(2, 100px);
-  justify-content: end;
+  grid-template-rows: repeat(2, 300px);
+  grid-template-columns: repeat(2, auto);
+  justify-content: start;
   margin-bottom: 60px;
 }
 
 .grid__container24 {
   display: grid;
-  grid-template-columns: repeat(2, 100px);
-  justify-content: center;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, 300px);
+  justify-content: end;
   margin-bottom: 60px;
 }
 
 .grid__container25 {
   display: grid;
-  grid-template-columns: repeat(2, 100px);
-  justify-content: space-evenly;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, 300px);
+  justify-content: center;
   margin-bottom: 60px;
 }
 
 .grid__container26 {
   display: grid;
-  grid-template-columns: repeat(2, 100px);
-  justify-content: space-around;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, 300px);
+  justify-content: space-evenly;
   margin-bottom: 60px;
 }
 
 .grid__container27 {
   display: grid;
-  grid-template-columns: repeat(2, 100px);
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, 300px);
+  justify-content: space-around;
+}
+
+.grid__container27_5 {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, 300px);
   justify-content: space-between;
+}
+
+/* align-content
+
+A veces, el tamaño total de su cuadrícula puede ser menor que el tamaño de su contenedor de cuadrícula. Esto podría suceder si todos los elementos de la cuadrícula tienen el tamaño de unidades no flexibles como  px. En este caso, puede establecer la alineación de la cuadrícula dentro del contenedor de la cuadrícula. Esta propiedad alinea la cuadrícula a lo largo del eje del  bloque (columna)  (a diferencia de  justify-content lo que alinea la cuadrícula a lo largo del  eje en línea (fila)  ).
+
+Valores:
+
+start – alinea la cuadrícula para que quede al ras con el borde inicial del contenedor de la cuadrícula
+end – alinea la rejilla para que quede al ras con el borde final del contenedor de la rejilla
+center – alinea la cuadrícula en el centro del contenedor de la cuadrícula
+stretch – cambia el tamaño de los elementos de la cuadrícula para permitir que la cuadrícula ocupe toda la altura del contenedor de la cuadrícula
+space-around – coloca una cantidad uniforme de espacio entre cada elemento de la cuadrícula, con espacios de la mitad del tamaño en los extremos
+space-between – coloca una cantidad uniforme de espacio entre cada elemento de la cuadrícula, sin espacio en los extremos
+space-evenly – coloca una cantidad uniforme de espacio entre cada elemento de la cuadrícula, incluidos los extremos */
+
+.grid__container28 .grid__item,
+.grid__container29 .grid__item,
+.grid__container30 .grid__item,
+.grid__container31 .grid__item,
+.grid__container32 .grid__item,
+.grid__container33 .grid__item,
+.grid__container34 .grid__item {
+  width: auto;
+  height: 100px;
+}
+
+.grid__container28 {
+  margin-bottom: 60px;
+  height: 700px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: stretch; /* default value */
+}
+.grid__container29 {
+  margin-bottom: 60px;
+  height: 700px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: start;
+}
+.grid__container30 {
+  margin-bottom: 60px;
+  height: 700px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: end;
+}
+.grid__container31 {
+  margin-bottom: 60px;
+  height: 700px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: center;
+}
+.grid__container32 {
+  margin-bottom: 60px;
+  height: 700px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: space-evenly;
+}
+.grid__container33 {
+  margin-bottom: 60px;
+  height: 700px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: space-around;
+}
+.grid__container34 {
+  margin-bottom: 60px;
+  height: 700px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: space-between;
 }
