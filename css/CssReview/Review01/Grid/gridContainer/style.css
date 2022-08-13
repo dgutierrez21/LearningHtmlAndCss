@@ -180,3 +180,80 @@ none – establece las tres propiedades en sus valores iniciales
 }
 
 /* Dado  grid-template que no restablece las   propiedades de cuadrícula implícitasgrid-auto-columns ( ,  grid-auto-rowsy  grid-auto-flow), que es probablemente lo que desea hacer en la mayoría de los casos, se recomienda usar la  grid propiedad en lugar de  grid-template. */
+
+/* column-gap
+row-gap
+
+cuadrícula
+Especifica el tamaño de las líneas de la cuadrícula. Puede pensar en ello como establecer el ancho de los canalones entre las columnas/filas.
+
+Valores:
+
+<line-size> – un valor de longitud */
+/* 
+.container {
+   standard 
+  column-gap: 0px;
+  row-gap: 0px;
+
+  old 
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  
+} 
+*/
+
+.grid__container8 .grid__item {
+  width: auto;
+  text-align: center;
+}
+
+.grid__container8 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  row-gap: 60px;
+}
+
+/* nota: Se eliminará el prefijo grid- y se cambiará el nombre de grid-column-gap y
+grid-row-gap por column-gap y row-gap. Las propiedades no prefijadas ya son
+compatibles con Chrome 68+,
+Safari 11.2 Release 50 + y Opera 54 + .; */
+
+/* gap */
+
+/* Una abreviatura de  row-gap y column-gap
+
+Valores:
+
+<grid-row-gap> <grid-column-gap> – valores de longitud */
+
+.grid__container9 .grid__item {
+  width: auto;
+  text-align: center;
+}
+
+.grid__container9 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 30px;
+  margin-bottom: 60px;
+}
+
+.grid__container10 .grid__item {
+  width: auto;
+  text-align: center;
+}
+
+.grid__container10 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+}
+
+/* nota: El prefijo grid- está obsoleto
+(pero quién sabe, puede que nunca se elimine de los navegadores) .
+Esencialmente,
+grid-gap ha sido renombrado como gap. La propiedad no prefijada ya es
+compatible con Chrome 68+,
+Safari 11.2 Release 50 + y Opera 54 + .; */
