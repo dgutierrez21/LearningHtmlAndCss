@@ -257,3 +257,50 @@ Esencialmente,
 grid-gap ha sido renombrado como gap. La propiedad no prefijada ya es
 compatible con Chrome 68+,
 Safari 11.2 Release 50 + y Opera 54 + .; */
+/* 
+justify-items
+
+justificar-elementos
+Alinea los elementos de la cuadrícula a lo largo del  eje en línea (fila)  (a diferencia de  align-items lo que se alinea a lo largo del eje del  bloque (columna)  ). Este valor se aplica a todos los elementos de la cuadrícula dentro del contenedor.
+
+Valores:
+
+start – alinea los elementos para que queden al ras con el borde inicial de su celda
+end – alinea los elementos para que queden al ras con el borde final de su celda
+center – alinea los elementos en el centro de su celda
+stretch – llena todo el ancho de la celda (este es el valor predeterminado) */
+
+.grid__container11 .grid__item,
+.grid__container12 .grid__item,
+.grid__container13 .grid__item,
+.grid__container14 .grid__item {
+  width: auto;
+}
+
+.grid__container11 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: stretch; /* default value */
+}
+
+.grid__container12 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: start;
+}
+.grid__container13 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: end;
+}
+.grid__container14 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Este comportamiento también se puede establecer en elementos de cuadrícula individuales a través de la  justify-self propiedad. */
