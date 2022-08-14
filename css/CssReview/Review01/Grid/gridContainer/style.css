@@ -638,3 +638,77 @@ Especifica el tamaño de las pistas de cuadrícula generadas automáticamente (t
 .grid__container38 .grid__item:nth-child(4) {
   grid-area: 1 / 1;
 }
+
+/* grid-auto-flow
+
+cuadrícula-auto-flujo
+Si tiene elementos de cuadrícula que no coloca explícitamente en la cuadrícula, el  algoritmo de colocación automática  se activa para colocar automáticamente los elementos. Esta propiedad controla cómo funciona el algoritmo de colocación automática.
+
+Valores:
+
+row – le dice al algoritmo de colocación automática que complete cada fila a su vez, agregando nuevas filas según sea necesario (predeterminado)
+column – le dice al algoritmo de colocación automática que complete cada columna a su vez, agregando nuevas columnas según sea necesario
+dense – le dice al algoritmo de colocación automática que intente llenar los agujeros antes en la cuadrícula si aparecen elementos más pequeños más tarde */
+
+/* Tenga en cuenta que la  densidad  solo cambia el orden visual de sus elementos y puede hacer que aparezcan desordenados, lo que es malo para la accesibilidad. */
+
+.grid__container39 .grid__item,
+.grid__container40 .grid__item,
+.grid__container41 .grid__item {
+  width: auto;
+  height: auto;
+}
+
+.grid__container39 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 90px);
+  gap: 30px;
+  grid-auto-flow: row; /* default value */
+}
+
+/* Al colocar los elementos en la cuadrícula, solo especifica lugares para dos de ellos: */
+
+.grid__container39 .grid__item:nth-child(1) {
+  grid-area: 1 / 1 / 3 / 2;
+}
+.grid__container39 .grid__item:nth-child(5) {
+  grid-area: 1 / 5 / 3 / 6;
+}
+
+/* Debido  grid-auto-flow a  que configuramos row, nuestra cuadrícula se verá así. Observe cómo los tres elementos que no colocamos ( item-b ,  item-c  y  item-d ) fluyen a través de las filas disponibles: */
+
+/* Si, en cambio, establecemos  grid-auto-flow ,  columnitem  -b ,  item-c  y  item-d  fluyen hacia abajo en las columnas: */
+
+.grid__container40 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 90px);
+  gap: 30px;
+  grid-auto-flow: column;
+}
+
+.grid__container40 .grid__item:nth-child(1) {
+  grid-area: 1 / 1 / 3 / 2;
+}
+
+.grid__container40 .grid__item:nth-child(5) {
+  grid-area: 1 / 5 / 3 / 6;
+}
+
+/* dense */
+
+/* el ejemplo se visualiza en menos de 840px */
+
+.grid__container41 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+  grid-auto-rows: 90px;
+  gap: 30px;
+  /* El valor "dense" llena los agujeros en la cuadrícula: */
+  grid-auto-flow: dense;
+}
+
+.grid__container41 .grid__item:nth-child(2) {
+  grid-column: span 2;
+}
