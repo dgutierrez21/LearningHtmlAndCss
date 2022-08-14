@@ -712,3 +712,17 @@ dense – le dice al algoritmo de colocación automática que intente llenar los
 .grid__container41 .grid__item:nth-child(2) {
   grid-column: span 2;
 }
+
+/* Grid */
+
+/* cuadrícula
+Una abreviatura para configurar todas las siguientes propiedades en una sola declaración:  grid-template-rows,  grid-template-columns,  grid-template-areas,  grid-auto-rows,  grid-auto-columnsy  grid-auto-flow (Nota: solo puede especificar las propiedades de cuadrícula explícitas o implícitas en una sola declaración de cuadrícula).
+
+Valores:
+
+none – establece todas las subpropiedades en sus valores iniciales.
+<grid-template> – funciona igual que la  grid-template taquigrafía.
+<grid-template-rows> / [ auto-flow && dense? ] <grid-auto-columns>? – establece  grid-template-rows el valor especificado. Si la  auto-flow palabra clave está a la derecha de la barra inclinada, se establece  grid-auto-flow en  column. Si la  dense palabra clave se especifica adicionalmente, el algoritmo de colocación automática utiliza un algoritmo de empaquetado "denso". Si  grid-auto-columns se omite, se establece en  auto.
+[ auto-flow && dense? ] <grid-auto-rows>? / <grid-template-columns> – establece  grid-template-columns el valor especificado. Si la  auto-flow palabra clave está a la izquierda de la barra inclinada, se establece  grid-auto-flow en  row. Si la  dense palabra clave se especifica adicionalmente, el algoritmo de colocación automática utiliza un algoritmo de empaquetado "denso". Si  grid-auto-rows se omite, se establece en  auto. */
+
+/* https://css-tricks.com/snippets/css/complete-guide-grid/#prop-grid */
