@@ -1,0 +1,63 @@
+/* grid-column-start, grid-column-end, 
+grid-row-start and grid-row-end */
+
+/* Determina la ubicación de un elemento de cuadrícula dentro de la cuadrícula haciendo referencia a líneas de cuadrícula específicas. grid-column-start/ grid-row-start es la línea donde comienza el elemento y  grid-column-end/ grid-row-end es la línea donde termina el elemento.
+
+Valores:
+
+<line> – puede ser un número para hacer referencia a una línea de cuadrícula numerada o un nombre para hacer referencia a una línea de cuadrícula con nombre
+span <number>– el elemento abarcará el número proporcionado de pistas de cuadrícula
+span <name>– el elemento se extenderá hasta que llegue a la siguiente línea con el nombre proporcionado
+auto– indica colocación automática, un intervalo automático o un intervalo predeterminado de uno */
+
+h2 {
+  font-size: 50px;
+  text-align: center;
+}
+
+.grid__item {
+  background-color: crimson;
+  color: #fff;
+  font-size: 60px;
+  border: 4px solid black;
+  text-align: center;
+}
+
+.grid__container {
+  border: 5px solid black;
+  padding: 10px;
+}
+
+.grid__container1 {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-auto-flow: column;
+  grid-auto-rows: 100px;
+}
+
+.grid__container1 .grid__item:nth-child(2) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
+.grid__container1 .grid__item:nth-child(3) {
+  grid-column-start: 3;
+  grid-column-end: span 1;
+
+  grid-row-start: 3;
+  grid-row-end: 7;
+}
+.grid__container1 .grid__item:nth-child(1) {
+  grid-column-start: 4;
+  grid-column-end: span 1;
+
+  grid-row-start: 4;
+  grid-row-end: span 5;
+}
+.grid__container1 .grid__item:nth-child(4) {
+  grid-row-start: 1;
+  grid-row-end: span 2;
+}
