@@ -595,3 +595,25 @@ Todos los principales navegadores, excepto Edge, admiten la  place-content propi
   grid-template-rows: repeat(2, auto);
   place-content: center;
 }
+
+/* grid-auto-columns__and__grid-auto-rows
+
+Especifica el tamaño de las pistas de cuadrícula generadas automáticamente (también conocidas como  pistas de cuadrícula implícitas ). Las pistas implícitas se crean cuando hay más elementos de cuadrícula que celdas en la cuadrícula o cuando un elemento de cuadrícula se coloca fuera de la cuadrícula explícita. */
+
+/* Valores:
+
+<track-size> – puede ser una longitud, un porcentaje o una fracción del espacio libre en la cuadrícula (usando la  fr unidad) */
+
+.grid__container37 .grid__item,
+.grid__container38 .grid__item {
+  width: auto;
+  height: auto;
+}
+.grid__container37 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  /* https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ */
+  grid-auto-rows: 100px;
+  gap: 30px;
+  margin-bottom: 60px;
+}
