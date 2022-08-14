@@ -617,3 +617,24 @@ Especifica el tamaño de las pistas de cuadrícula generadas automáticamente (t
   gap: 30px;
   margin-bottom: 60px;
 }
+
+.grid__container38 {
+  display: grid;
+  grid-auto-columns: minmax(10rem, 1fr);
+  /* https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ */
+  grid-auto-rows: 100px;
+  gap: 30px;
+}
+
+.grid__container38 .grid__item:nth-child(1) {
+  grid-area: 1 / 2;
+}
+.grid__container38 .grid__item:nth-child(2) {
+  grid-area: 2 / 2;
+}
+.grid__container38 .grid__item:nth-child(3) {
+  grid-area: 2 / 1;
+}
+.grid__container38 .grid__item:nth-child(4) {
+  grid-area: 1 / 1;
+}
