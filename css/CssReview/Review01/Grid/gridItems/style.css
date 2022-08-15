@@ -96,3 +96,38 @@ Valores:
 .grid__container2 .grid__item:nth-child(4) {
   grid-row: 1 / span 2;
 }
+
+/* grid-area
+
+Asigna un nombre a un elemento para que pueda ser referenciado por una plantilla creada con la  grid-template-areas propiedad. Alternativamente, esta propiedad se puede usar como una abreviatura aún más corta para  grid-row-start +  grid-column-start +  grid-row-end +  grid-column-end.
+
+Valores:
+
+<name> – un nombre de su elección
+<row-start> /  <column-start> /  <row-end> / <column-end>  – pueden ser números o líneas nombradas */
+
+.grid__container3 {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-template-areas:
+    "item4 . . ."
+    "item4 item2 . ."
+    ". item2 . ."
+    ". item2 . .";
+  grid-auto-flow: column;
+  grid-auto-rows: 100px;
+}
+
+.grid__container3 .grid__item:nth-child(2) {
+  grid-area: item2;
+}
+.grid__container3 .grid__item:nth-child(3) {
+  grid-area: 3 / 3 / 7 / 4;
+}
+.grid__container3 .grid__item:nth-child(1) {
+  grid-area: 4 / 4 / span 5 / 5;
+}
+.grid__container3 .grid__item:nth-child(4) {
+  grid-area: item4;
+}
