@@ -236,3 +236,102 @@ auto – La alineación “predeterminada” para el modo de diseño.
 .grid__container6 .grid__item:nth-child(4) {
   place-self: center;
 }
+
+/* Unidades especiales y funciones */
+
+/* https://css-tricks.com/snippets/css/complete-guide-grid/#aa-special-units-functions */
+
+/* Es probable que termine usando muchas unidades fraccionarias en CSS Grid, como 1fr. Esencialmente significan "porción del espacio restante". Así que una declaración como:
+
+grid-template-columns: 1fr 3fr;
+Significa, libremente, 25% 75%. Excepto que esos valores porcentuales son mucho más firmes que las unidades fraccionarias. 
+Por ejemplo, si agregó relleno a esas columnas basadas en porcentajes, ahora ha roto el 100% del ancho (asumiendo un content-boxmodelo de caja). 
+Las unidades fraccionarias también son mucho más amigables en combinación con otras unidades, como puedes imaginar:
+
+grid-template-columns: 50px min-content 1fr; */
+
+/* ******************************************** */
+
+/* Palabras clave de tamaño */
+
+/* Al dimensionar filas y columnas, puede usar todas las  longitudes a las  que está acostumbrado, como  px, rem, %, etc., pero también tiene palabras clave:
+
+min-content: el tamaño mínimo del contenido. Imagine una línea de texto como "E pluribus unum", el contenido mínimo es probablemente el ancho de la palabra "pluribus".
+max-content: el tamaño máximo del contenido. Imagina la oración de arriba, la max-contentes la longitud de la oración completa.
+auto: esta palabra clave se parece mucho a frlas unidades, excepto que "pierden" la lucha en el tamaño contra frlas unidades al asignar el espacio restante.
+fit-content: utilice el espacio disponible, pero nunca menos de min-content y nunca más de max-content.
+unidades fraccionarias: ver arriba */
+
+/* ******************************************** */
+
+/* Funciones de dimensionamiento
+
+La minmax()función hace exactamente lo que parece: establece un valor mínimo y máximo para lo que puede ser la longitud. Esto es útil en combinación con unidades relativas. 
+Es posible que desee que una columna solo pueda reducirse hasta ahora. Esto es extremadamente útil y probablemente lo que quieras :
+grid-template-columns: minmax(100px, 1fr) 3fr;
+la min()función
+la max()función */
+
+/* ******************************************** */
+
+/* La función repeat() y las palabras clave
+
+La  repeat() función puede ahorrar algo de escritura:
+
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+ easier: 
+grid-template-columns: repeat(8, 1fr);
+
+ especially when: 
+grid-template-columns: repeat(8, minmax(10px, 1fr));
+
+Pero repeat()puede volverse más elegante cuando se combina con palabras clave:
+
+auto-fill: ajuste tantas columnas como sea posible en una fila, incluso si están vacías.
+
+auto-fit:Coloque las columnas que haya en el espacio. Prefiere expandir columnas para llenar el espacio en lugar de columnas vacías.
+Este contiene el fragmento más famoso de todo CSS Grid y uno de los mejores trucos de CSS de todos los tiempos :
+
+grid-template-columns:  repeat(auto-fit, minmax(250px, 1fr));
+La diferencia entre las palabras clave se detalla aquí . */
+
+/* https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ */
+
+/* ******************************************** */
+
+/* Subgrid
+
+La subcuadrícula es una característica extremadamente útil de las cuadrículas que permite que los elementos de la cuadrícula tengan una cuadrícula propia que hereda las líneas de la cuadrícula principal.
+
+.parent-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+.grid-item {
+  grid-column: 2 / 7;
+
+  display: grid;
+  grid-template-columns: subgrid;
+}
+.child-of-grid-item {
+   gets to participate on parent grid! 
+  grid-column: 3 / 6;
+}
+Esto solo es compatible con Firefox en este momento, pero realmente necesita llegar a todas partes.
+
+También es útil saber sobre display: contents;. Esto no es lo mismo que la subcuadrícula, pero a veces puede ser una herramienta útil de manera similar.
+
+<div class="grid-parent">
+
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+
+  <ul style="display: contents;">
+    <!-- These grid-items get to participate on 
+         the same grid!-->
+    <li class="grid-item"></li>
+    <li class="grid-item"></li>
+  </ul>
+
+</div> */
