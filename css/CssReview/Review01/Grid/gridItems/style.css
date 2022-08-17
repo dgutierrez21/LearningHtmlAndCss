@@ -131,3 +131,41 @@ Valores:
 .grid__container3 .grid__item:nth-child(4) {
   grid-area: item4;
 }
+
+/* justify-self
+
+/* Alinea un elemento de cuadrícula dentro de una celda a lo largo del  eje en línea (fila)  (a diferencia de  align-self lo que se alinea a lo largo del  eje de bloque (columna)  ). Este valor se aplica a un elemento de cuadrícula dentro de una sola celda.
+
+Valores:
+
+start – alinea el elemento de la cuadrícula para que quede al ras con el borde inicial de la celda
+end – alinea el elemento de la cuadrícula para que quede al ras con el borde final de la celda
+center – alinea el elemento de la cuadrícula en el centro de la celda
+stretch – llena todo el ancho de la celda (este es el valor predeterminado) */
+
+.grid__container4 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.grid__container4 .grid__item {
+}
+
+.grid__container4 .grid__item:nth-child(1) {
+  justify-self: stretch; /* default value */
+}
+
+.grid__container4 .grid__item:nth-child(2) {
+  justify-self: start;
+}
+
+.grid__container4 .grid__item:nth-child(3) {
+  justify-self: end;
+}
+
+.grid__container4 .grid__item:nth-child(4) {
+  justify-self: center;
+}
+
+/* Para establecer la alineación de  todos  los elementos de una cuadrícula, este comportamiento también se puede establecer en el contenedor de la cuadrícula a través de la  justify-items propiedad. */
