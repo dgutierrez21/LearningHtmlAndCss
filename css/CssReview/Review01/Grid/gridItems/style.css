@@ -145,11 +145,8 @@ stretch – llena todo el ancho de la celda (este es el valor predeterminado) */
 
 .grid__container4 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 60px;
-}
-
-.grid__container4 .grid__item {
 }
 
 .grid__container4 .grid__item:nth-child(1) {
@@ -205,3 +202,37 @@ stretch – llena toda la altura de la celda (este es el valor predeterminado) *
 }
 
 /* Para alinear  todos  los elementos en una cuadrícula, este comportamiento también se puede configurar en el contenedor de la cuadrícula a través de la  align-items propiedad. */
+
+/* place-self
+
+place-self establece las  propiedades align-self y  justify-self en una sola declaración.
+
+Valores:
+
+auto – La alineación “predeterminada” para el modo de diseño.
+<align-self> / <justify-self>  – El primer valor establece  align-self, el segundo valor  justify-self. Si se omite el segundo valor, el primer valor se asigna a ambas propiedades. */
+
+/* Todos los principales navegadores, excepto Edge, admiten la  place-self propiedad abreviada. */
+
+.grid__container6 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 500px;
+  gap: 60px;
+}
+
+.grid__container6 .grid__item:nth-child(1) {
+  place-self: stretch; /* default value */
+}
+
+.grid__container6 .grid__item:nth-child(2) {
+  place-self: end start;
+}
+
+.grid__container6 .grid__item:nth-child(3) {
+  place-self: start end;
+}
+
+.grid__container6 .grid__item:nth-child(4) {
+  place-self: center;
+}
