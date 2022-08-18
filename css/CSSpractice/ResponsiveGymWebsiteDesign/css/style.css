@@ -233,6 +233,11 @@ img {
   cursor: pointer;
 }
 
+.nav .nav__button {
+  background-color: var(--title-color);
+  border: none;
+}
+
 /* Show menu */
 
 .nav__menu.nav-menu-active {
@@ -305,4 +310,36 @@ img {
   z-index: 1;
   width: 350px;
   margin: 0 auto;
+}
+
+/*=============== BUTTON ===============*/
+
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  padding: 18px 32px;
+  border: 2px solid var(--first-color-light);
+  color: var(--title-color-black);
+  font-weight: var(--font-bold);
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: var(--first-color-alt);
+}
+
+.button i {
+  font-size: 1.25rem;
+  transition: transform 0.3s;
+}
+
+.button__flex {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+}
+
+.button__flex:hover i {
+  transform: translateX(0.5rem);
 }
