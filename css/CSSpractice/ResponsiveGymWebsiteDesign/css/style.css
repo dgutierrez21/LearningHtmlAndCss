@@ -343,3 +343,16 @@ img {
 .button__flex:hover i {
   transform: translateX(0.5rem);
 }
+
+/*=============== LOGOS ===============*/
+
+.logos__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+.logos__img {
+  width: 120px;
+}
