@@ -153,6 +153,14 @@ img {
   overflow: hidden; /* For animation ScrollReveal */
 }
 
+.color-green {
+  color: var(--first-color);
+}
+
+.color-red {
+  color: #ed4956;
+}
+
 /*=============== HEADER & NAV ===============*/
 
 .header {
@@ -607,4 +615,82 @@ img {
 .pricing__card-active .pricing__number,
 .pricing__card-active .pricing__item {
   color: var(--title-color-black);
+}
+
+/*=============== CALCULATE ===============*/
+
+.calculate {
+  padding-bottom: 0;
+}
+
+.calculate__container {
+  row-gap: 4rem;
+}
+
+.calculate__content .section__titles {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.calculate__description {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.calculate__form {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.calculate__box {
+  border: 2px solid var(--first-color-light);
+  position: relative;
+}
+
+.calculate__input {
+  padding: 20px 56px 20px 24px;
+  border: none;
+  outline: none;
+  color: var(--text-color);
+  background-color: transparent;
+  width: 100%;
+}
+
+.calculate__input::-webkit-outer-spin-button,
+.calculate__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  pointer-events: none;
+}
+
+.calculate__input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.calculate__label {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.25rem;
+  color: var(--title-color);
+}
+
+.calculate__form .button {
+  margin-top: 1.5rem;
+}
+
+.calculate__img {
+  width: 200px;
+  justify-self: center;
+}
+
+.calculate__message {
+  position: absolute;
+  transform: translateY(1rem);
+  margin-right: 1.5rem;
+}
+
+.calculate__message__link {
+  color: var(--text-color);
+  text-decoration: underline;
+  font-size: 15.008px;
 }
