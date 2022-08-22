@@ -22,8 +22,6 @@
 
     <!-- ================ MAIN JS =============== -->
 
-    <script src="./js/main.js" defer></script>
-
     <title>Gym Website</title>
   </head>
   <body>
@@ -400,7 +398,11 @@
                 <label for="" class="calculate__label">kg</label>
               </div>
 
-              <button type="submit" class="button button__flex">
+              <button
+                type="submit"
+                class="button button__flex"
+                id="calculate-button"
+              >
                 Calculate Now <i class="ri-arrow-right-line"></i>
               </button>
             </form>
@@ -416,5 +418,7 @@
         </div>
       </section>
     </main>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>
