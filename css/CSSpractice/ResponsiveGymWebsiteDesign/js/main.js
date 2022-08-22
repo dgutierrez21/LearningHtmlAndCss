@@ -56,10 +56,12 @@ const calculateBmi = (event) => {
   const deleteMessage = (seconds) => {
     calculateButton.disabled = true;
     calculateButton.style.opacity = 0.5;
+    calculateButton.style.cursor = "auto";
     setTimeout(() => {
       calculateMessage.textContent = "";
       calculateButton.disabled = false;
       calculateButton.style.opacity = 1;
+      calculateButton.style.cursor = "pointer";
     }, seconds);
   };
 
@@ -113,8 +115,13 @@ const calculateBmi = (event) => {
       )} <a href="https://en.wikipedia.org/wiki/List_of_heaviest_people" target="_blank" class="calculate__message__link">see here</a>`;
     }
 
-    //delete the message after five seconds
-    deleteMessage(5000);
+    if (bmiPrecise > 185.6) {
+      //delete the message after five seconds
+      deleteMessage(6000);
+    } else {
+      //delete the message after four seconds
+      deleteMessage(4000);
+    }
   }
 };
 
