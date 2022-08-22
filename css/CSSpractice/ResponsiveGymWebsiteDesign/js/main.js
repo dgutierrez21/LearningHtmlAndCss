@@ -49,21 +49,21 @@ const calculateForm = document.querySelector("#calculate-form"),
   calculateButton = document.querySelector("#calculate-button"),
   calculateMessage = document.querySelector("#calculate-message");
 
+// Funtion deleteMessage
+const deleteMessage = (button, message, seconds) => {
+  button.disabled = true;
+  button.style.opacity = 0.5;
+  button.style.cursor = "auto";
+  setTimeout(() => {
+    message.textContent = "";
+    button.disabled = false;
+    button.style.opacity = 1;
+    button.style.cursor = "pointer";
+  }, seconds);
+};
+
 const calculateBmi = (event) => {
   event.preventDefault();
-
-  // Funtion deleteMessage
-  const deleteMessage = (seconds) => {
-    calculateButton.disabled = true;
-    calculateButton.style.opacity = 0.5;
-    calculateButton.style.cursor = "auto";
-    setTimeout(() => {
-      calculateMessage.textContent = "";
-      calculateButton.disabled = false;
-      calculateButton.style.opacity = 1;
-      calculateButton.style.cursor = "pointer";
-    }, seconds);
-  };
 
   // Check if the fields have a value
   if (calculateCm.value === "" || calculateKg.value === "") {
@@ -75,7 +75,7 @@ const calculateBmi = (event) => {
     calculateMessage.textContent = "Fill in the Height and Weight";
 
     //delete the message after three seconds
-    deleteMessage(3000);
+    deleteMessage(calculateButton, calculateMessage, 3000);
   } else {
     // add color and display message
     calculateMessage.classList.remove("color-red");
@@ -117,10 +117,10 @@ const calculateBmi = (event) => {
 
     if (bmiPrecise > 185.6) {
       //delete the message after five seconds
-      deleteMessage(6000);
+      deleteMessage(calculateButton, calculateMessage, 6000);
     } else {
       //delete the message after four seconds
-      deleteMessage(4000);
+      deleteMessage(calculateButton, calculateMessage, 4000);
     }
   }
 };
