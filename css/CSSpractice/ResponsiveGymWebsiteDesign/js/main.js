@@ -126,3 +126,51 @@ const calculateBmi = (event) => {
 };
 
 calculateForm.addEventListener("submit", calculateBmi);
+
+// =============== EMAIL JS ===============
+
+const contactForm = document.querySelector("#contact-form"),
+  contactMessage = document.querySelector("#contact-message"),
+  contactUser = document.querySelector("#contact-user"),
+  contactButton = document.querySelector("#contact-form button");
+
+const sendEmail = (event) => {
+  event.preventDefault();
+
+  // check if the field has a value
+  if (contactUser.value === "") {
+    //add and remove color
+    contactMessage.classList.remove("color-green");
+    contactMessage.classList.add("color-red");
+
+    // show message
+    contactMessage.textContent = "You must enter your email";
+
+    // remove message three seconds
+    deleteMessage(contactButton, contactMessage, 3000);
+  } else {
+    //serviceID - templateID - #form - publicKey
+    emailjs
+      .sendForm("serviceID", "templaID", "#contact-form", "publicKey")
+      .then((result) => {
+        // show message and add color
+        contactMessage.classList.remove("color-red");
+        contactMessage.classList.add("color-green");
+
+        // show message
+        contactMessage.textContent = "You registered successfully";
+
+        // remove message three seconds
+        deleteMessage(contactButton, contactMessage, 3000);
+      })
+      .catch((err) => {
+        // mail sending error
+        alert(
+          "OOPS! An error has occurred while subscribing, check your internet connection or contact us through our social networks and report this error.",
+          err
+        );
+      });
+  }
+};
+
+contactForm.addEventListener("submit", sendEmail);
