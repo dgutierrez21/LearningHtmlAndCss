@@ -235,6 +235,11 @@ button {
   color: var(--first-color);
 }
 
+/* active-link */
+.nav__link.active-link {
+  color: var(--first-color);
+}
+
 .nav__close {
   font-size: 1.5rem;
   position: absolute;
