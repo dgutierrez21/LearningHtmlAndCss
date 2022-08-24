@@ -827,3 +827,34 @@ button {
   background-color: hsl(79, 100%, 56%);
   border-radius: 0.5rem;
 }
+
+/*=============== SCROLL UP ===============*/
+
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -5%;
+  background-color: var(--first-color);
+  display: inline-flex;
+  padding: 0.35rem;
+  color: var(--title-color-black);
+  font-size: 1.25rem;
+  z-index: var(--z-tooltip);
+  transition: 1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scrollup:hover {
+  transform: translateY(-0.25rem);
+}
+
+.scrollup i {
+  transform: rotate(-90deg);
+}
+
+.show-scroll {
+  opacity: 1;
+  pointer-events: all;
+  bottom: 3rem;
+}
